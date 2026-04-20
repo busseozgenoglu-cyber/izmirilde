@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from 'react'
+import { useState, useRef, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Search, X } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
@@ -29,7 +29,6 @@ type SearchItem = {
   type: 'mekan' | 'etkinlik' | 'rehber'
 }
 
-// Tüm içerikleri birleştir
 function getAllSearchItems(): SearchItem[] {
   const places: SearchItem[] = placeCards.map((p) => ({
     id: `p-${p.id}`,
@@ -60,15 +59,9 @@ function getAllSearchItems(): SearchItem[] {
   return [...places, ...events, ...guides]
 }
 
-// ===================== HERO SECTION =====================
+// ===================== HERO SECTION (SADECE GÖRSEL) =====================
 function HeroSection({ onSearch }: { onSearch: (q: string) => void }) {
-  const [loaded, setLoaded] = useState(false)
   const [query, setQuery] = useState('')
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoaded(true), 300)
-    return () => clearTimeout(timer)
-  }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -84,78 +77,65 @@ function HeroSection({ onSearch }: { onSearch: (q: string) => void }) {
           alt="İzmir"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      {/* Glass Panel */}
-      <div className="relative z-10 flex items-center justify-center h-full px-4">
-        <div
-          className={`glass-panel rounded-3xl p-8 sm:p-12 max-w-[720px] w-full text-center shadow-[0_8px_40px_rgba(0,0,0,0.15)] transition-all duration-1000 ${
-            loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+      {/* Centered Search */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
+        <h1
+          className="text-white font-bold text-center mb-8 px-4"
+          style={{
+            fontFamily: "'Playfair Display', serif",
+            fontSize: 'clamp(36px, 7vw, 72px)',
+            lineHeight: 1.0,
+            letterSpacing: '-0.02em',
+            textShadow: '0 2px 20px rgba(0,0,0,0.3)',
+          }}
         >
-          {/* Logo */}
-          <div className="flex justify-center mb-5">
-            <img
-              src="/izmirilde-logo.png"
-              alt="izmirilde"
-              className="h-8 w-auto"
-            />
-          </div>
-          <div className="w-16 h-px bg-black/10 mx-auto mb-8" />
+          İzmir&apos;in En İyi
+          <br />
+          Mekanlarını Keşfet
+        </h1>
 
-          {/* Search Bar */}
-          <form
-            onSubmit={handleSubmit}
-            className={`flex items-center gap-3 bg-black/[0.04] rounded-xl px-5 py-4 transition-all duration-600 ${
-              loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-            }`}
-            style={{ transitionDelay: '0.3s' }}
+        {/* Search Bar */}
+        <form
+          onSubmit={handleSubmit}
+          className="glass-panel rounded-2xl px-5 py-3.5 flex items-center gap-3 w-full max-w-xl shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
+        >
+          <Search className="w-5 h-5 text-black/40 shrink-0" />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Mekan, etkinlik veya mahalle ara..."
+            className="flex-1 bg-transparent text-base text-black placeholder:text-black/40 min-w-0"
+          />
+          <button
+            type="submit"
+            className="shrink-0 px-5 py-2 bg-black text-white rounded-lg text-sm font-medium hover:bg-black/90 transition-colors"
           >
-            <Search className="w-5 h-5 text-black/40 shrink-0" />
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Mekan, etkinlik veya mahalle ara..."
-              className="flex-1 bg-transparent text-base text-black placeholder:text-black/40 min-w-0"
-            />
-            <button
-              type="submit"
-              className="shrink-0 px-6 py-2.5 bg-black text-white rounded-lg text-sm font-medium hover:bg-black/90 transition-colors"
+            Ara
+          </button>
+        </form>
+
+        {/* Quick Tags */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mt-5">
+          {[
+            { label: '☕ Kafeler', query: 'kafe' },
+            { label: '🍽 Restoranlar', query: 'restoran' },
+            { label: '🌅 Beach', query: 'beach' },
+            { label: '🎭 Etkinlikler', query: 'konser' },
+            { label: '📍 Alsancak', query: 'alsancak' },
+            { label: '📍 Çeşme', query: 'çeşme' },
+          ].map((tag) => (
+            <span
+              key={tag.label}
+              onClick={() => onSearch(tag.query)}
+              className="px-4 py-1.5 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full text-[13px] text-white/80 hover:bg-white/25 transition-colors cursor-pointer"
             >
-              Ara
-            </button>
-          </form>
-
-          {/* Quick Tags */}
-          <div
-            className={`flex flex-wrap items-center justify-center gap-2 mt-5 transition-all duration-500 ${
-              loaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            style={{ transitionDelay: '0.5s' }}
-          >
-            {[
-              { label: '☕ Kafeler', query: 'kafe' },
-              { label: '🍽 Restoranlar', query: 'restoran' },
-              { label: '🌅 Beach', query: 'beach' },
-              { label: '🎭 Etkinlikler', query: 'konser' },
-              { label: '📍 Alsancak', query: 'alsancak' },
-              { label: '📍 Çeşme', query: 'çeşme' },
-            ].map((tag, i) => (
-              <span
-                key={tag.label}
-                onClick={() => onSearch(tag.query)}
-                className="px-4 py-1.5 bg-black/[0.04] rounded-full text-[13px] text-black/60 hover:bg-black/[0.08] transition-colors cursor-pointer"
-                style={{
-                  opacity: loaded ? 1 : 0,
-                  transition: `opacity 0.4s ease ${0.6 + i * 0.05}s`,
-                }}
-              >
-                {tag.label}
-              </span>
-            ))}
-          </div>
+              {tag.label}
+            </span>
+          ))}
         </div>
       </div>
 
@@ -229,7 +209,6 @@ function SearchResultsSection({
           </div>
         ) : (
           <>
-            {/* Mekanlar */}
             {mekanlar.length > 0 && (
               <div className="mb-10">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -277,7 +256,6 @@ function SearchResultsSection({
               </div>
             )}
 
-            {/* Etkinlikler */}
             {etkinlikler.length > 0 && (
               <div className="mb-10">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -320,7 +298,6 @@ function SearchResultsSection({
               </div>
             )}
 
-            {/* Rehberler */}
             {rehberler.length > 0 && (
               <div>
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -507,12 +484,9 @@ function NewsSection() {
               Son Dakika
             </h2>
           </div>
-          <Link
-            to="#"
-            className="text-sm font-medium text-black/70 hover:text-black transition-colors reveal reveal-delay-1 shrink-0"
-          >
-            Tüm Haberler →
-          </Link>
+          <span className="text-sm text-black/40 reveal reveal-delay-1 shrink-0">
+            {newsCards.length} haber
+          </span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -520,7 +494,7 @@ function NewsSection() {
             <div
               key={card.id}
               className="group cursor-pointer flex gap-4 items-start reveal"
-              style={{ transitionDelay: `${i * 0.08}s` }}
+              style={{ transitionDelay: `${i * 0.05}s` }}
             >
               <div className="shrink-0 w-[100px] h-[100px] rounded-xl overflow-hidden">
                 <img
@@ -614,11 +588,10 @@ function MarqueeSection() {
   )
 }
 
-// ===================== CTA SECTION — İZMİR'DE BUGÜN NE YAPSAM? =====================
+// ===================== CTA SECTION =====================
 function CTASection() {
   return (
     <section className="relative py-28 lg:py-40 overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0">
         <img
           src="/images/izmir-hero-still.jpg"
@@ -671,7 +644,6 @@ export default function HomePage() {
     <main>
       <HeroSection onSearch={setSearchQuery} />
 
-      {/* Arama sonuçları varsa göster */}
       {searchQuery && (
         <SearchResultsSection
           query={searchQuery}
