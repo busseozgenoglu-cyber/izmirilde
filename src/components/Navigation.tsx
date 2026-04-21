@@ -43,14 +43,20 @@ export default function Navigation() {
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-[4vw] h-full flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 shrink-0">
+          <Link to="/" className="flex items-center gap-2.5 shrink-0 group">
             <img
-              src="/izmirilde-logo.png"
-              alt="izmirilde"
-              className={`h-7 w-auto transition-all duration-400 ${
-                isOverHero ? 'brightness-0 invert' : ''
-              }`}
+              src="/izmirilde-icon-256.png"
+              alt="izmirilde logo"
+              className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-sm"
             />
+            <span
+              className={`font-bold text-xl tracking-tight transition-colors duration-400 ${
+                isOverHero ? 'text-white' : 'text-black'
+              }`}
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              izmir<span className="gradient-text-sunset">ilde</span>
+            </span>
           </Link>
 
           {/* Desktop Links */}
@@ -106,8 +112,14 @@ export default function Navigation() {
       {mobileOpen && (
         <div className="fixed inset-0 z-[100] bg-white flex flex-col">
           <div className="flex items-center justify-between px-6 h-[72px] border-b border-black/5">
-            <Link to="/" onClick={() => setMobileOpen(false)}>
-              <img src="/izmirilde-logo.png" alt="izmirilde" className="h-7 w-auto" />
+            <Link to="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5">
+              <img src="/izmirilde-icon-256.png" alt="izmirilde logo" className="h-9 w-9 object-contain" />
+              <span
+                className="font-bold text-xl tracking-tight text-black"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                izmir<span className="gradient-text-sunset">ilde</span>
+              </span>
             </Link>
             <button onClick={() => setMobileOpen(false)} aria-label="Close">
               <X className="w-6 h-6" />

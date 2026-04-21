@@ -13,6 +13,12 @@ export default function NotFoundPage() {
 
       <main className="min-h-[80vh] flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-orange-50/30">
         <div className="max-w-2xl text-center">
+          <img
+            src="/izmirilde-icon-256.png"
+            alt="izmirilde"
+            className="h-20 w-20 mx-auto mb-6 drop-shadow-md opacity-80"
+          />
+
           <div
             className="text-[120px] sm:text-[180px] font-bold leading-none mb-4 gradient-text-sunset"
             style={{ fontFamily: "'Playfair Display', serif" }}

@@ -9,13 +9,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Brand Column */}
           <div>
-            <img
-              src="/izmirilde-logo.png"
-              alt="izmirilde"
-              className="h-8 w-auto brightness-0 invert mb-4"
-            />
+            <div className="flex items-center gap-2.5 mb-4">
+              <img
+                src="/izmirilde-icon-256.png"
+                alt="izmirilde logo"
+                className="h-12 w-12 object-contain"
+              />
+              <span
+                className="font-bold text-2xl text-white tracking-tight"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                izmirilde
+              </span>
+            </div>
             <p className="text-sm text-white/80 leading-relaxed">
-              İzmir&apos;in en iyi mekanlarını keşfet
+              İzmir&apos;in en iyi mekanlarını, rehberlerini ve 32 ilçesini keşfet
             </p>
             <div className="flex items-center gap-4 mt-5">
               <a

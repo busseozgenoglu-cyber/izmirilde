@@ -366,6 +366,11 @@ function CTASection() {
       </div>
 
       <div className="relative z-10 max-w-[900px] mx-auto px-4 sm:px-[4vw] text-center">
+        <img
+          src="/izmirilde-icon-256.png"
+          alt="izmirilde"
+          className="h-24 w-24 mx-auto mb-6 drop-shadow-2xl animate-parallax-float"
+        />
         <h2
           className="font-bold text-white leading-[0.95] tracking-[-0.04em] mb-6"
           style={{

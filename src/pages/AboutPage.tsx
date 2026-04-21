@@ -115,21 +115,34 @@ export default function AboutPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[55vh] min-h-[440px] flex items-center justify-center overflow-hidden">
         <img
           src="/images/about-hero.jpg"
           alt="Hakkımızda"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover scale-110 animate-slow-zoom"
         />
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
+
+        {/* Sparkle overlay */}
+        <div className="absolute inset-0 sparkle-overlay pointer-events-none" />
+        <div className="sparkle-star" style={{ top: '20%', left: '18%', animationDelay: '0s' }} />
+        <div className="sparkle-star" style={{ top: '35%', left: '78%', animationDelay: '0.5s' }} />
+        <div className="sparkle-star" style={{ top: '65%', left: '25%', animationDelay: '1.1s' }} />
+        <div className="shimmer-sweep" />
+
         <div className="relative z-10 text-center px-4">
+          <img
+            src="/izmirilde-icon-256.png"
+            alt="izmirilde"
+            className="h-20 w-20 mx-auto mb-6 drop-shadow-2xl animate-parallax-float reveal"
+          />
           <h1
-            className="text-h1 font-bold text-white leading-[0.95] tracking-[-0.04em] reveal"
+            className="text-h1 font-bold text-white leading-[0.95] tracking-[-0.04em] reveal reveal-delay-1"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Hakkımızda
           </h1>
-          <p className="mt-4 text-white/85 text-lg reveal reveal-delay-1">
+          <p className="mt-4 text-white/85 text-lg reveal reveal-delay-2">
             İzmir&apos;i dijitalde keşfetmenin en iyi yolu
           </p>
         </div>

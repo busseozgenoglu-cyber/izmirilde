@@ -42,7 +42,7 @@ export default function BlogDetailPage() {
       name: 'izmirilde',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://izmirilde.com/izmirilde-logo.png',
+        url: 'https://izmirilde.com/izmirilde-icon-256.png',
       },
     },
     mainEntityOfPage: {
