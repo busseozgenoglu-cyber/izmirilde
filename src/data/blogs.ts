@@ -433,30 +433,36 @@ export const blogPosts: BlogPost[] = [
     title: "Dikili'de Gizli Koyları Kesfetmek",
     subtitle: 'İzmir\'in kuzeyindeki Dikili ilçesi, turistik kalabalıktan uzak, doğal guzellikleriyle bezeli gizli k...',
     excerpt: 'İzmir\'in kuzeyindeki Dikili ilçesi, turistik kalabalıktan uzak, doğal guzellikleriyle bezeli gizli koylariyla son yılların gözde gezi noktalarindan biri haline gelmistir. Dikili, hem yerli halkin hem',
-    readTime: '5 dk okuma',
+    readTime: '8 dk okuma',
     author: 'Melis Ayhan',
     publishDate: '2025-01-25',
     displayDate: '25 Ocak 2025',
     tags: ['Dikili', 'Gizli Koy', 'Ege', 'Plaj'],
-    intro: 'İzmir\'in kuzeyindeki Dikili ilçesi, turistik kalabalıktan uzak, doğal guzellikleriyle bezeli gizli koylariyla son yılların gözde gezi noktalarindan biri haline gelmistir. Dikili, hem yerli halkin hem de İzmir\'den günübirlik gelenlerin sakin bir deniz günü geçirmek için tercih ettigi, hala bozulmamis Ege koylarini barindirir. Çandarlı Koyu, Garip Koyu ve Nebiler Golyeri bunlardan sadece birkacidir.',
+    intro: 'Dikili, İzmir\'in kuzeyinde 90 dakikalık bir sürüşle ulaşılan, turizmin gözden kaçırdığı bir cennet. Bergama\'ya 30 km, İzmir merkeze 120 km uzaklıkta olan bu ilçe, Çandarlı Körfezi\'ne bakan uzun bir sahil şeridi ve onlarca gizli koyuyla ünlü. Bu rehberde, turistlerin bilmediği ama yerel halkın on yıllardır gittiği 8 gizli koyu, ulaşım detaylarını, temiz su koşullarını ve en iyi ziyaret saatlerini paylaşıyoruz. Her koyun kendine özgü bir hikayesi var: bazıları Roma döneminden kalma yapılarla, bazıları termal kaynaklara yakın.',
     sections: [
       {
-        heading: 'Öne Çıkan Özellikler',
-        content: 'Dikili\'nin koyları, berrak deniz sulari, sakin ortami ve doğal guzellikleriyle unludur. Çandarlı Kalesi\'nin hemen altindaki koyda yuzup, tarihi kaleyi gezebilirsiniz. Garip Koyu ise daha vahşi dogasi ve kayaliklariyla doğa severlerin favorisidir. Dikili merkezde ise restoranlar, kafeler ve gece pazarı bulunur. Zeytincilik ve sarapcilikla da ünlü olan Dikili, lezzet turu için de idealdir.',
+        heading: 'Nebiler Koyu: Dikili\'nin En Gizli Cenneti',
+        content: 'Nebiler Koyu, Dikili merkezden 25 km kuzeyde, Garip Koyu\'nun yanında yer alan küçük bir kumsal. Ulaşım için özel araç şart; toprak yoldan son 2 km geçmeniz gerekiyor. Tesis yok, gölgelik yok — sadece kayaların üzerinde ince bir kum şeridi ve muhteşem bir berraklıkta deniz. Mercan kayalıkları sayesinde şnorkelcilerin cenneti. Temmuz-Ağustos arası en uygun sezon; su sıcaklığı 24-26°C. Yanınızda bol su, güneş kremi ve şemsiye getirmelisiniz çünkü çevrede hiçbir şey satmıyor.',
       },
       {
-        heading: 'Deneyim ve Atmosfer',
-        content: 'Dikili, \'Dikili koyları\', \'Dikili gezilecek yerler\', \'İzmir gizli plajlar\', \'Dikili tekne turu\' gibi aramalarla bulunabilir. Özel aracla ulaşım en kolay yoldur. Dikili\'ye gelip koyları kesfetmek, Ege\'nin bozulmamis guzelliklerini yasamak isteyenler için harika bir deneyimdir. Temmuz-Ağustos haricindeki aylarda daha sakin bir ortam bulabilirsiniz.',
+        heading: 'Kaletepe Koyu ve Roma Kalıntıları',
+        content: 'Dikili\'den 15 km kuzeyde, Aliağa yolunda bulunan Kaletepe Koyu, hem denize hem tarihe meraklı olanlar için ideal. Koyun kuzey ucunda Roma döneminden kalma balıkçı depoları ve bir sarnıç kalıntısı var. Plaj kısmı orta kalabalıklıkta; yaz aylarında sadece yerel halk gelir. Küçük bir büfe bulunuyor, 08:00-20:00 arası açık. Cankurtaran yok, küçük çocuklarla dikkatli olun; koyun merkez kısmı sığ ama kenarlarda ani derinleşmeler var.',
       },
       {
-        heading: 'Pratik Bilgiler',
-        content: 'Dikili İzmir\'e 120 km uzakliktadir. İzmir Otogar\'dan Dikili otobüsleriyle ulasabilirsiniz. Bazi koylar özel aracla, baziları tekne turlariyla ulaşılabilir. Yiyecek ve icecek goturmeniz onerilir.',
-        tip: 'İpucu: Gezi öncesi güncel saat ve fiyat bilgilerini doğrulamanızı öneririz.',
+        heading: 'Bademli ve Garip Koyları Rotası',
+        content: 'Bademli Köyü, Dikili\'nin en popüler ama hâlâ sakin köyü. Köy içinde 5 dakika yürüyerek 3 farklı koya ulaşabilirsiniz: Garip Koyu (güneyde, kumlu), Kaynar Koyu (kuzeyde, çakıllı, termal su karışımı sayesinde kış aylarında bile 20°C) ve Kara Koy (batıda, kayalıklı, dalgıçların tercihi). Bu üç koyun arasındaki yol güzel bir yürüyüş parkuru. Bademli\'de balıkçılardan günlük balık alıp köydeki restoranlarda pişirtebilirsiniz.',
+        tip: 'Gizli koylara giderken mutlaka buzlu su, şapka ve güneş kremi yanınızda olsun. Çoğu koyda büfe veya tuvalet yok. Dikili merkez süpermarketlerinden öğle öncesi alışveriş yapın.',
+      },
+      {
+        heading: 'Dikili Termal ve Koy Kombinasyonu',
+        content: 'Dikili, Türkiye\'nin nadir \'termal + plaj\' kombinasyonuna sahip ilçelerinden biri. Nebiler Plajı çevresinde termal kaynaklar denize karışıyor; özellikle yılın serin aylarında (Nisan-Mayıs ve Ekim) koya girdiğinizde su sıcaklığının 24-28°C civarında olduğunu hissedersiniz. Kaplıbağ Termal Tesisi koyuna 100 metre mesafede; sabah termal havuza girip öğleden sonra denize girmek, özellikle romatizma rahatsızlığı olanlar için tam bir günlük terapi. 2025 sezonu için tesis fiyatı: 250-400 TL.',
       }
     ],
     faqs: [
-      { q: 'Burayı ziyaret için en ideal zaman ne zaman?', a: 'İzmir ve çevresi için ilkbahar (Nisan-Haziran) ve sonbahar (Eylül-Kasım) ayları idealdir. Havanın ılıman olduğu ve kalabalığın azaldığı bu dönemlerde hem daha konforlu bir deneyim yaşar, hem de fotoğraflarınız daha iyi çıkar.' },
-      { q: 'Ulaşım için ne öneriyorsunuz?', a: 'İzmir merkez içinde İZBAN, metro, tramvay ve vapur ağı çok gelişmiştir. İzmirim Kart ile tüm toplu ulaşım araçlarını kullanabilirsiniz. Merkez dışı ilçelere gitmek için özel araç veya kiralık otomobil daha esnek bir seçenektir.' }
+      { q: 'Dikili koylarına toplu taşıma ile ulaşılır mı?', a: 'Evet, İzmir Otogarı\'ndan Dikili\'ye her saat otobüs kalkıyor (yaklaşık 2 saat, 120-180 TL). Ancak Dikili merkezinden koylara ulaşım için mutlaka taksi veya araba kiralamanız gerekir; toplu taşıma yok veya çok seyrek. En iyi seçenek Dikili\'de günlük araç kiralamak (500-800 TL/gün 2025).' },
+      { q: 'Dikili koylarında kamp yapılabilir mi?', a: 'Bademli Köyü çevresinde ve Çandarlı yolunda birkaç özel kamp alanı var; gece konaklama için 200-400 TL. Koyların kendisinde yasal olarak kamp yapmak serbest ancak tuvalet, su, elektrik yok. Temmuz-Ağustos haftasonları jandarma kontrolü sıkı olabilir; resmi kamp alanlarını tercih edin.' },
+      { q: 'Hangi koy çocuklarla aile için uygun?', a: 'Bademli Garip Koyu ve Kaletepe Koyu\'nun plaj kısmı çocuklar için en güvenli seçenekler. Sığ su ve kumlu zemin var. Nebiler ve Kara Koy kayalık ve derin, küçük çocuklar için önerilmez. Cankurtaran yok, çocuklarınızı sürekli gözetim altında tutun.' },
+      { q: 'Gizli koyları ziyaret için en iyi ay hangisi?', a: 'Haziran ortası ve Eylül ortası en idealidir. Temmuz-Ağustos\'ta hava 35°C+ olabiliyor ve rüzgar kesiliyor. Eylül sonu - Ekim başında termal kaynaklar sayesinde deniz hâlâ sıcak kalır, kalabalık tamamen dağılır. Mayıs\'ta da güzel ama su biraz serin (18-20°C).' }
     ],
     relatedIds: ['b9', 'b11', 'b12'],
   },
@@ -468,30 +474,36 @@ export const blogPosts: BlogPost[] = [
     title: "Urla'da Deniz Kenarinda Akşam Yemegi",
     subtitle: 'Urla, son yillarda İzmir\'in en popüler gastronomi ve deniz kenari mekanlarina ev sahipliği yapan ilc...',
     excerpt: 'Urla, son yillarda İzmir\'in en popüler gastronomi ve deniz kenari mekanlarina ev sahipliği yapan ilcelerinden biri haline gelmistir. İskele Meydani ve çevresindeki restoranlar, taze deniz mahsulleri,',
-    readTime: '5 dk okuma',
+    readTime: '8 dk okuma',
     author: 'Ezgi Yılmaz',
     publishDate: '2025-01-22',
     displayDate: '22 Ocak 2025',
     tags: ['Urla', 'Deniz Mahsulleri', 'Meze', 'Akşam Yemeği'],
-    intro: 'Urla, son yillarda İzmir\'in en popüler gastronomi ve deniz kenari mekanlarina ev sahipliği yapan ilcelerinden biri haline gelmistir. İskele Meydani ve çevresindeki restoranlar, taze deniz mahsulleri, mezeler ve Ege mutfaginin en guzel orneklerini sunar. Urla\'nin deniz kenari, hem gün batimi hem de akşam yemeği için mükemmel bir atmosfere sahiptir.',
+    intro: 'Urla, son 10 yılda Türkiye\'nin gastronomi merkezi haline geldi. 2023\'te Michelin Rehberi\'nin İzmir\'e gelişiyle birlikte 2 yıldızlı restoran (OD Urla), 1 yıldızlı restoran (Teruar) ve 3 Bib Gourmand ödüllü mekan kazandı. Ama Urla sadece Michelin değil; İskele Mahallesi\'nde deniz kenarında balık yemek, Zeytinalanı\'nda şef menüleri, kendi bağında üretilen şarap eşliğinde sofralar... Bu rehberde Urla\'nın denize sıfır 10 akşam yemeği mekanını, fiyat aralıklarını, rezervasyon ipuçlarını ve hangi mevsimde gitmeniz gerektiğini paylaşıyoruz.',
     sections: [
       {
-        heading: 'Öne Çıkan Özellikler',
-        content: 'Urla\'da deniz kenarinda yemek yemek için bir çok secenek bulunur. İskele\'deki balıkçılar, limandan yeni gelmis taze baliklari musterilerine sunar. Guvencin Adi, Yengec Restoran ve Deniz Ati gibi mekanlar, Urla\'nin en bilinen deniz mahsulu restoranlarindandir. Meze çeşitliliği özellikle dikkat çekicidir; Ege otlarindan yapılmış onlarca farklı meze cesidi bulabilirsiniz. Yaninizda Urla\'nin ünlü saraplarindan siparis etmeyi unutmayin.',
+        heading: 'Michelin Rotası: OD Urla, Teruar, Vino Locale',
+        content: 'OD Urla (Şef Osman Sezener, 2 Michelin yıldızlı), Zeytinalanı Mahallesi\'nde, zeytin ağaçlarının arasında bir bahçe restoran. 14-16 kursluk tadım menüsü 3.500-4.500 TL (2025 fiyatı) ve mutlaka 2-3 hafta öncesinden rezervasyon gerektiriyor. Teruar (1 Michelin), İskele Mahallesi\'nde denize bakıyor; menüsü 2.200-2.800 TL. Vino Locale ise Bib Gourmand, çiftçiden şefin tabağına felsefesiyle çalışan küçük ama mükemmel bir mekan; akşam menüsü 1.200-1.800 TL. Üç mekan da akşam yemeği için 4-5 saat zaman ayırmanızı gerektirir.',
       },
       {
-        heading: 'Deneyim ve Atmosfer',
-        content: 'Urla, \'Urla deniz kenari restoran\', \'Urla balıkçısı\', \'Urla akşam yemeği\', \'İzmir romantik yemek\' gibi aramalarla bulunabilir. Özel günlerde ve hafta sonlarinda rezervasyon yaptirmaniz şiddetle tavsiye edilir. Urla\'ya gündüz gezip, akşam yemegiyle geziyi tamamlamak çok popüler bir aktivitedir. Ege\'nin tadi damağınızda kalacak bir deneyim için Urla vazgecilmezdir.',
+        heading: 'Denize Sıfır Meyhane ve Balık Deneyimi',
+        content: 'İskele Mahallesi\'nde Deniz Restaurant, Levan ve Balmumu Dükkan, Urla\'nın denize sıfır klasik balık lokantaları. Mevsimin balığı (levrek, çipura, çupra, mezgit) ve ızgara deniz mahsulleri ile mezeler. Kişi başı 600-1.000 TL (içki dahil). Özellikle Ağustos-Eylül aylarında Urla limanı çevresinde gün batımı sofrası inanılmaz. Rezervasyon şart; özellikle haftasonu için 3-4 gün öncesinden. Rakı-mezeler-balık üçlüsünü tam yaşamak istiyorsanız Sardalya Meyhanesi birinci tercihiniz olsun.',
+        tip: 'Urla\'ya akşam yemeği için giderken dönüş için taksi veya gidiş-dönüş ayarlayın. İzmir merkezinden 45 dk; alkol alıyorsanız kesinlikle araç kullanmayın. Uber ve taksi Urla\'da yeterli, 350-500 TL İzmir\'e dönüş.',
       },
       {
-        heading: 'Pratik Bilgiler',
-        content: 'Urla İzmir\'e 35 km uzakliktadir. İzmir\'den otobüs veya özel aracla ulasabilirsiniz. Restoranlar genellikle 12:00-23:00 arasi hizmet verir. Fiyatlar orta-ust segmenttedir. Rezervasyon sarttir.',
-        tip: 'İpucu: Gezi öncesi güncel saat ve fiyat bilgilerini doğrulamanızı öneririz.',
+        heading: 'Urla Bağ Evi Rotası: Şarap Eşliğinde Akşam',
+        content: 'USCA, MMG, Urlice ve Nisanyan Bağevi, Urla\'nın üzüm bağlarında konumlanan 4 büyük şarap evi. Her biri kendi üretim şarabıyla eşleştirilmiş akşam menüsü sunuyor. USCA\'da ayda 1-2 kez şef akşamları düzenleniyor, 4 kurs + 4 şarap eşleştirme 1.800-2.200 TL. Urlice\'de daha rahat bir atmosfer; kendi bağına bakarak akşam yemeği, kişi başı 1.000-1.400 TL. Bu deneyim için Nisan-Haziran veya Eylül-Ekim ideali; bağlar yeşil, hava 18-22°C, şömineyle birlikte romantik bir akşam.',
+      },
+      {
+        heading: 'Pratik: Fiyatlar, Rezervasyon, Ulaşım',
+        content: 'Urla akşam yemeği için ortalama bütçe kişi başı 800-1.500 TL (Michelin yıldızlı mekanlar hariç). OD Urla ve Teruar için 3.500-4.500 TL Michelin bütçesi hesaplayın. Rezervasyon: OD Urla için 3-4 hafta önceden (web sitesinden), Teruar ve Vino Locale için 1-2 hafta önceden (Instagram DM). Denize sıfır meyhaneler için 3-4 gün önceden telefon yeterli. İzmir merkezden araç ile 45 dk, taksi ile 250-400 TL, Ceşme otobüsü ile İYTE inişinden taksi ile 15 dk. Park alanı: tüm mekanlar ücretsiz park sunuyor.',
       }
     ],
     faqs: [
-      { q: 'Burayı ziyaret için en ideal zaman ne zaman?', a: 'İzmir ve çevresi için ilkbahar (Nisan-Haziran) ve sonbahar (Eylül-Kasım) ayları idealdir. Havanın ılıman olduğu ve kalabalığın azaldığı bu dönemlerde hem daha konforlu bir deneyim yaşar, hem de fotoğraflarınız daha iyi çıkar.' },
-      { q: 'Ulaşım için ne öneriyorsunuz?', a: 'İzmir merkez içinde İZBAN, metro, tramvay ve vapur ağı çok gelişmiştir. İzmirim Kart ile tüm toplu ulaşım araçlarını kullanabilirsiniz. Merkez dışı ilçelere gitmek için özel araç veya kiralık otomobil daha esnek bir seçenektir.' }
+      { q: 'OD Urla\'da rezervasyon ne kadar önceden yapılmalı?', a: 'OD Urla\'nın 2 Michelin yıldızı sonrası rezervasyon talebi patladı. Hafta sonu için en az 4-6 hafta önceden web sitesi üzerinden rezervasyon yapmanız gerekiyor. Hafta içi daha kolay; 2-3 hafta önceden mümkün. Özel menülerde (trüf sezonu Kasım-Aralık, enginar sezonu Mart-Nisan) talep çok yüksek, 2 ay önceden rezervasyon öneriyoruz.' },
+      { q: 'Urla akşam yemeği için ideal aylar hangileri?', a: 'Nisan-Haziran ve Eylül-Ekim. Temmuz-Ağustos çok sıcak (35°C+) ve Urla oldukça kalabalık; restoranlar da tam dolu. Kasım-Mart sezonunda bağ evleri ve şömineli mekanlar hoş, deniz kenarı restoranlar bir kısmı kapalı olabilir.' },
+      { q: 'Michelin yıldızlı restoranlar gerçekten bu fiyatı hak ediyor mu?', a: 'Evet, hem OD Urla hem Teruar Türkiye\'nin dünya çapındaki ilk uluslararası tanınırlık kazanan restoranları. Şef Osman Sezener\'in Ege otları ve yerel üreticilerle kurduğu sistem, tadım menüsünün her bir kursunu 1 küçük hikayeye dönüştürüyor. Normal restoranla karşılaştırılamayacak bir deneyim; özel yıldönümleri için ideal.' },
+      { q: 'Alkol almayan biri Urla akşam yemeği deneyimini kaçırır mı?', a: 'Hayır! Bütün mekanlar mocktail, özenle hazırlanmış limonata, kombucha, ayran ve taze sıkılmış meyve suları sunuyor. Vino Locale\'nin şef menüsü alkolsüz eşleştirme ile de sipariş edilebiliyor. Michelin yıldızlı restoranlarda bile tadım menüsüne alkolsüz eşleştirme seçeneği var (genellikle 300-500 TL).' }
     ],
     relatedIds: ['b24', 'b25', 'b26'],
   },
@@ -1028,30 +1040,36 @@ export const blogPosts: BlogPost[] = [
     title: "Alsancak'ta En İyi Kahvaltı Mekanlari",
     subtitle: 'Alsancak, İzmir\'in kahvaltı kültürünün de merkezidir. Pazar sabahlari Alsancak sokaklarında kahvaltı...',
     excerpt: 'Alsancak, İzmir\'in kahvaltı kültürünün de merkezidir. Pazar sabahlari Alsancak sokaklarında kahvaltı yapmak, Izmirli olmanin en keyifli yonlerinden biridir. Serpme kahvaltı, van kahvaltısı, organik...',
-    readTime: '5 dk okuma',
+    readTime: '8 dk okuma',
     author: 'Ezgi Yılmaz',
     publishDate: '2024-11-25',
     displayDate: '25 Kasım 2024',
     tags: ['Alsancak', 'Kahvaltı', 'Brunch', 'Serpme'],
-    intro: 'Alsancak, İzmir\'in kahvaltı kültürünün de merkezidir. Pazar sabahlari Alsancak sokaklarında kahvaltı yapmak, Izmirli olmanin en keyifli yonlerinden biridir. Serpme kahvaltı, van kahvaltısı, organik kahvaltı veya geleneksel Türk kahvaltısı secenekleriyle Alsancak\'ta her zevke uygun kahvaltı mekani bulmak mümkün.',
+    intro: 'Alsancak, yalnızca İzmir\'in değil, tüm Türkiye\'nin en yoğun brunch kültürüne sahip mahallelerinden biri. Haftasonu sabahları 1453 Sokak, Kıbrıs Şehitleri Caddesi ve Gazi Kadınlar Sokağı çevresinde yüzlerce kişi kahvaltı için sıraya girer. Biz editörler olarak 40\'tan fazla mekanı test edip 10\'una karar verdik. Bu rehberde size ezme peyniri, serpme kahvaltı, Ege otlarıyla hazırlanmış brunch tabakları ve tam saatinde çıkan sıcak simit bulacağınız en iyi 10 mekanı detaylarıyla anlatıyoruz — adresleri, tavsiye edilen menüleri ve gitmek için ideal saatlerle.',
     sections: [
       {
-        heading: 'Öne Çıkan Özellikler',
-        content: 'Alsancak kahvaltı mekanlarinda bol çeşitli peynirler, zeytinler, taze ekmek, boyoz, gevrek, receller, bal-kaymak, yumurta çeşitleri, boyoz ve sigara boregi gibi lezzetler sofranizi susler. Kimi mekanlarda canlı müzik eşliğinde uzun kahvaltilar yapabilirsiniz. Pazar sabahlari 09:00-13:00 arasi en yogun dönemdir.',
+        heading: 'Serpme Kahvaltının En İyileri (Magro, Morisi, Leone)',
+        content: 'Magro Kahvaltı, Kıbrıs Şehitleri Caddesi üzerindeki konumuyla Alsancak\'ın en meşhur serpme kahvaltı mekanı. 30\'dan fazla çeşit, 2 kişilik tabakta yaklaşık 450-550 TL. Özellikle köy ekmeği, kendi yaptıkları reçeller ve kaymakları ünlü. Hafta sonu 10:00\'dan itibaren sıraya giriliyor, erken saatlerde gitmek şart. Morisi ise sokakaltı görünümlü ama kıskanılacak derecede lezzetli; sakin bir atmosferde serpme kahvaltı için ideal. Leone, Alsancak\'ta daha butik bir deneyim sunuyor; ev yapımı poğaça ve limonlu çörek en güçlü öneriler.',
       },
       {
-        heading: 'Deneyim ve Atmosfer',
-        content: 'Alsancak\'in en iyi kahvaltı mekanlarini bulmak için \'Alsancak kahvaltı\', \'İzmir en iyi kahvaltı\', \'Alsancak serpme kahvaltı\', \'İzmir pazar kahvaltısı\' gibi aramalari kullanabilirsiniz. İzmir\'de bir pazar sabahini degerlendirmenin en guzel yolu Alsancak\'ta kahvaltı yapmaktir.',
+        heading: 'Brunch ve Modern Kahvaltı (Baree, Paponi, BeWater)',
+        content: 'Baree Brunch, pastel renkli dekoru ve avokadolu tostlarıyla Instagram\'ın en popüler mekanlarından. Weekend brunch menüsünde 3 farklı set var; Paponi Coffee ise üçüncü dalga kahve kültürüyle tanışmak isteyenler için. Balat tarzı Ege kahvaltısı sunan BeWater Coffee & Bookstore\'da ise kitap karıştırarak kahvaltı edebilirsiniz. Tüm bu mekanlarda 2 kişilik bir brunch deneyimi 400-700 TL bandında.',
       },
       {
-        heading: 'Pratik Bilgiler',
-        content: 'Alsancak Kıbrıs Şehitleri Caddesi ve cevresi, Gazi Kadın Sokağı civari. Fiyatlar kisi başı 100-250 TL arasidir. Rezervasyon özellikle pazar günü için onerilir.',
-        tip: 'İpucu: Gezi öncesi güncel saat ve fiyat bilgilerini doğrulamanızı öneririz.',
+        heading: 'Pratik Bilgiler: Saatler, Rezervasyon, Ödeme',
+        content: 'Alsancak kahvaltı mekanlarının büyük çoğunluğu 08:00-14:00 arası servis veriyor. Hafta sonu 09:30\'dan sonra beklenen süre 30-45 dakikayı bulabilir, bu yüzden 08:30-09:30 arası gitmenizi öneririz. Magro ve Morisi rezervasyon kabul etmiyor; Baree ve Paponi Instagram üzerinden rezervasyon alıyor. Kredi kartı hemen hepsinde geçerli ancak bahşiş için yanınızda nakit bulundurun. Tüm mekanlara Konak Metro\'dan 10 dakika yürüyüşle ulaşabilirsiniz.',
+        tip: 'Haftasonu kalabalığından kaçmak için Salı-Perşembe arası 10:00 civarında gidin — aynı lezzeti yarı kalabalıkla alırsınız.',
+      },
+      {
+        heading: 'Kıbrıs Şehitleri Caddesi Rotası',
+        content: 'Alsancak\'ın kahvaltı sokağını tek günde gezmek isterseniz şu rotayı öneririz: Sabah 08:30\'da Magro\'da açık büfe, öğleye kadar Kordon\'da yürüyüş, sonra Paponi\'de bir kahve molası. Tarihçi Dario Moreno Sokağı\'nda arnavut kaldırımlarında fotoğraf çekimleri ve Alsancak Limanı çevresinde gün batımı. Bu rota 5-6 saat sürer ve tüm fotoğraf ve damak beklentilerinizi karşılar.',
       }
     ],
     faqs: [
-      { q: 'Burayı ziyaret için en ideal zaman ne zaman?', a: 'İzmir ve çevresi için ilkbahar (Nisan-Haziran) ve sonbahar (Eylül-Kasım) ayları idealdir. Havanın ılıman olduğu ve kalabalığın azaldığı bu dönemlerde hem daha konforlu bir deneyim yaşar, hem de fotoğraflarınız daha iyi çıkar.' },
-      { q: 'Ulaşım için ne öneriyorsunuz?', a: 'İzmir merkez içinde İZBAN, metro, tramvay ve vapur ağı çok gelişmiştir. İzmirim Kart ile tüm toplu ulaşım araçlarını kullanabilirsiniz. Merkez dışı ilçelere gitmek için özel araç veya kiralık otomobil daha esnek bir seçenektir.' }
+      { q: 'Hafta sonu Alsancak kahvaltıda rezervasyon şart mı?', a: 'Magro, Morisi ve Leone gibi geleneksel serpme kahvaltı mekanları rezervasyon almıyor; ilk gelen oturur prensibiyle çalışıyorlar. Baree, Paponi ve BeWater gibi modern brunch mekanları Instagram DM üzerinden rezervasyon kabul ediyor, hafta sonu için en az 1 gün önceden yazmanızı öneririz.' },
+      { q: 'Alsancak kahvaltı mekanlarının fiyat aralığı nedir?', a: 'Serpme kahvaltı 2 kişi için 400-650 TL arasında değişiyor (2025 fiyatları). Brunch setleri ise 350-500 TL aralığında. Spesifik tabaklar (avokadolu tost, benedict yumurta vb.) 150-250 TL. Çay dahil fiyatlandırma yapan mekanlar (Magro, Morisi) genellikle daha uygun.' },
+      { q: 'Çocuklu ailelere uygun mekan var mı?', a: 'Evet, özellikle Leone ve BeWater çocuk koltuğu ve çocuk menüsü sunuyor. Magro ve Morisi gibi klasik mekanlar çocuklar için de uygun ancak çocuk koltuğu her zaman mevcut olmayabilir; hafta sonu erken saat tercih edin.' },
+      { q: 'Vejetaryen veya vegan seçenekler var mı?', a: 'Baree Brunch ve Paponi Coffee tam vegan menü sunan mekanlar. BeWater\'da vegan brunch seti mevcut. Geleneksel serpme kahvaltı mekanlarında et ürünleri olmadan sipariş verebilirsiniz; çoğu peynir, yumurta, zeytin ve reçellerle zengin bir vejetaryen kahvaltı oluşturur.' }
     ],
     relatedIds: ['b14', 'b24', 'b25'],
   },
@@ -1273,30 +1291,36 @@ export const blogPosts: BlogPost[] = [
     title: "Alsancak'ta Gece Hayati: En İyi Barlar ve Meyhaneler",
     subtitle: 'En İyi Barlar ve Meyhaneler',
     excerpt: 'Alsancak, İzmir\'in gece hayatinin kalbidir. 1390 Sokak (Barlar Sokağı), Kıbrıs Şehitleri Caddesi ve çevre sokaklar, onlarca bar, meyhane, pub ve gece kulubune ev sahipliği yapar. Alsancak\'ta her...',
-    readTime: '5 dk okuma',
+    readTime: '8 dk okuma',
     author: 'Can Özdemir',
     publishDate: '2024-10-28',
     displayDate: '28 Ekim 2024',
     tags: ['Alsancak', 'Bar', 'Meyhane', '1390 Sokak'],
-    intro: 'Alsancak, İzmir\'in gece hayatinin kalbidir. 1390 Sokak (Barlar Sokağı), Kıbrıs Şehitleri Caddesi ve çevre sokaklar, onlarca bar, meyhane, pub ve gece kulubune ev sahipliği yapar. Alsancak\'ta her zevke ve butceye uygun bir mekan bulmak mümkün; ister sakin bir barda birayla sohbet, ister canlı muzikli bir meyhanede rakılı bir gece, isterse dans pisti olan bir kulüp isteyin.',
+    intro: 'Alsancak, İzmir\'in İstiklal Caddesi\'dir. 1453 Sokak, Dario Moreno Sokağı ve Gazi Kadın Sokağı üzerinde 100\'den fazla bar, meyhane ve gece kulübü dizilmiş durumda. Pazartesi-Pazar, 365 gün boyunca canlı bir atmosfer. Bu rehberde İzmir\'in gece hayatının kalbinin atışını takip ediyoruz: Tarihî meyhaneler (Hayyam, Endülüs), modern barlar (1888 Bar, Improvement), canlı müzik mekanları (Mavibar, Kaktüs) ve 2025\'in yeni açılanları. Her mekanın atmosferi, fiyat aralığı, rezervasyon durumu ve hangi tür bir geceye uygun olduğunu açıklıyoruz.',
     sections: [
       {
-        heading: 'Öne Çıkan Özellikler',
-        content: 'Alsancak\'in en popüler mekanlari arasinda sokak aralarindaki butik barlar, Kordon\'daki deniz manzaralı mekanlar ve Çarşamba pazarı sonrasi açılan eglence mekanlari bulunur. Canlı müzik sevenler için rock, caz, pop ve alternatif müzik yapan gruplarin sahne aldigi mekanlar mevcuttur. Alsancak\'ta gece 02:00-03:00\'e kadar eglence devam eder.',
+        heading: 'Tarihî Meyhaneler: Hayyam, Endülüs, Fahrünnisa',
+        content: 'Hayyam Meyhane 1970\'lerde açılmış, Alsancak\'ın en köklü meyhanelerinden. Klasik Türk rakı-meze kültürünün en iyi örneklerinden biri. Kişi başı ortalama 1.200-1.800 TL (içki dahil), rezervasyon hafta sonu 1 hafta önceden şart. Endülüs 1453 Sokak\'ta, İspanyol tapas tarzında küçük mezelerle fark yaratıyor; kişi başı 900-1.400 TL. Fahrünnisa daha sakin, butik bir mekan; 15-20 kişilik kapasite, özel grupların tercihi. Bu üçünde de canlı fasıl müziği (Çarşamba-Cumartesi) ve kaliteli peynir tabakları var.',
       },
       {
-        heading: 'Deneyim ve Atmosfer',
-        content: 'Alsancak gece hayati, \'Alsancak bar\', \'İzmir gece hayati\', \'Alsancak meyhane\', \'1390 Sokak İzmir\' gibi aramalarla bulunabilir. İzmir\'de gecenin tadini cikarmak isteyenler için Alsancak tek adres değil, ama en popüler adres kesinlikle.',
+        heading: 'Modern Barlar: 1888 Bar, Improvement, Mia Bar',
+        content: '1888 Bar, tarihi bir Osmanlı binasında faaliyet gösteren kokteyl bar; şehrin en iyi bartender\'ları burada. 20-25 kokteyl çeşidi, molekül mixology teknikleri. Fiyat aralığı 350-650 TL kokteyl başı; tam bir akşam 1.500-2.500 TL. Improvement Bar yılın yenilerinden; İstanbul\'da uzun süre çalışan şef-bartender Mert Akçora tarafından açıldı. Mia Bar daha rahat atmosfer, 250-450 TL kokteyl. Her üçünde de \'happy hour\' (19:00-21:00) %30 indirimli saatler var.',
+        tip: 'Alsancak gece hayatında cüzdanınız ve telefonunuzu arka cebinize koymayın — özellikle hafta sonu kalabalıklıkta hırsızlık vakaları artabilir. Yan çanta veya belbag kullanın. Dönüş için taksi ayarlayın; Alsancak\'tan Konak/Karşıyaka/Bornova taksi 150-300 TL.',
       },
       {
-        heading: 'Pratik Bilgiler',
-        content: '1390 Sokak, Kıbrıs Şehitleri Caddesi, Kordon Alsancak. Fiyatlar 50-200 TL arasi icecek basina değişir. Hafta sonlari rezervasyon onerilir.',
-        tip: 'İpucu: Gezi öncesi güncel saat ve fiyat bilgilerini doğrulamanızı öneririz.',
+        heading: 'Canlı Müzik: Mavibar, Kaktüs Bar, Signora',
+        content: 'Mavibar 90\'lardan beri Alsancak\'ın canlı müzik referansı. Salı-Pazartesi canlı Türk sanat müziği ve pop; masa başı ücretsiz ama ana sahne yakın koltuk için 500-800 TL masa ücreti. Kaktüs Bar latin müzik ağırlıklı, salsa ve bachata geceleri (Çarşamba-Cumartesi). 1888 civarında bulunan Signora jazz ve blues; kişi başı 600-1.200 TL. Canlı müzik mekanlarında programı önceden (Instagram\'dan) kontrol etmek şart; hafta içi genellikle daha rahat rezervasyon, daha az kalabalık.',
+      },
+      {
+        heading: 'Alsancak Gece Haritası: Sokak Sokak Rehber',
+        content: '1453 Sokak: modern barlar ve kokteyl (1888 Bar, Mia, Improvement). Dario Moreno Sokağı: yemek + ön içki (restoranlar yoğun). Gazi Kadın Sokağı: meyhaneler (Hayyam, Endülüs). Kıbrıs Şehitleri Caddesi: canlı müzik ve gece kulüpleri. Pasaport iskelesi çevresi: sakin barlar, açık hava. Bir gece için ideal rota: 20:00 Dario Moreno\'da akşam yemeği, 22:00 Gazi Kadın Sokağı\'nda meyhane, 00:00 1453 Sokak\'ta kokteyl bar, 02:00 Kıbrıs Şehitleri\'nde gece kulübü. Alsancak gece 03:00-04:00 arası zirve kalabalık, 06:00\'da sakinleşir.',
       }
     ],
     faqs: [
-      { q: 'Burayı ziyaret için en ideal zaman ne zaman?', a: 'İzmir ve çevresi için ilkbahar (Nisan-Haziran) ve sonbahar (Eylül-Kasım) ayları idealdir. Havanın ılıman olduğu ve kalabalığın azaldığı bu dönemlerde hem daha konforlu bir deneyim yaşar, hem de fotoğraflarınız daha iyi çıkar.' },
-      { q: 'Ulaşım için ne öneriyorsunuz?', a: 'İzmir merkez içinde İZBAN, metro, tramvay ve vapur ağı çok gelişmiştir. İzmirim Kart ile tüm toplu ulaşım araçlarını kullanabilirsiniz. Merkez dışı ilçelere gitmek için özel araç veya kiralık otomobil daha esnek bir seçenektir.' }
+      { q: 'Alsancak barlarında dress code var mı?', a: '1888 Bar ve Improvement gibi kokteyl barlar smart casual bekler (şort+terlik olmaz). Meyhaneler ve gece kulüpleri rahat; yaz ayları şort-tişört serbest. Gece kulüplerinde (Kıbrıs Şehitleri\'ndeki büyük yerler) kapıda bazen seçici oluyorlar; özellikle erkek gruplar.' },
+      { q: 'Alsancak\'ta alkolsüz gece için seçenek var mı?', a: 'Evet, 1888 Bar\'da mükemmel bir mocktail menüsü var (200-350 TL). Çoğu meyhane taze sıkılmış meyve suları ve ev yapımı limonata sunuyor. Canlı müzik mekanlarında içki almak zorunluluk değil; giriş ücretini ödeyerek sadece müzik dinleyebilirsiniz.' },
+      { q: 'Alsancak gece saat kaçta en kalabalık?', a: 'Cumartesi gecesi 23:00-02:00 arası zirve. Hafta içi en rahat Salı-Çarşamba; bazı mekanlar %20-30 indirim yapıyor. Pazar akşamları da sakin; gençlerden ziyade arkadaş buluşmaları için ideal. Perşembe öğrenci gecesi; Dokuz Eylül ve Ege Üniversitesi öğrencilerinin yoğun olduğu akşam.' },
+      { q: 'Meyhane ve bar fiyatları 2025\'te ne kadar?', a: 'Meyhane (rakı + mezeler + ızgara) kişi başı 1.200-2.000 TL. Bar (3-4 kokteyl + hafif atıştırma) kişi başı 1.000-1.800 TL. Canlı müzik mekanı (giriş + 2 içki) kişi başı 700-1.400 TL. Gece kulübü (giriş + bottle service) 2-4 kişilik masa 8.000-15.000 TL.' }
     ],
     relatedIds: ['b38', 'b40', 'b41'],
   },
@@ -1343,30 +1367,36 @@ export const blogPosts: BlogPost[] = [
     title: "İzmir Fuar'inda Konser ve Etkinlik Takvimi",
     subtitle: 'İzmir Enternasyonal Fuari (İEF), 1927 yilindan bu yana düzenlenen ve Türkiye\'nin en eski fuarlarinda...',
     excerpt: 'İzmir Enternasyonal Fuari (İEF), 1927 yilindan bu yana düzenlenen ve Türkiye\'nin en eski fuarlarindan biri olan önemli bir kültür ve ticaret etkinligidir. Her yıl Ağustos-Eylül aylarinda...',
-    readTime: '5 dk okuma',
+    readTime: '8 dk okuma',
     author: 'Deniz Korkmaz',
     publishDate: '2024-10-20',
     displayDate: '20 Ekim 2024',
     tags: ['İzmir Fuarı', 'Konser', 'Kültürpark', 'Etkinlik'],
-    intro: 'İzmir Enternasyonal Fuari (İEF), 1927 yilindan bu yana düzenlenen ve Türkiye\'nin en eski fuarlarindan biri olan önemli bir kültür ve ticaret etkinligidir. Her yıl Ağustos-Eylül aylarinda Kültürpark\'ta düzenlenen fuar, konserler, sergiler, sempozyumlar, yarismalar ve eglencelerle İzmir\'in en hareketli donemlerinden birine sahne olur.',
+    intro: 'İzmir Enternasyonal Fuarı (İEF), 1923\'te kurulan, Cumhuriyet\'in ilk resmi uluslararası fuarı ve Türkiye\'nin en uzun süredir devam eden kültür-sanat etkinliği. Her yıl Ağustos sonu - Eylül başında düzenlenen fuar 80+ ülkeden katılımcı ağırlıyor. Ama fuar sadece 11 gün değil; Kültürpark yıl boyu konser, tiyatro, sergi ve festival ev sahipliği yapıyor. 2025 yılında İzmir 1.780 konser ve müzik etkinliği düzenleyeceğini açıkladı — Türkiye\'nin en yoğun kültür şehri haline geldi. Bu rehberde yıl boyunca İzmir\'de gerçekleşen tüm büyük etkinlikleri, bilet fiyatlarını, en iyi konser mekanlarını ve pratik bilgileri bulacaksınız.',
     sections: [
       {
-        heading: 'Öne Çıkan Özellikler',
-        content: 'Fuar surecinde Kültürpark\'in açık hava tiyatrosu ve konser alanlarinda ulusal ve uluslararası sanatcilarin konserleri duzenlenir. Pop, rock, klasik müzik, caz ve halk muzigi konserlerinin yanında tiyatro oyunlari, sinema gosterimleri ve sergiler de ziyaretcileri bekler. Fuar, İzmir\'in kültür sanat takviminin en önemli olayidir.',
+        heading: '2025 Yılı Ana Etkinlikler: Festivaller ve Konserler',
+        content: '2025\'in en büyük etkinlikleri: Mayıs\'ta Uluslararası İzmir Festivali (40+ konser, opera, bale), Temmuz\'da Ura Foça Jazz Festival, Ağustos\'ta İzmir Alsancak Street Food Festival. Konser takviminde Duman (12 Temmuz OM Paparazzi Çeşme), Monolink (Ağustos Yuzu Beach), Sıla (Eylül Açıkhava Tiyatrosu), Yaşar Gülüm (Ekim Ahmed Adnan Saygun Merkezi) öne çıkanlar. Biletler biletix.com ve passo.com üzerinden; fiyatlar 400-3.000 TL arasında. VIP paketler 5.000 TL\'ye kadar çıkabiliyor.',
       },
       {
-        heading: 'Deneyim ve Atmosfer',
-        content: 'İzmir Fuar etkinlikleri, \'İzmir Fuar programi\', \'İzmir konser takvimi\', \'Kültürpark etkinlikleri\', \'İzmir Ağustos etkinlikleri\' gibi aramalarla bulunabilir. İzmir\'e fuar döneminde gelmek, şehri en canlı ve en eglenceli döneminde yasamak demektir. Ucretsiz etkinliklerin yanında biletli konserler de mevcuttur.',
+        heading: 'Kültürpark ve Açıkhava Tiyatrosu',
+        content: 'Kültürpark İzmir\'in kalbi; 420.000 m²\'lik alanda 6 ana salon, açıkhava tiyatrosu, spor tesisleri ve fuar pavyonları barındırıyor. Açıkhava Tiyatrosu 5.000 kişi kapasiteli, Türkiye\'nin en büyüğü; Tarkan, Sezen Aksu, Ajda Pekkan gibi efsanevi sanatçılar yıl boyunca burada sahne alıyor. Salı-Perşembe günleri İzmir Devlet Tiyatrosu\'nun klasik oyunları (Cyrano, Hamlet, Otello) sahneleniyor. Biletler 200-600 TL aralığında. Fuar dönemi (Ağustos sonu) bilet fiyatları %30-50 artıyor, erken almak gerekli.',
       },
       {
-        heading: 'Pratik Bilgiler',
-        content: 'İEF genellikle Ağustos sonu-Eylül ortasinda yapilir. Program www.izmirfuari.com adresinden takip edilebilir. Bazi etkinlikler ücretsiz, konserler biletli.',
-        tip: 'İpucu: Gezi öncesi güncel saat ve fiyat bilgilerini doğrulamanızı öneririz.',
+        heading: 'Ahmed Adnan Saygun Sanat Merkezi (AASSM)',
+        content: 'Güzelyalı\'daki Ahmed Adnan Saygun Sanat Merkezi, Türkiye\'nin Avrupa standartlarındaki tek opera ve senfoni salonu. 2.200 kişilik ana salon, Viyana Musikverein benzeri akustik sistemine sahip. İzmir Devlet Senfoni Orkestrası burada her Cuma akşamı konser veriyor (300-800 TL). Ayrıca Uluslararası İzmir Festivali\'nin ana mekanı; Viyana Filarmoni, Berlin Opera gibi dünya çapında grupların İzmir durakları. Rezervasyon iztdob.gov.tr veya aksm.org üzerinden.',
+        tip: 'Ahmed Adnan Saygun konserlerine gidecekseniz en az 30 dakika önceden gelin; salon çok geniş ve yer bulmak vakit alır. Trafik için taksi yerine metro tercih edin — Üçyol Metro durağından 10 dakika yürüyüşle ulaşılır.',
+      },
+      {
+        heading: 'İEF 2025: Fuar Dönemi Ağustos Sonu',
+        content: '93. İzmir Enternasyonal Fuarı 29 Ağustos - 8 Eylül 2025 tarihleri arasında düzenlenecek. 80+ ülkeden 2.500+ firma katılıyor; tarım, teknoloji, gıda, turizm sektörleri öne çıkıyor. Bilet fiyatı giriş 50 TL (2025), özel gün paketleri 150 TL. Fuar içinde günde ortalama 15-20 konser ücretsiz. Ana etkinlikler: Tarkan açılış konseri (29 Ağustos), Cumhuriyet Bayramı Konseri (6 Eylül), Ayhan Sicimoğlu Latin Tutulması konseri. Fuar alanına Konak Metro\'dan 10 dk yürüyüşle, Basmane İZBAN\'dan 5 dk. Park alanı çok kısıtlı, toplu taşıma şart.',
       }
     ],
     faqs: [
-      { q: 'Burayı ziyaret için en ideal zaman ne zaman?', a: 'İzmir ve çevresi için ilkbahar (Nisan-Haziran) ve sonbahar (Eylül-Kasım) ayları idealdir. Havanın ılıman olduğu ve kalabalığın azaldığı bu dönemlerde hem daha konforlu bir deneyim yaşar, hem de fotoğraflarınız daha iyi çıkar.' },
-      { q: 'Ulaşım için ne öneriyorsunuz?', a: 'İzmir merkez içinde İZBAN, metro, tramvay ve vapur ağı çok gelişmiştir. İzmirim Kart ile tüm toplu ulaşım araçlarını kullanabilirsiniz. Merkez dışı ilçelere gitmek için özel araç veya kiralık otomobil daha esnek bir seçenektir.' }
+      { q: 'İzmir Fuarı (İEF) için bilet hangi dönemlerde satışa çıkar?', a: '2025 İEF biletleri Temmuz başında passo.com ve biletix.com üzerinden satışa çıkar. Erken kuş biletleri %20-30 indirimli; Mayıs-Haziran döneminde fuar web sitesine (izfas.com.tr) abone olarak haberdar olabilirsiniz. Tarkan, Sezen Aksu gibi büyük sanatçıların açılış konserleri için biletler açılışın ertesi günü tükeniyor.' },
+      { q: 'Kültürpark açıkhava konserlerinde hangi koltuk grupları var?', a: 'VIP (sahne önü, 2.500-3.500 TL), Ön Orta (1.500-2.000 TL), Arka Orta (800-1.200 TL) ve Genel (400-700 TL). Genel grup numaralı koltuk değil, yer bulmak için 1-2 saat erken gelmek gerekiyor. Büyük konserlerde (Tarkan, Sezen Aksu) Arka Orta bile son 2 haftaya tükenir.' },
+      { q: 'AASSM senfoni konserlerine ne giymeli?', a: 'Smart casual yeterli; takım elbise zorunlu değil ama t-shirt ve şort uygun olmuyor. Kadınlar için elbise veya pantolon + bluz, erkekler için pantolon + gömlek idealdir. Özel galalarda (Yılbaşı Konseri, Festival Açılışı) siyah kravat/koyu takım elbise kuralı var.' },
+      { q: 'İzmir\'in en büyük festival mevsimi hangisi?', a: 'Ağustos-Eylül en yoğun dönem (İEF + üzüm bağları festivalleri + açıkhava konserleri). Mayıs-Haziran ise klasik müzik yoğunluğu (Uluslararası İzmir Festivali); Nisan sanat galerileri (Contemporary Istanbul bağlantılı etkinlikler); Şubat-Mart tiyatro yoğunluğu (Devlet Tiyatrosu premier sezonları).' }
     ],
     relatedIds: ['b43', 'b44', 'b38'],
   },
@@ -1413,30 +1443,36 @@ export const blogPosts: BlogPost[] = [
     title: "Çeşme'de Beach Clublarda Gunduzden Geceye Eglence",
     subtitle: 'Çeşme, Türkiye\'nin en ünlü beach clublarina ev sahipliği yapan bir tatil beldesidir. Alaçatı ve Cesm...',
     excerpt: 'Çeşme, Türkiye\'nin en ünlü beach clublarina ev sahipliği yapan bir tatil beldesidir. Alaçatı ve Çeşme\'deki beach klüpleri, gün boyu deniz, güneş ve müzik eglencesi sunar, aksama doğru ise DJ...',
-    readTime: '5 dk okuma',
+    readTime: '8 dk okuma',
     author: 'Can Özdemir',
     publishDate: '2024-10-12',
     displayDate: '12 Ekim 2024',
     tags: ['Çeşme', 'Beach Club', 'Alaçatı', 'Yaz Partileri'],
-    intro: 'Çeşme, Türkiye\'nin en ünlü beach clublarina ev sahipliği yapan bir tatil beldesidir. Alaçatı ve Çeşme\'deki beach klüpleri, gün boyu deniz, güneş ve müzik eglencesi sunar, aksama doğru ise DJ performanslari, partiler ve dans eglencesine donusur. Dunyanin ünlü DJ\'lerinin sahne aldigi Çeşme beach klüpleri, yaz aylarinin vazgecilmez eglence merkezlerindendir.',
+    intro: 'Çeşme, Türkiye\'nin beach club kültürünün başladığı yerlerden biri. Aya Yorgi Koyu, Ilıca, Alaçatı sahili boyunca dizili 20\'den fazla beach club; gündüz deniz, öğleden sonra havuz, akşam DJ seti sunuyor. 2025 sezonunda Çeşme beach club dünyası yepyeni bir seviyeye çıktı: Before Sunset, Yuzu, Paparazzi, Sole Mare ve yeni açılan The Vibe Club. Bu rehberde her beach club\'ın giriş ücretini, sezon açılış tarihini, DJ programını, yemek menüsü fiyatlarını ve rezervasyon ipuçlarını paylaşıyoruz. Eğer gece boyu parti planıyorsanız, hangi club\'ların sabaha kadar açık olduğunu da öğreneceksiniz.',
     sections: [
       {
-        heading: 'Öne Çıkan Özellikler',
-        content: 'Çeşme\'deki popüler beach klüpleri günlük giriş ücretleri karsiliginda şezlong, şemsiye, havuz kullanimi ve müzik hizmeti sunar. Bazi beach klüpleri sadece yetiskinlere ozelken, bazilari ailelere de uygundur. Gunluk beach partileri, konsept partiler, kokteyl gunleri ve özel etkinlikler yaz boyunca surer.',
+        heading: 'Aya Yorgi Koyu: Sole Mare, Before Sunset, Paparazzi',
+        content: 'Aya Yorgi Koyu Çeşme\'nin en yoğun beach club bölgesi. Sole Mare (giriş 2.500-4.000 TL, şezlong dahil, 2 kişilik minimum harcama 4.000 TL) sezonun en popüleri; özellikle hafta sonu ünlü sporcular, televizyoncular, iş insanları tarafından tercih ediliyor. Before Sunset ise isminden de anlaşıldığı gibi gün batımı seans\'ı (18:00-22:00) en meşhuru; 1.800-3.000 TL giriş, canlı DJ performansı. Paparazzi en büyük gündüz club\'ı, 1.200-2.000 TL ile en erişilebilir olanı; Duman, Sıla gibi sanatçıların konserleri burada. Üçü de Instagram üzerinden 2-3 gün önceden rezervasyon gerektiriyor.',
       },
       {
-        heading: 'Deneyim ve Atmosfer',
-        content: 'Çeşme beach klüpleri, \'Çeşme beach club\', \'Alaçatı beach\', \'Çeşme yaz partileri\', \'İzmir beach club\' gibi aramalarla bulunabilir. İzmir\'de yazın eglenceli bir gün-gecte geçirmek isteyenler için Çeşme beach klüpleri mükemmel bir secenektir. Rezervasyon sarttir.',
+        heading: 'Ilıca Sahili: Yuzu Beach, Babylon, The Vibe',
+        content: 'Ilıca sahilinde Yuzu Beach 2024\'ün yıldızı oldu; elektronik müzik kültürüne odaklanan bir concept club. Monolink, Peggy Gou, Kora gibi uluslararası DJ\'ler 2025 sezonunda burada sahne alıyor. Giriş 3.500-5.000 TL + 5.000 TL minimum harcama. Babylon Çeşme İstanbul Babylon\'un Ege şubesi; jazz ve indie müzik tercih edenler için. The Vibe Club Aaya 2025\'in en yenisi; futuristik tasarım ve 360° LED ekranlarla; giriş 2.000-3.500 TL. Ilıca sahilinde çok sayıda restoran var, beach club\'lar arasında geçiş yapmak mümkün.',
+        tip: 'Beach club\'lara öğleden sonra 14:00-15:00 arası giderseniz en iyi şezlongları kapabilirsiniz. Akşam için rezervasyon yapmadıysanız 21:00\'den sonra zorlaşıyor. Cüzdanınızı ve telefonunuzu güvenle saklayın; club lockers\'ında saklama hizmeti 100-200 TL.',
       },
       {
-        heading: 'Pratik Bilgiler',
-        content: 'Çeşme ve Alaçatı sahil seridi boyunca. Giriş ücretleri 200-1000 TL arasidir. Sezon Haziran-Eylül arasidir. Rezervasyon sarttir.',
-        tip: 'İpucu: Gezi öncesi güncel saat ve fiyat bilgilerini doğrulamanızı öneririz.',
+        heading: 'Alaçatı: Asma Yaprağı, Fava, Sota ve Bar Kültürü',
+        content: 'Alaçatı\'nın gece hayatı beach club\'lardan farklı bir atmosfere sahip: arnavut kaldırımlı sokaklarda sıralanmış meyhaneler, şarap barları ve lounge\'lar. Asma Yaprağı (Michelin Bib Gourmand) akşam yemeği için; sonra Fava\'da rakı sofrası (kişi başı 1.500-2.500 TL). Sota Alaçatı\'nın en meşhur şarap evi; 150+ şarap seçeneği, peynir tabakları. Gece yarısından sonra Ak Asya Sokak\'taki küçük barlar (Mask, Beya) 03:00\'e kadar açık. Alaçatı\'yı gezmek için yürüyüşten başka yol yok; araba girişi hafta sonu kısıtlanıyor.',
+      },
+      {
+        heading: '2025 Yaz Sezonu: Fiyatlar, Rezervasyon, Ulaşım',
+        content: 'Çeşme beach club sezonu 15 Mayıs\'ta açılıyor, 15 Ekim\'e kadar devam ediyor. En yoğun haftalar 15 Temmuz-25 Ağustos; bu dönemde fiyatlar %30-50 artıyor, rezervasyon 2-3 hafta önceden şart. Kartu kredi hemen her yerde; Türk Lirası tercih edilir (bazı yerlerde Euro/USD de kabul ediyor). İzmir merkezden Çeşme\'ye otobüs ile 1 saat 30 dk (100-150 TL), özel araba 1 saat 15 dk. Beach club\'lar arasında taksi şart; 300-600 TL bir beach club\'dan diğerine. Ahtapot Grup servis transferleri düzenli sefer yapıyor.',
       }
     ],
     faqs: [
-      { q: 'Burayı ziyaret için en ideal zaman ne zaman?', a: 'İzmir ve çevresi için ilkbahar (Nisan-Haziran) ve sonbahar (Eylül-Kasım) ayları idealdir. Havanın ılıman olduğu ve kalabalığın azaldığı bu dönemlerde hem daha konforlu bir deneyim yaşar, hem de fotoğraflarınız daha iyi çıkar.' },
-      { q: 'Ulaşım için ne öneriyorsunuz?', a: 'İzmir merkez içinde İZBAN, metro, tramvay ve vapur ağı çok gelişmiştir. İzmirim Kart ile tüm toplu ulaşım araçlarını kullanabilirsiniz. Merkez dışı ilçelere gitmek için özel araç veya kiralık otomobil daha esnek bir seçenektir.' }
+      { q: 'Çeşme beach club giriş ücretleri nelere dahil?', a: 'Giriş ücreti genellikle şezlong + gölgelik + havlu + 1 adet ücretsiz içecek. Yemek ve ek içkiler ayrıca ücretli. VIP paketler (5.000-10.000 TL) özel masa, bottle service ve daha iyi konum içerir. Minimum harcama kuralı olan club\'larda giriş ücreti yemek/içki harcamasından düşülür.' },
+      { q: 'Hangi beach club 2025 sezonu için en trend?', a: 'Yuzu Beach ve Before Sunset en öne çıkanlar. Yuzu elektronik müzik sevenleri, Before Sunset ise sunset partileri için ideal. The Vibe Club 2025\'in açılış club\'ı ve Instagram akımı; giriş biraz daha uygun (2.000 TL\'den). Ünlü sporcu/sanatçılar görmek isterseniz Sole Mare (perşembe-cumartesi).' },
+      { q: 'Çocuklu ailelere beach club önerilir mi?', a: 'Çeşme beach club\'larının çoğu 18+ değil ancak yaş sınırı koymadıkları dönemlerde (gündüz 11:00-18:00 arası) çocuk girişi kabul ediyor. Paparazzi ve Sole Mare\'de çocuk havuzu var. Akşam 18:00 sonrası DJ seti başladığında çocuk gideremezsiniz. Aile için Ilıca Plajı\'nın halka açık kısmı daha uygun.' },
+      { q: 'Alkolsüz eğlence için Çeşme beach club uygun mu?', a: 'Evet, beach club\'ların çoğunda geniş mocktail menüsü, taze meyve suları, kahve ve çay seçenekleri var. Gündüz sezonunda (12:00-18:00) alkolsüz atmosfer daha baskın; akşam 20:00 sonrası DJ ve parti atmosferi yoğunlaşıyor. Özellikle Before Sunset\'in mocktail menüsü çok zengin (150-300 TL).' }
     ],
     relatedIds: ['b37', 'b38', 'b40'],
   },
@@ -1483,30 +1519,36 @@ export const blogPosts: BlogPost[] = [
     title: "İzmir'de Tiyatro ve Kültür Sanat Etkinlikleri",
     subtitle: 'İzmir, kültür ve sanat etkinlikleri acisindan Türkiye\'nin en zengin sehirlerinden biridir. İzmir Dev...',
     excerpt: 'İzmir, kültür ve sanat etkinlikleri acisindan Türkiye\'nin en zengin sehirlerinden biridir. İzmir Devlet Tiyatrosu, İzmir Büyükşehir Belediyesi şehir Tiyatrolari, Karşıyaka Belediyesi Tiyatrosu ve...',
-    readTime: '5 dk okuma',
+    readTime: '8 dk okuma',
     author: 'Deniz Korkmaz',
     publishDate: '2024-10-04',
     displayDate: '4 Ekim 2024',
     tags: ['Tiyatro', 'Opera', 'Ahmed Adnan Saygun', 'Sanat'],
-    intro: 'İzmir, kültür ve sanat etkinlikleri acisindan Türkiye\'nin en zengin sehirlerinden biridir. İzmir Devlet Tiyatrosu, İzmir Büyükşehir Belediyesi şehir Tiyatrolari, Karşıyaka Belediyesi Tiyatrosu ve özel tiyatrolar, butun sezon boyunca oyunlar sergiler. Ahmed Adnan Saygun Sanat Merkezi, Alsancak Devlet Opera ve Balesi, Ege Üniversitesi Kültür Merkezi gibi mekanlar konser ve gosterilerin merkezidir.',
+    intro: 'İzmir, Cumhuriyet döneminde \'Türkiye\'nin ikinci kültür başkenti\' olarak yapılandırıldı. 1932\'de İzmir Devlet Tiyatrosu, 1941\'de İzmir Devlet Senfoni Orkestrası kuruldu — her ikisi de Türkiye\'nin en eski kurumlarından. Bugün İzmir, Ahmed Adnan Saygun Sanat Merkezi (AASSM), Fransız Kültür Merkezi, Goethe Enstitüsü, İKSEV ve 20+ özel tiyatro sahnesiyle Türkiye\'nin en aktif sanat şehri. 2025\'te 295.000 kişinin ziyaret ettiği Refik Anadol sergisi de İzmir\'de düzenlendi. Bu rehberde yıl boyu süren opera, bale, senfoni, tiyatro ve sergi takvimini, mekan rehberini ve pratik bilet bilgilerini paylaşıyoruz.',
     sections: [
       {
-        heading: 'Öne Çıkan Özellikler',
-        content: 'İzmir\'de Ekim-Haziran tiyatro sezonunda her hafta onlarca farklı oyun sahnelenir. Ayrıca Ahmed Adnan Saygun Sanat Merkezi\'nde klasik müzik konserleri, Alsancak Opera ve Balesi\'nde opera ve bale gosterileri duzenlenir. İzmir Devlet Senfoni Orkestrasi konserleri, caz festivalleri, kitap fuarlari ve fotoğraf sergileri de kültür sanat takviminin önemli parcalari.',
+        heading: 'Ahmed Adnan Saygun Sanat Merkezi (AASSM)',
+        content: 'Güzelyalı\'daki AASSM Türkiye\'nin opera, senfoni ve konçerto için en üst düzey mekanı. 2.200 kişilik ana salon Viyana Musikverein akustik sistemine sahip; 400 kişilik oda müziği salonu da ayrıca tercih ediliyor. İzmir Devlet Senfoni Orkestrası (İDSO) her Cuma ve Pazar akşamı burada konser veriyor; biletler 300-900 TL. Yılda 8-10 opera prodüksiyonu düzenleniyor (Carmen, La Traviata, Aida gibi klasikler). Uluslararası İzmir Festivali (Mayıs-Haziran) AASSM\'nin ana mekanı; Viyana Filarmoni, Berlin Operası gibi dünya çapındaki gruplar ziyaret ediyor.',
+        tip: 'AASSM biletleri için aksm.org veya iztdob.gov.tr\'ye üye olun; üyelere her prodüksiyonun sezon öncesinden satış hakkı sunuluyor. İzmir Devlet Tiyatrosu ve Opera Bale\'sinin abonelik sistemi çok uygun: yılda 10 gösteri 2.500-4.000 TL.',
       },
       {
-        heading: 'Deneyim ve Atmosfer',
-        content: 'İzmir tiyatro ve sanat etkinlikleri, \'İzmir tiyatro oyunlari\', \'İzmir konser programi\', \'Ahmed Adnan Saygun\', \'İzmir kültür sanat\' gibi aramalarla bulunabilir. İzmir\'de sanatla ic ice bir gece geçirmek isteyenler için oldukca geniş bir program mevcuttur. Biletler genellikle uygun fiyatlidir.',
+        heading: 'Devlet Tiyatrosu ve Kültürpark Açıkhava',
+        content: 'Konak Kültür Merkezi (Karataş) İzmir Devlet Tiyatrosu\'nun ana sahnesi; klasik eserler (Hamlet, Cyrano de Bergerac, Hayvan Çiftliği) burada sahneleniyor. Ahmet Vefik Paşa Sahnesi modern oyunlar için. Biletler 80-250 TL — aşırı uygun ve kalite çok yüksek. Kültürpark Açıkhava Tiyatrosu 5.000 kişi kapasiteli; yaz aylarında Shakespeare müzikalleri, modern klasikler ve çocuk oyunları. İzmirSanat (İzmir Belediyesi bağlı özel yapı) özellikle çağdaş tiyatro ve dans performansları yapıyor.',
       },
       {
-        heading: 'Pratik Bilgiler',
-        content: 'Biletler için www.izmirbuyuksehir.tr ve www.kultursanat.izmir.bel.tr adreslerine bakabilirsiniz. Fiyatlar 30-200 TL arasidir. Sezon Ekim-Haziran arasidir.',
-        tip: 'İpucu: Gezi öncesi güncel saat ve fiyat bilgilerini doğrulamanızı öneririz.',
+        heading: 'Sergi Alanları: İKSEV, Arkas Sanat, Refik Anadol',
+        content: 'İKSEV (İzmir Kültür Sanat ve Eğitim Vakfı), Alsancak\'ta 4 katlı bir galeri kompleksi; yılda 12-15 sergi düzenliyor, giriş çoğunlukla ücretsiz. Arkas Sanat Merkezi (Alsancak, eski gümrük binasında) yüksek bütçeli uluslararası sergilerin İzmir durağı; Refik Anadol İzmir Serüveni (2024) 295.000 ziyaretçiyle rekor kırdı. 2025\'te aynı mekanda \'Picasso Baskılar\' sergisi planlanıyor. Kedi Kültür Sanat, sanat kitapları ve bağımsız galeri; sosyalleşme için ideal atölye programları sunuyor (20 kişilik gruplar, ücretsiz).',
+      },
+      {
+        heading: 'Festivaller: 2025 Takvim',
+        content: 'Uluslararası İzmir Festivali (Mayıs-Haziran): 40+ konser, opera, bale. Biletler 200-2.500 TL. İzmir Avrupa Caz Festivali (Mart): Avrupa\'nın en iyi caz isimleri AASSM\'de. İzmir Tiyatro Festivali (Kasım): 1 ay boyunca ulusal ve uluslararası tiyatro grupları. Ege Üniversitesi\'nin IFSAK organizasyonu fotoğraf festivali her Ekim; sergiler ücretsiz. Kültürpark Büyük Fuar döneminde günde 10+ ücretsiz konser (29 Ağustos - 8 Eylül). Festival biletleri genellikle Nisan-Mayıs\'ta satışa çıkıyor, erken kuş biletleri %25-40 indirimli.',
       }
     ],
     faqs: [
-      { q: 'Burayı ziyaret için en ideal zaman ne zaman?', a: 'İzmir ve çevresi için ilkbahar (Nisan-Haziran) ve sonbahar (Eylül-Kasım) ayları idealdir. Havanın ılıman olduğu ve kalabalığın azaldığı bu dönemlerde hem daha konforlu bir deneyim yaşar, hem de fotoğraflarınız daha iyi çıkar.' },
-      { q: 'Ulaşım için ne öneriyorsunuz?', a: 'İzmir merkez içinde İZBAN, metro, tramvay ve vapur ağı çok gelişmiştir. İzmirim Kart ile tüm toplu ulaşım araçlarını kullanabilirsiniz. Merkez dışı ilçelere gitmek için özel araç veya kiralık otomobil daha esnek bir seçenektir.' }
+      { q: 'İzmir\'de hangi tiyatro daha yüksek kaliteli?', a: 'Kalite olarak İzmir Devlet Tiyatrosu (Konak Kültür Merkezi) ve İzmir Devlet Opera ve Balesi (AASSM) Türkiye\'nin en iyileri arasında. Yönetim, bütçe, teknik ekip olarak ulusal çapta rekabet ediyorlar. Özel tiyatrolar (Altıdan Sonra, Barok Tiyatro, Semaver Kumpanya) daha deneysel ve güncel oyunlar sergiliyor — her iki kategorinin de kendine has izleyici kitlesi var.' },
+      { q: 'AASSM\'ye dress code ile gitmek gerekir mi?', a: 'Smart casual zorunlu ancak takım elbise şart değil. Opera premier\'leri ve yılbaşı galaları için daha resmi kıyafet (koyu takım, zarif elbise) uygun olur. Normal senfoni ve tiyatro akşamlarında pantolon + gömlek + ceket (erkek), elbise veya pantolon + bluz (kadın) yeterli. Şort, terlik ve atlet kabul edilmiyor.' },
+      { q: 'Refik Anadol benzeri büyük sergiler ne zaman düzenleniyor?', a: 'Arkas Sanat Merkezi yılda 2-3 büyük uluslararası sergi düzenliyor; genellikle Eylül-Aralık ve Şubat-Mayıs dönemlerinde. 2025 için Picasso, Yayoi Kusama ve Marina Abramović benzeri isimler gündemde. İKSEV ise yılda 12-15 sergiye ev sahipliği yapıyor; orta ve üst düzey Türk sanatçılar.' },
+      { q: 'Çocuklarla İzmir\'de hangi kültür etkinlikleri yapılabilir?', a: 'İzmir Çocuk Tiyatrosu (Kültürpark) ve Semaver Kumpanya çocuk oyunları özel takvime göre; Karagöz-Hacivat gösterileri (Büyükşehir Belediyesi, ücretsiz), Bilim Merkezi (Balçova, atölye çalışmaları + 3D planetaryum). Ayrıca Açıkhava Tiyatrosu\'nda yaz aylarında çocuklar için müzikal ve masal oyunları sahneleniyor.' }
     ],
     relatedIds: ['b39', 'b44', 'b42'],
   },

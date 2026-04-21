@@ -137,6 +137,11 @@ export default function GuidesPage() {
                     src={featured.image}
                     alt={featured.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement
+                      target.onerror = null
+                      target.src = '/images/kulturpark-izmir.jpg'
+                    }}
                   />
                   <div className="absolute top-6 left-6">
                     <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold text-white gradient-sunset">
@@ -252,6 +257,11 @@ export default function GuidesPage() {
                         alt={p.title}
                         className="w-full h-full object-cover card-image-zoom"
                         loading="lazy"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement
+                          target.onerror = null
+                          target.src = '/images/kulturpark-izmir.jpg'
+                        }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       <div className="absolute top-4 left-4">

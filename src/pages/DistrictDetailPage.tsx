@@ -89,6 +89,11 @@ export default function DistrictDetailPage() {
               src={district.image}
               alt={district.name}
               className="w-full h-full object-cover scale-110 animate-slow-zoom"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement
+                target.onerror = null
+                target.src = '/images/kulturpark-izmir.jpg'
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
           </div>
@@ -242,6 +247,11 @@ export default function DistrictDetailPage() {
                         alt={r.name}
                         className="w-full h-full object-cover card-image-zoom"
                         loading="lazy"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement
+                          target.onerror = null
+                          target.src = '/images/kulturpark-izmir.jpg'
+                        }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                       <div className="absolute bottom-3 left-3 right-3">

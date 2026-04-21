@@ -178,6 +178,11 @@ export default function DistrictsPage() {
                           alt={d.name}
                           className="w-full h-full object-cover card-image-zoom"
                           loading="lazy"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement
+                            target.onerror = null
+                            target.src = '/images/kulturpark-izmir.jpg'
+                          }}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                         <div className="absolute top-4 left-4">

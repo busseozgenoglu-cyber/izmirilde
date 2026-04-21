@@ -113,6 +113,11 @@ export default function BlogDetailPage() {
               src={post.image}
               alt={post.title}
               className="w-full h-full object-cover scale-110 animate-slow-zoom"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement
+                target.onerror = null
+                target.src = '/images/kulturpark-izmir.jpg'
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
           </div>
@@ -345,6 +350,11 @@ export default function BlogDetailPage() {
                         alt={r.title}
                         className="w-full h-full object-cover card-image-zoom"
                         loading="lazy"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement
+                          target.onerror = null
+                          target.src = '/images/kulturpark-izmir.jpg'
+                        }}
                       />
                       <div className="absolute top-4 left-4">
                         <span className="inline-block px-3 py-1 rounded-full text-[10px] font-semibold text-white gradient-sunset">
