@@ -1,9 +1,69 @@
+# izmirilde.com — robots.txt
+# Son güncelleme: 2025
+
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /*.json$
+Disallow: /src/
+Disallow: /node_modules/
+
+# Googlebot özel izinler
+User-agent: Googlebot
+Allow: /
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.webp$
+Disallow: /api/
+
+# Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.webp$
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Disallow: /api/
+
+# AI crawlers (explicitly allowed for visibility in AI search)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Block resource-hungry/bad bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
 
 # Sitemap
 Sitemap: https://izmirilde.com/sitemap.xml
 
-# Crawler settings
-Crawl-delay: 1
+# Host directive
+Host: https://izmirilde.com

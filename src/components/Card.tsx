@@ -34,12 +34,17 @@ export default function Card({
       }}
     >
       {/* Image */}
-      <div className={`relative ${imgAspect} overflow-hidden`}>
+      <div className={`relative ${imgAspect} overflow-hidden bg-gradient-to-br from-orange-50 to-red-50`}>
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover card-image-zoom"
           loading="lazy"
+          onError={(e) => {
+            const target = e.target as HTMLImageElement
+            target.onerror = null
+            target.src = '/images/kulturpark-izmir.jpg'
+          }}
         />
       </div>
 
