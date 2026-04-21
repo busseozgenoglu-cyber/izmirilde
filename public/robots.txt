@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://izmirilde.com/sitemap.xml
+
+# Crawler settings
+Crawl-delay: 1

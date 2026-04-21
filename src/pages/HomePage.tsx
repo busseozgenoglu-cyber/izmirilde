@@ -1,6 +1,6 @@
-import { useState, useRef, useMemo } from 'react'
+import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { Search, X } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 import SectionHeader from '../components/SectionHeader'
 import Card from '../components/Card'
 import FilterTabs from '../components/FilterTabs'
@@ -13,129 +13,72 @@ import {
   neighborhoodCards,
   marqueeItems,
   filterTabs,
-  placeCards,
-  eventCards,
-  guideCards,
 } from '../data'
 
-// ===================== ARAMA TİPLERİ =====================
-type SearchItem = {
-  id: string
-  title: string
-  subtitle: string
-  category: string
-  location?: string
-  image: string
-  type: 'mekan' | 'etkinlik' | 'rehber'
-}
-
-function getAllSearchItems(): SearchItem[] {
-  const places: SearchItem[] = placeCards.map((p) => ({
-    id: `p-${p.id}`,
-    title: p.title,
-    subtitle: p.subtitle,
-    category: p.category,
-    location: p.location,
-    image: p.image,
-    type: 'mekan' as const,
-  }))
-  const events: SearchItem[] = eventCards.map((e) => ({
-    id: `e-${e.id}`,
-    title: e.title,
-    subtitle: `${e.day} ${e.month} — ${e.venue}`,
-    category: e.category,
-    location: e.venue,
-    image: e.image,
-    type: 'etkinlik' as const,
-  }))
-  const guides: SearchItem[] = guideCards.map((g) => ({
-    id: `g-${g.id}`,
-    title: g.title,
-    subtitle: g.subtitle,
-    category: g.category,
-    image: g.image,
-    type: 'rehber' as const,
-  }))
-  return [...places, ...events, ...guides]
-}
-
 // ===================== HERO SECTION (SADECE GÖRSEL) =====================
-function HeroSection({ onSearch }: { onSearch: (q: string) => void }) {
-  const [query, setQuery] = useState('')
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (query.trim()) onSearch(query.trim())
-  }
-
+function HeroSection() {
   return (
     <section className="relative w-full h-screen min-h-[600px] overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with slow zoom */}
       <div className="absolute inset-0">
         <img
           src="/images/izmir-hero-still.jpg"
           alt="İzmir"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-110 animate-slow-zoom"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
       </div>
 
-      {/* Centered Search */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
+      {/* Centered content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
+        <span className="inline-block px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white text-xs font-semibold uppercase tracking-[0.2em] mb-8 animate-fade-in">
+          Ege'nin İncisi · 2025 Rehberi
+        </span>
+
         <h1
-          className="text-white font-bold text-center mb-8 px-4"
+          className="text-white font-bold text-center mb-6 px-4 animate-fade-in-up"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: 'clamp(36px, 7vw, 72px)',
-            lineHeight: 1.0,
-            letterSpacing: '-0.02em',
+            fontSize: 'clamp(40px, 8vw, 88px)',
+            lineHeight: 0.95,
+            letterSpacing: '-0.03em',
             textShadow: '0 2px 20px rgba(0,0,0,0.3)',
           }}
         >
-          İzmir&apos;in En İyi
+          İzmir'in En İyi
           <br />
-          Mekanlarını Keşfet
+          <em className="gradient-text-sunset not-italic">Mekanlarını</em> Keşfet
         </h1>
 
-        {/* Search Bar */}
-        <form
-          onSubmit={handleSubmit}
-          className="glass-panel rounded-2xl px-5 py-3.5 flex items-center gap-3 w-full max-w-xl shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
+        <p
+          className="text-white/90 text-lg sm:text-xl max-w-2xl leading-relaxed mb-10 animate-fade-in-up"
+          style={{ animationDelay: '0.2s' }}
         >
-          <Search className="w-5 h-5 text-black/40 shrink-0" />
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Mekan, etkinlik veya mahalle ara..."
-            className="flex-1 bg-transparent text-base text-black placeholder:text-black/40 min-w-0"
-          />
-          <button
-            type="submit"
-            className="shrink-0 px-5 py-2 bg-black text-white rounded-lg text-sm font-medium hover:bg-black/90 transition-colors"
-          >
-            Ara
-          </button>
-        </form>
+          Efes'ten Alaçatı'ya, Kordon'dan Kemeraltı'na —
+          <br className="hidden sm:block" />
+          editörlerimizin hazırladığı 50 detaylı rehberle İzmir'i yaşayın.
+        </p>
 
-        {/* Quick Tags */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mt-5">
-          {[
-            { label: '☕ Kafeler', query: 'kafe' },
-            { label: '🍽 Restoranlar', query: 'restoran' },
-            { label: '🌅 Beach', query: 'beach' },
-            { label: '🎭 Etkinlikler', query: 'konser' },
-            { label: '📍 Alsancak', query: 'alsancak' },
-            { label: '📍 Çeşme', query: 'çeşme' },
-          ].map((tag) => (
-            <span
-              key={tag.label}
-              onClick={() => onSearch(tag.query)}
-              className="px-4 py-1.5 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full text-[13px] text-white/80 hover:bg-white/25 transition-colors cursor-pointer"
-            >
-              {tag.label}
-            </span>
-          ))}
+        {/* CTA Buttons */}
+        <div
+          className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
+          style={{ animationDelay: '0.4s' }}
+        >
+          <Link
+            to="/guides"
+            className="group inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full gradient-sunset text-white font-semibold shadow-xl hover:scale-[1.03] transition-transform"
+          >
+            50 Rehberi Keşfet
+            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+          <Link
+            to="/places"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white/15 backdrop-blur-md border border-white/30 text-white font-semibold hover:bg-white/25 transition-colors"
+          >
+            Mekanları Gör
+          </Link>
         </div>
       </div>
 
@@ -150,201 +93,6 @@ function HeroSection({ onSearch }: { onSearch: (q: string) => void }) {
   )
 }
 
-// ===================== ARAMA SONUÇLARI =====================
-function SearchResultsSection({
-  query,
-  onClear,
-}: {
-  query: string
-  onClear: () => void
-}) {
-  const allItems = useMemo(() => getAllSearchItems(), [])
-  const results = useMemo(() => {
-    if (!query) return []
-    const q = query.toLowerCase()
-    return allItems.filter(
-      (item) =>
-        item.title.toLowerCase().includes(q) ||
-        item.subtitle.toLowerCase().includes(q) ||
-        item.category.toLowerCase().includes(q) ||
-        (item.location && item.location.toLowerCase().includes(q))
-    )
-  }, [query, allItems])
-
-  const mekanlar = results.filter((r) => r.type === 'mekan')
-  const etkinlikler = results.filter((r) => r.type === 'etkinlik')
-  const rehberler = results.filter((r) => r.type === 'rehber')
-
-  if (!query) return null
-
-  return (
-    <section className="bg-white py-16 lg:py-20 border-b border-black/5">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-[4vw]">
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-black/50 mb-2">
-              ARAMA SONUÇLARI
-            </p>
-            <h2 className="text-h3 font-semibold leading-[1.2] tracking-[-0.02em]">
-              &quot;{query}&quot; için {results.length} sonuç
-            </h2>
-          </div>
-          <button
-            onClick={onClear}
-            className="flex items-center gap-2 px-4 py-2 border border-black/10 rounded-lg text-sm text-black/60 hover:bg-black/5 transition-colors"
-          >
-            <X className="w-4 h-4" />
-            Temizle
-          </button>
-        </div>
-
-        {results.length === 0 ? (
-          <div className="text-center py-20">
-            <p className="text-lg text-black/40">
-              Aramanızla eşleşen sonuç bulunamadı.
-            </p>
-            <p className="text-sm text-black/30 mt-2">
-              Farklı bir kelime deneyin veya quick tags&apos;leri kullanın.
-            </p>
-          </div>
-        ) : (
-          <>
-            {mekanlar.length > 0 && (
-              <div className="mb-10">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full gradient-sunset" />
-                  Mekanlar ({mekanlar.length})
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {mekanlar.map((item, i) => (
-                    <Link to="/places" key={item.id}>
-                      <div
-                        className="card-hover rounded-2xl overflow-hidden bg-white"
-                        style={{
-                          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                          animationDelay: `${i * 0.08}s`,
-                        }}
-                      >
-                        <div className="aspect-[3/2] overflow-hidden">
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-full object-cover card-image-zoom"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="p-5">
-                          <span className="inline-block px-3 py-1 rounded-full text-[10px] font-medium text-white gradient-sunset mb-2">
-                            {item.category}
-                          </span>
-                          <h4 className="font-semibold text-base leading-snug mb-1">
-                            {item.title}
-                          </h4>
-                          <p className="text-sm text-black/50 line-clamp-1">
-                            {item.subtitle}
-                          </p>
-                          {item.location && (
-                            <p className="text-xs text-black/40 mt-1">
-                              {item.location}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {etkinlikler.length > 0 && (
-              <div className="mb-10">
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full gradient-sunset" />
-                  Etkinlikler ({etkinlikler.length})
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {etkinlikler.map((item, i) => (
-                    <Link to="/events" key={item.id}>
-                      <div
-                        className="card-hover rounded-2xl overflow-hidden bg-white"
-                        style={{
-                          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                          animationDelay: `${i * 0.08}s`,
-                        }}
-                      >
-                        <div className="aspect-[3/2] overflow-hidden">
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-full object-cover card-image-zoom"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="p-5">
-                          <span className="inline-block px-3 py-1 rounded-full text-[10px] font-medium text-white gradient-sunset mb-2">
-                            {item.category}
-                          </span>
-                          <h4 className="font-semibold text-base leading-snug mb-1">
-                            {item.title}
-                          </h4>
-                          <p className="text-sm text-black/50 line-clamp-1">
-                            {item.subtitle}
-                          </p>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {rehberler.length > 0 && (
-              <div>
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full gradient-sunset" />
-                  Rehberler ({rehberler.length})
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {rehberler.map((item, i) => (
-                    <Link to="/guides" key={item.id}>
-                      <div
-                        className="card-hover rounded-2xl overflow-hidden bg-white"
-                        style={{
-                          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                          animationDelay: `${i * 0.08}s`,
-                        }}
-                      >
-                        <div className="aspect-[3/2] overflow-hidden">
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-full object-cover card-image-zoom"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="p-5">
-                          <span className="inline-block px-3 py-1 rounded-full text-[10px] font-medium text-white gradient-sunset mb-2">
-                            {item.category}
-                          </span>
-                          <h4 className="font-semibold text-base leading-snug mb-1">
-                            {item.title}
-                          </h4>
-                          <p className="text-sm text-black/50 line-clamp-1">
-                            {item.subtitle}
-                          </p>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </>
-        )}
-      </div>
-    </section>
-  )
-}
 
 // ===================== TRENDING SECTION =====================
 function TrendingSection() {
@@ -637,27 +385,52 @@ function CTASection() {
 
 // ===================== HOMEPAGE =====================
 export default function HomePage() {
-  const [searchQuery, setSearchQuery] = useState('')
   useScrollReveal()
 
   return (
-    <main>
-      <HeroSection onSearch={setSearchQuery} />
-
-      {searchQuery && (
-        <SearchResultsSection
-          query={searchQuery}
-          onClear={() => setSearchQuery('')}
+    <>
+      <Helmet>
+        <title>izmirilde — İzmir Rehberi, Mekanlar, Etkinlikler ve Keşfedilecek 50 Yer</title>
+        <meta
+          name="description"
+          content="İzmir'in en iyi mekanları, etkinlikleri ve gezilecek yerleri. Efes, Alaçatı, Çeşme, Kordon, Kemeraltı ve daha fazlası için editör rehberi. 50 detaylı blog yazısı."
         />
-      )}
-
-      <TrendingSection />
-      <DiscoverySection />
-      <PopularListsSection />
-      <NewsSection />
-      <NeighborhoodSection />
-      <MarqueeSection />
-      <CTASection />
-    </main>
+        <meta
+          name="keywords"
+          content="İzmir, İzmir gezilecek yerler, İzmir yapılacak şeyler, İzmir rehberi, Efes, Alaçatı, Çeşme, Kordon, Kemeraltı, İzmir mekanlar, İzmir etkinlikler, izmirilde"
+        />
+        <link rel="canonical" href="https://izmirilde.com/" />
+        <meta property="og:title" content="izmirilde — İzmir Rehberi, Mekanlar, Etkinlikler" />
+        <meta property="og:description" content="İzmir'de ne yapılır, nereye gidilir? 50 detaylı rehberle Ege'nin incisini keşfedin." />
+        <meta property="og:url" content="https://izmirilde.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://izmirilde.com/images/izmir-hero-still.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'izmirilde',
+            url: 'https://izmirilde.com/',
+            description: "İzmir rehberi, mekanlar, etkinlikler ve 50 detaylı keşif yazısı",
+            inLanguage: 'tr-TR',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://izmirilde.com/guides?q={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
+          })}
+        </script>
+      </Helmet>
+      <main>
+        <HeroSection />
+        <TrendingSection />
+        <DiscoverySection />
+        <PopularListsSection />
+        <NewsSection />
+        <NeighborhoodSection />
+        <MarqueeSection />
+        <CTASection />
+      </main>
+    </>
   )
 }

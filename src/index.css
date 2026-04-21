@@ -278,3 +278,68 @@ input:focus, textarea:focus, select:focus {
   opacity: 0.9;
   transition: all 0.15s ease;
 }
+
+/* ===================== BLOG DETAIL ANIMATIONS ===================== */
+@keyframes slowZoom {
+  0% { transform: scale(1.1); }
+  50% { transform: scale(1.18); }
+  100% { transform: scale(1.1); }
+}
+
+.animate-slow-zoom {
+  animation: slowZoom 20s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes parallaxFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-parallax-float {
+  animation: parallaxFloat 4s ease-in-out infinite;
+}
+
+/* Smooth prose typography in blog body */
+.prose p {
+  margin-bottom: 1.25em;
+}
+
+/* Details/Summary styling for FAQ */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Mobile-first blog reading experience */
+@media (max-width: 640px) {
+  article h2 {
+    font-size: 24px !important;
+  }
+  article p {
+    font-size: 16px !important;
+  }
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

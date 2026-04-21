@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { label: 'Keşfet', href: '/guides' },
+  { label: 'Keşfet', href: '/' },
   { label: 'Mekanlar', href: '/places' },
   { label: 'Etkinlikler', href: '/events' },
   { label: 'Rehberler', href: '/guides' },
