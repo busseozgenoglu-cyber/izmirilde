@@ -10,6 +10,7 @@ import BlogDetailPage from './pages/BlogDetailPage'
 import DistrictsPage from './pages/DistrictsPage'
 import DistrictDetailPage from './pages/DistrictDetailPage'
 import BestPlacesPage from './pages/BestPlacesPage'
+import HiddenPlacesPage from './pages/HiddenPlacesPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -36,6 +37,7 @@ function App() {
         <Route path="/districts" element={<DistrictsPage />} />
         <Route path="/districts/:slug" element={<DistrictDetailPage />} />
         <Route path="/best-places" element={<BestPlacesPage />} />
+        <Route path="/hidden-places" element={<HiddenPlacesPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />

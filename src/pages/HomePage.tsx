@@ -14,6 +14,7 @@ import {
   marqueeItems,
   filterTabs,
 } from '../data'
+import { hiddenPlaces } from '../data/hiddenPlaces'
 
 // ===================== HERO SECTION (SADECE GÖRSEL) =====================
 function HeroSection() {
@@ -353,6 +354,101 @@ function MarqueeSection() {
   )
 }
 
+// ===================== HIDDEN PLACES SECTION =====================
+function HiddenPlacesSection() {
+  // Take 6 randomly selected, but stable ones
+  const featuredHidden = [
+    hiddenPlaces[0],   // Saklı Cennet Koyu - Foça
+    hiddenPlaces[1],   // Dolungaz Koyu - Karaburun
+    hiddenPlaces[10],  // Erythrai Antik Kenti
+    hiddenPlaces[17],  // Ayaz Şelalesi
+    hiddenPlaces[25],  // Doğanbey Köyü
+    hiddenPlaces[40],  // Kalanoros Tepesi
+  ].filter(Boolean)
+
+  return (
+    <section className="relative py-20 lg:py-28 bg-gradient-to-b from-white via-orange-50/20 to-white overflow-hidden">
+      {/* Sparkle decoration */}
+      <div className="sparkle-star" style={{ top: '10%', left: '5%', animationDelay: '0s' }} />
+      <div className="sparkle-star" style={{ top: '25%', left: '95%', animationDelay: '0.5s' }} />
+      <div className="sparkle-star" style={{ top: '70%', left: '8%', animationDelay: '1s' }} />
+
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8 relative z-10">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 reveal">
+          <div>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-0.5 gradient-sunset" />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-black/60">
+                04 — Saklı Cennetler
+              </span>
+            </div>
+            <h2
+              className="text-4xl sm:text-5xl font-bold leading-[0.95] tracking-[-0.02em] max-w-3xl"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Turistlerin <em className="gradient-text-sunset not-italic">Bilmediği</em><br />
+              50 Gizli Yer
+            </h2>
+            <p className="mt-4 text-black/60 text-lg max-w-2xl">
+              Foça'nın bilinmeyen koylarından, Bergama'nın antik hazinelerine. Yerel halkın yıllardır gittiği saklı cennetler.
+            </p>
+          </div>
+          <Link
+            to="/hidden-places"
+            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-sunset text-white font-semibold hover:scale-105 transition-transform whitespace-nowrap"
+          >
+            50 Yerin Tümünü Gör →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredHidden.map((p, i) => (
+            <Link
+              to="/hidden-places"
+              key={p.id}
+              className="group block rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-500 card-hover reveal"
+              style={{ transitionDelay: `${i * 0.1}s` }}
+            >
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="w-full h-full object-cover card-image-zoom"
+                  loading="lazy"
+                  onError={(e) => {
+                    const t = e.target as HTMLImageElement
+                    t.onerror = null
+                    t.src = '/images/kulturpark-izmir.jpg'
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute top-4 left-4">
+                  <span className="inline-block px-3 py-1 rounded-full text-[11px] font-semibold text-white gradient-sunset shadow-md">
+                    🌟 Gizli
+                  </span>
+                </div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className="inline-block px-3 py-1 rounded-full text-[10px] font-semibold text-white bg-black/60 backdrop-blur-sm">
+                    📍 {p.district}
+                  </span>
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="font-bold text-lg leading-tight mb-2 group-hover:gradient-text-sunset transition-all" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {p.name}
+                </h3>
+                <p className="text-sm text-black/60 line-clamp-2 leading-relaxed">
+                  {p.description}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // ===================== CTA SECTION =====================
 function CTASection() {
   return (
@@ -450,6 +546,7 @@ export default function HomePage() {
         <PopularListsSection />
         <NewsSection />
         <NeighborhoodSection />
+        <HiddenPlacesSection />
         <MarqueeSection />
         <CTASection />
       </main>

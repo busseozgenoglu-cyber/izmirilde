@@ -4,10 +4,9 @@ import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Keşfet', href: '/' },
+  { label: 'Gizli Yerler', href: '/hidden-places' },
   { label: 'En İyi 30 Mekan', href: '/best-places' },
   { label: 'İlçeler', href: '/districts' },
-  { label: 'Mekanlar', href: '/places' },
-  { label: 'Etkinlikler', href: '/events' },
   { label: 'Rehberler', href: '/guides' },
 ]
 
