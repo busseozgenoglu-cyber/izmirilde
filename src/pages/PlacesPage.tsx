@@ -5,6 +5,42 @@ import Card from '../components/Card'
 import useScrollReveal from '../hooks/useScrollReveal'
 import { placeCards } from '../data'
 
+// Location string → district slug mapping
+function locationToSlug(location: string): string {
+  const loc = location.toLowerCase()
+  if (loc.includes('alsancak') || loc.includes('kordon')) return '/districts/alsancak-ve-kordon'
+  if (loc.includes('karşıyaka') || loc.includes('bostanlı')) return '/districts/karsiyaka'
+  if (loc.includes('çeşme')) return '/districts/cesme'
+  if (loc.includes('alaçatı')) return '/districts/alacati'
+  if (loc.includes('urla')) return '/districts/urla'
+  if (loc.includes('konak') || loc.includes('kemeraltı')) return '/districts/konak'
+  if (loc.includes('karataş')) return '/guides/tarihi-asansor-karatas'
+  if (loc.includes('bornova')) return '/districts/bornova'
+  if (loc.includes('foça')) return '/districts/foca'
+  if (loc.includes('selçuk')) return '/districts/selcuk'
+  if (loc.includes('seferihisar') || loc.includes('sığacık')) return '/districts/seferihisar-ve-sigacik'
+  if (loc.includes('güzelyalı')) return '/districts/konak'
+  if (loc.includes('balçova')) return '/districts/balcova'
+  if (loc.includes('narlıdere')) return '/districts/narlidere'
+  if (loc.includes('aliağa')) return '/districts/aliaga'
+  if (loc.includes('dikili')) return '/districts/dikili'
+  if (loc.includes('bergama')) return '/districts/bergama'
+  if (loc.includes('buca')) return '/districts/buca'
+  if (loc.includes('menemen')) return '/districts/menemen'
+  if (loc.includes('kemalpaşa')) return '/districts/kemalpasa'
+  if (loc.includes('gaziemir')) return '/districts/gaziemir'
+  if (loc.includes('bayraklı')) return '/districts/bayrakli'
+  if (loc.includes('çiğli')) return '/districts/cigli'
+  if (loc.includes('karabağlar')) return '/districts/karabaglar'
+  if (loc.includes('karaburun')) return '/districts/karaburun'
+  if (loc.includes('menderes')) return '/districts/menderes'
+  if (loc.includes('güzelbahçe')) return '/districts/guzelbahce'
+  if (loc.includes('ödemiş')) return '/districts/odemis'
+  if (loc.includes('tire')) return '/districts/tire'
+  if (loc.includes('torbalı')) return '/districts/torbali'
+  return '/districts'
+}
+
 const categories = [
   { name: 'Tümü', count: 248 },
   { name: 'Kafe', count: 64 },
@@ -228,7 +264,7 @@ export default function PlacesPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                 {visibleCards.map((card, i) => (
-                  <Link to={`/places`} key={card.id}>
+                  <Link to={locationToSlug(card.location)} key={card.id}>
                     <Card
                       image={card.image}
                       category={card.category}

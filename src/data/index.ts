@@ -9,6 +9,7 @@ export interface TrendingCard {
   title: string;
   subtitle: string;
   location: string;
+  href: string;
 }
 
 export const trendingCards: TrendingCard[] = [
@@ -19,6 +20,7 @@ export const trendingCards: TrendingCard[] = [
     title: '1888 Bar & Lounge',
     subtitle: 'Tarihi binada modern kokteyl deneyimi',
     location: '📍 Alsancak, İzmir',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: '2',
@@ -27,6 +29,7 @@ export const trendingCards: TrendingCard[] = [
     title: 'Poka Coffee Roasters',
     subtitle: 'Kendi çekirdeklerini kavuran, üçüncü dalga kahve',
     location: '📍 Alsancak, İzmir',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: '3',
@@ -35,6 +38,7 @@ export const trendingCards: TrendingCard[] = [
     title: 'Sole Mare Beach Club',
     subtitle: "Aya Yorgi Koyu'nun en popüler beach'i",
     location: '📍 Çeşme, İzmir',
+    href: '/districts/cesme',
   },
   {
     id: '4',
@@ -43,6 +47,7 @@ export const trendingCards: TrendingCard[] = [
     title: 'Ahmed Adnan Saygun GSÖ',
     subtitle: 'Dünya standartlarında senfoni konserleri',
     location: '📍 Güzelyalı, İzmir',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: '5',
@@ -51,6 +56,7 @@ export const trendingCards: TrendingCard[] = [
     title: 'Asma Yaprağı',
     subtitle: 'Michelin Bib Gourmand ödüllü Ege mutfağı',
     location: '📍 Alaçatı, Çeşme',
+    href: '/districts/alacati',
   },
   {
     id: '6',
@@ -59,6 +65,7 @@ export const trendingCards: TrendingCard[] = [
     title: 'Kültürpark İzmir Fuarı',
     subtitle: "İzmir'in kalbinde yeşilin ve kültürün adresi",
     location: '📍 Konak, İzmir',
+    href: '/guides/izmir-fuar-konser-takvimi',
   },
 ];
 
@@ -70,6 +77,7 @@ export interface DiscoveryCard {
   title: string;
   subtitle: string;
   location: string;
+  href: string;
 }
 
 export const discoveryCards: DiscoveryCard[] = [
@@ -80,6 +88,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: 'Tarihi Asansör',
     subtitle: "Tarihî Asansör'den İzmir Körfezi manzarası",
     location: '📍 Karataş, İzmir',
+    href: '/guides/tarihi-asansor-karatas',
   },
   {
     id: 'd2',
@@ -88,6 +97,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: 'Monolink — Yuzu Beach',
     subtitle: 'Elektronik müzik ve Ege’nin buluştuğu an',
     location: '📍 Çeşme, İzmir',
+    href: '/districts/cesme',
   },
   {
     id: 'd3',
@@ -96,6 +106,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: 'BeWater Coffee & Bookstore',
     subtitle: 'Kitap ve kahvenin buluştuğu mekan',
     location: '📍 Alsancak, İzmir',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'd4',
@@ -104,6 +115,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: "Alaçatı'nın En İyi Kafeleri",
     subtitle: 'Rüzgar sörfünün başkentinde keşif rotası',
     location: '📍 Alaçatı, Çeşme',
+    href: '/districts/alacati',
   },
   {
     id: 'd5',
@@ -112,6 +124,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: 'Refik Anadol — İzmir Serüveni',
     subtitle: '295 bin ziyaretçiyle dijital sanatın zirvesi',
     location: '📍 Konak, İzmir',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'd6',
@@ -120,6 +133,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: 'Bostanlı Gün Batımı',
     subtitle: 'Günü kapatmanın en güzel yolu',
     location: '📍 Karşıyaka, İzmir',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'd7',
@@ -128,6 +142,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: 'Narımor',
     subtitle: 'Alsancakın Michelin Yıldızlı şef restoranı',
     location: '📍 Alsancak, İzmir',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'd8',
@@ -136,6 +151,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: 'Smyrna Antik Agora',
     subtitle: 'İzmirin 2000 yıllık tarihine yolculuk',
     location: '📍 Namazgah, İzmir',
+    href: '/guides/agora-oren-yeri-izmir',
   },
 ];
 
@@ -147,6 +163,7 @@ export interface PopularList {
   title: string;
   subtitle: string;
   readTime: string;
+  href: string;
 }
 
 export const popularLists: PopularList[] = [
@@ -157,6 +174,7 @@ export const popularLists: PopularList[] = [
     title: "İzmir'de En İyi 10 Kahvaltı Mekanı",
     subtitle: 'Morisi, Zahide Alaçatı, Magro ve daha fazlası',
     readTime: '8 dk okuma',
+    href: '/guides/alsancak-en-iyi-kahvalti',
   },
   {
     id: 'p2',
@@ -165,6 +183,7 @@ export const popularLists: PopularList[] = [
     title: 'Alaçatı Gece Hayatı Rehberi 2025',
     subtitle: 'Asma Yaprağı, Fava, Sota ve yazın en iyi adresleri',
     readTime: '6 dk okuma',
+    href: '/districts/alacati',
   },
   {
     id: 'p3',
@@ -173,6 +192,7 @@ export const popularLists: PopularList[] = [
     title: "İzmir'in Gizli Koyları",
     subtitle: 'Kalabalıktan uzak, cennetten köşeler',
     readTime: '10 dk okuma',
+    href: '/guides/dikili-gizli-koylar',
   },
   {
     id: 'p4',
@@ -181,6 +201,7 @@ export const popularLists: PopularList[] = [
     title: "İzmir'in Michelin Yıldızlı Restoranları",
     subtitle: 'Narımor, OD Urla, Vino Locale, Teruar',
     readTime: '7 dk okuma',
+    href: '/guides/urla-deniz-kenari-yemek',
   },
   {
     id: 'p5',
@@ -189,16 +210,18 @@ export const popularLists: PopularList[] = [
     title: '2025 İzmir Konser Takvimi',
     subtitle: 'Duman, Sıla, Yaşar, Monolink ve daha fazlası',
     readTime: '5 dk okuma',
+    href: '/guides/izmir-fuar-konser-takvimi',
   },
 ];
 
-// ===================== HABERLER (12) =====================
+// ===================== HABERLER (17) =====================
 export interface NewsCard {
   id: string;
   image: string;
   category: string;
   title: string;
   date: string;
+  href: string;
 }
 
 export const newsCards: NewsCard[] = [
@@ -208,6 +231,7 @@ export const newsCards: NewsCard[] = [
     category: '📰 Gündem',
     title: '93. İzmir Enternasyonal Fuarı Açıldı — 80 Ülke Katılıyor',
     date: '2 saat önce',
+    href: '/guides/izmir-fuar-konser-takvimi',
   },
   {
     id: 'n2',
@@ -215,6 +239,7 @@ export const newsCards: NewsCard[] = [
     category: '🎨 Kültür',
     title: 'Refik Anadol Sergisi İzmirde 295 Bin Ziyaretçiyi Ağırladı',
     date: '5 saat önce',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n3',
@@ -222,6 +247,7 @@ export const newsCards: NewsCard[] = [
     category: '🏙 Gündem',
     title: 'Kültürpark Yenileme Projesi Tüm Hızıyla Devam Ediyor',
     date: '1 gün önce',
+    href: '/districts/konak',
   },
   {
     id: 'n4',
@@ -229,6 +255,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gündem',
     title: 'Narımor Alsancak Michelin Yıldızı Aldı',
     date: '1 gün önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n5',
@@ -236,6 +263,7 @@ export const newsCards: NewsCard[] = [
     category: '🏛 Gündem',
     title: 'Konak Meydanı Düzenlemesi Tamamlandı',
     date: '2 gün önce',
+    href: '/guides/izmir-saat-kulesi-konak-meydani',
   },
   {
     id: 'n6',
@@ -243,6 +271,7 @@ export const newsCards: NewsCard[] = [
     category: '🎵 Kültür',
     title: 'İzmirde 2025te 1780 Konser ve Müzik Etkinliği Düzenlenecek',
     date: '2 gün önce',
+    href: '/guides/izmir-fuar-konser-takvimi',
   },
   {
     id: 'n7',
@@ -250,6 +279,7 @@ export const newsCards: NewsCard[] = [
     category: '🏛 Kültür',
     title: 'Smyrna Antik Agora 2025te UNESCO Dünya Mirası Listesine Aday',
     date: '3 gün önce',
+    href: '/guides/agora-oren-yeri-izmir',
   },
   {
     id: 'n8',
@@ -257,6 +287,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gündem',
     title: 'Hayyam Meyhane 2025 Sofralarında Yeni Lezzetler Sunuyor',
     date: '3 gün önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n9',
@@ -264,6 +295,7 @@ export const newsCards: NewsCard[] = [
     category: '🎵 Müzik',
     title: 'Duman 12 Temmuzda OM Paparazzide İzmirde',
     date: '4 gün önce',
+    href: '/guides/izmir-fuar-konser-takvimi',
   },
   {
     id: 'n10',
@@ -271,6 +303,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gündem',
     title: 'Oca Soyalı Bayraklının En Yeni Deniz Ürünleri Restoranı',
     date: '5 gün önce',
+    href: '/districts/bayrakli',
   },
   {
     id: 'n11',
@@ -278,6 +311,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gündem',
     title: 'Scappi Alsancakta Napoli Pizzasıyla Açıldı',
     date: '6 gün önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n12',
@@ -285,6 +319,7 @@ export const newsCards: NewsCard[] = [
     category: '☕ Kültür',
     title: 'Monas Art Coffee Bakery Karşıyakada Sanat ve Kahveyi Buluşturdu',
     date: '1 hafta önce',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'n13',
@@ -292,6 +327,7 @@ export const newsCards: NewsCard[] = [
     category: '🍸 Gece Hayatı',
     title: '1888 Bar Alsancakta Yeni Kokteyl Menüsünü Tanıttı',
     date: '1 hafta önce',
+    href: '/guides/alsancak-gece-hayati-barlar',
   },
   {
     id: 'n14',
@@ -299,6 +335,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'Asma Yaprağı Michelin Bib Gourmand Ödülünü İkinci Kez Kazandı',
     date: '1 hafta önce',
+    href: '/districts/alacati',
   },
   {
     id: 'n15',
@@ -306,6 +343,7 @@ export const newsCards: NewsCard[] = [
     category: '🌅 Tatil',
     title: 'Before Sunset Beach Club 2025 Sezonuna Hazır',
     date: '2 hafta önce',
+    href: '/guides/cesme-beach-club-eglence',
   },
   {
     id: 'n16',
@@ -313,6 +351,7 @@ export const newsCards: NewsCard[] = [
     category: '📍 Yaşam',
     title: 'Bostanlı İskele Yenileme Projesi Tamamlandı',
     date: '2 hafta önce',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'n17',
@@ -320,6 +359,7 @@ export const newsCards: NewsCard[] = [
     category: '⛵ Turizm',
     title: 'Çeşme Marina 2025 Yaz Sezonuna 500 Yatla Başladı',
     date: '2 hafta önce',
+    href: '/districts/cesme',
   },
   {
     id: 'n18',
@@ -327,6 +367,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'İzmirde 8 Yeni Balık Restoranı Açıldı — 2025 Rehberi',
     date: '2 hafta önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n19',
@@ -334,6 +375,7 @@ export const newsCards: NewsCard[] = [
     category: '🎵 Müzik',
     title: 'Kordon Jazz Festivali 2025 Programı Açıklandı',
     date: '3 hafta önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n20',
@@ -341,6 +383,7 @@ export const newsCards: NewsCard[] = [
     category: '🏛 Turizm',
     title: 'Efes Antik Kenti 2025te 2 Milyon Ziyaretçi Hedefliyor',
     date: '3 hafta önce',
+    href: '/districts/selcuk',
   },
   {
     id: 'n21',
@@ -348,6 +391,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'Fava Restoranı 2025 Yaz Menüsünü Gün Yüzüne Çıkardı',
     date: '3 hafta önce',
+    href: '/districts/alacati',
   },
   {
     id: 'n22',
@@ -355,6 +399,7 @@ export const newsCards: NewsCard[] = [
     category: '🌅 Tatil',
     title: 'Fly-Inn Beach Club 2025 Sezon Açılış Partisi Düzenliyor',
     date: '3 hafta önce',
+    href: '/guides/cesme-beach-club-eglence',
   },
   {
     id: 'n23',
@@ -362,6 +407,7 @@ export const newsCards: NewsCard[] = [
     category: '🏖 Seyahat',
     title: 'İzmirin Gizli Koyları Listesi — 2025 Güncel Rehber',
     date: '4 hafta önce',
+    href: '/guides/dikili-gizli-koylar',
   },
   {
     id: 'n24',
@@ -369,6 +415,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'Gümüş Balık Karşıyakada Yeni Şubesini Açtı',
     date: '4 hafta önce',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'n25',
@@ -376,6 +423,7 @@ export const newsCards: NewsCard[] = [
     category: '🎵 Müzik',
     title: 'Hayyam Meyhanede Fasıl Geceleri Başladı',
     date: '4 hafta önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n26',
@@ -383,6 +431,7 @@ export const newsCards: NewsCard[] = [
     category: '🎭 Kültür',
     title: '93. İzmir Enternasyonal Fuarında 500 Etkinlik Yer Alacak',
     date: '1 ay önce',
+    href: '/guides/izmir-fuar-konser-takvimi',
   },
   {
     id: 'n27',
@@ -390,6 +439,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'İzmir Kahvaltı Festivali 2025 Tarihleri Belli Oldu',
     date: '1 ay önce',
+    href: '/guides/alsancak-en-iyi-kahvalti',
   },
   {
     id: 'n28',
@@ -397,6 +447,7 @@ export const newsCards: NewsCard[] = [
     category: '🎭 Kültür',
     title: 'İzmir Devlet Tiyatrosu 2025 Sezonunu Açtı',
     date: '1 ay önce',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n29',
@@ -404,6 +455,7 @@ export const newsCards: NewsCard[] = [
     category: '🎵 Müzik',
     title: 'Ahmed Adnan Saygun GSÖde Bu Sezon 40 Konser Var',
     date: '1 ay önce',
+    href: '/guides/izmir-fuar-konser-takvimi',
   },
   {
     id: 'n30',
@@ -411,6 +463,7 @@ export const newsCards: NewsCard[] = [
     category: '☕ Kültür',
     title: 'İzmir Kahve Kültürü Kitabı Yayımlandı',
     date: '1 ay önce',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n31',
@@ -418,6 +471,7 @@ export const newsCards: NewsCard[] = [
     category: '☕ Etkinlik',
     title: '3. Uluslararası İzmir Kahve Festivali Başvuruları Açıldı',
     date: '1 ay önce',
+    href: '/districts',
   },
   {
     id: 'n32',
@@ -425,6 +479,7 @@ export const newsCards: NewsCard[] = [
     category: '🏙 Gündem',
     title: 'Karşıyaka İskele Yenileme Projesi Başlıyor',
     date: '1 ay önce',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'n33',
@@ -432,6 +487,7 @@ export const newsCards: NewsCard[] = [
     category: '📍 Yaşam',
     title: 'Karşıyaka Çarşısı Yaya Alanı Projesi Onaylandı',
     date: '1 ay önce',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'n34',
@@ -439,6 +495,7 @@ export const newsCards: NewsCard[] = [
     category: '🌅 Tatil',
     title: 'Kıyı Beach Club Çeşmede Yeni Sezonunu Açtı',
     date: '1 ay önce',
+    href: '/districts/cesme',
   },
   {
     id: 'n35',
@@ -446,6 +503,7 @@ export const newsCards: NewsCard[] = [
     category: '🏛 Gündem',
     title: 'Konak Saat Kulesi Restorasyonu Tamamlandı',
     date: '1 ay önce',
+    href: '/districts/konak',
   },
   {
     id: 'n36',
@@ -453,6 +511,7 @@ export const newsCards: NewsCard[] = [
     category: '🌳 Yaşam',
     title: 'Kültürparkta Yeni Bisiklet Yolları Açıldı',
     date: '1 ay önce',
+    href: '/districts/konak',
   },
   {
     id: 'n37',
@@ -460,6 +519,7 @@ export const newsCards: NewsCard[] = [
     category: '🏙 Gündem',
     title: 'Kültürpark İzmir Fuar Alanı Genişletiliyor',
     date: '1 ay önce',
+    href: '/districts/konak',
   },
   {
     id: 'n38',
@@ -467,6 +527,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'Levan Urla 2025 Michelin Rehberine Girdi',
     date: '1 ay önce',
+    href: '/districts/urla',
   },
   {
     id: 'n39',
@@ -474,6 +535,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'Magro Alsancakta Yeni Brunch Menüsü Tanıttı',
     date: '1 ay önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n40',
@@ -481,6 +543,7 @@ export const newsCards: NewsCard[] = [
     category: '🍸 Gece Hayatı',
     title: 'Alsancakta 5 Yeni Kokteyl Barı Açıldı',
     date: '1 ay önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n41',
@@ -488,6 +551,7 @@ export const newsCards: NewsCard[] = [
     category: '☕ Kültür',
     title: 'Karşıyaka Sanat Sokağı Projesi Hayata Geçiyor',
     date: '1 ay önce',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'n42',
@@ -495,6 +559,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'Morisi Bostanlıda Kahvaltı Menüsünü Yeniledi',
     date: '1 ay önce',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'n43',
@@ -502,6 +567,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'OD Urla Michelin Yıldızını Korudu — 2025',
     date: '1 ay önce',
+    href: '/districts/urla',
   },
   {
     id: 'n44',
@@ -509,6 +575,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'Bayraklıda Yeni Gastronomi Caddesi Oluşturuluyor',
     date: '1 ay önce',
+    href: '/districts/bayrakli',
   },
   {
     id: 'n45',
@@ -516,6 +583,7 @@ export const newsCards: NewsCard[] = [
     category: '☕ Kültür',
     title: 'Poka Coffee Roasters 3. Şubesini Açtı',
     date: '2 ay önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n46',
@@ -523,6 +591,7 @@ export const newsCards: NewsCard[] = [
     category: '🎨 Kültür',
     title: 'Arkas Sanat Merkezinde Yeni Sergi Sezonu Başladı',
     date: '2 ay önce',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n47',
@@ -530,6 +599,7 @@ export const newsCards: NewsCard[] = [
     category: '📍 Yaşam',
     title: 'Alsancakta Gizli Bahçe Konseptli 3 Yeni Mekan',
     date: '2 ay önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n48',
@@ -537,6 +607,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'İzmirde Napoli Pizzası Trendi — En İyi 5 Adres',
     date: '2 ay önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n49',
@@ -544,6 +615,7 @@ export const newsCards: NewsCard[] = [
     category: '☕ Kültür',
     title: 'Smyrna Cafe Tarihi Binada Yeniden Açıldı',
     date: '2 ay önce',
+    href: '/districts',
   },
   {
     id: 'n50',
@@ -551,6 +623,7 @@ export const newsCards: NewsCard[] = [
     category: '🌅 Tatil',
     title: 'Çeşme Plajları 2025 Mavi Bayrak Listesinde',
     date: '2 ay önce',
+    href: '/districts/cesme',
   },
   {
     id: 'n51',
@@ -558,6 +631,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'Sota Alaçatı Dünya 50 Best Restaurants Listesine Girdi',
     date: '2 ay önce',
+    href: '/districts/alacati',
   },
   {
     id: 'n52',
@@ -565,6 +639,7 @@ export const newsCards: NewsCard[] = [
     category: '📍 Yaşam',
     title: 'Tarihi Asansörde Akşam Yemeği Etkinlikleri Başlıyor',
     date: '2 ay önce',
+    href: '/guides/tarihi-asansor-karatas',
   },
   {
     id: 'n53',
@@ -572,6 +647,7 @@ export const newsCards: NewsCard[] = [
     category: '⛵ Turizm',
     title: 'İzmir Körfezi Tekne Turları 2025 Sezonu Açıldı',
     date: '2 ay önce',
+    href: '/districts/urla',
   },
   {
     id: 'n54',
@@ -579,6 +655,7 @@ export const newsCards: NewsCard[] = [
     category: '🎭 Kültür',
     title: 'İzmir Tiyatro Festivali 2025 Programı Açıklandı',
     date: '2 ay önce',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n55',
@@ -586,6 +663,7 @@ export const newsCards: NewsCard[] = [
     category: '🍷 Turizm',
     title: 'Urla Şarap Rotası 2025 Rehberi Yayımlandı',
     date: '2 ay önce',
+    href: '/districts/urla',
   },
   {
     id: 'n56',
@@ -593,6 +671,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'Vino Locale Michelin Rehberinde Yıldız Aldı',
     date: '2 ay önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n57',
@@ -600,6 +679,7 @@ export const newsCards: NewsCard[] = [
     category: '🎵 Müzik',
     title: 'Çeşme Aya Yorgi Koyu 2025 Konser Takvimi',
     date: '2 ay önce',
+    href: '/districts/cesme',
   },
   {
     id: 'n58',
@@ -607,6 +687,7 @@ export const newsCards: NewsCard[] = [
     category: '🍽 Gastronomi',
     title: 'Zahide Alaçatı Ege Kahvaltısıyla Büyüyor',
     date: '2 ay önce',
+    href: '/districts/alacati',
   },
   {
     id: 'n59',
@@ -614,6 +695,7 @@ export const newsCards: NewsCard[] = [
     category: '📍 Yaşam',
     title: 'Alaçatı Sokakları 2025 Yaz Sezonuna Hazırlanıyor',
     date: '3 ay önce',
+    href: '/districts/alacati',
   },
   {
     id: 'n60',
@@ -621,6 +703,7 @@ export const newsCards: NewsCard[] = [
     category: '☕ Kültür',
     title: 'İzmirde 15 Yeni Third Wave Kafe Açıldı',
     date: '3 ay önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n61',
@@ -628,6 +711,7 @@ export const newsCards: NewsCard[] = [
     category: '🎵 Müzik',
     title: 'Endülüs Meyhanede Yeni Sezon Fasıl Programı',
     date: '3 ay önce',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n62',
@@ -635,6 +719,7 @@ export const newsCards: NewsCard[] = [
     category: '🍸 Gece Hayatı',
     title: 'Improvement Bar Alsancakta Yeni Konseptini Tanıttı',
     date: '3 ay önce',
+    href: '/districts/alsancak-ve-kordon',
   },
 ];
 
@@ -644,6 +729,7 @@ export interface NeighborhoodCard {
   image: string;
   title: string;
   subtitle: string;
+  href: string;
 }
 
 export const neighborhoodCards: NeighborhoodCard[] = [
@@ -652,36 +738,42 @@ export const neighborhoodCards: NeighborhoodCard[] = [
     image: '/images/alsancak-street.jpg',
     title: 'Alsancak',
     subtitle: "Kordon'dan kültüre, İzmir'in kalbi",
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'nh2',
     image: '/images/karsiyaka-bostanli.jpg',
     title: 'Karşıyaka',
     subtitle: 'Anadolu yakasının renkli yüzü',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'nh3',
     image: '/images/cesme-marina.jpg',
     title: 'Çeşme',
     subtitle: "Ege'nin incisi, yazın başkenti",
+    href: '/districts/cesme',
   },
   {
     id: 'nh4',
     image: '/images/urla-vineyards.jpg',
     title: 'Urla',
     subtitle: 'Şarap rotaları ve Ege lezzetleri',
+    href: '/districts/urla',
   },
   {
     id: 'nh5',
     image: '/images/bostanli-sunset.jpg',
     title: 'Bostanlı',
     subtitle: 'Gün batımının en güzel izlendiği semt',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'nh6',
     image: '/images/tarihi-asansor.jpg',
     title: 'Karataş',
     subtitle: 'Tarihî Asansör ve eşsiz manzara',
+    href: '/guides/tarihi-asansor-karatas',
   },
 ];
 

@@ -135,7 +135,7 @@ function TrendingSection() {
             key={card.id}
             className="shrink-0 w-[280px] sm:w-[320px] scroll-snap-start"
           >
-            <Link to={`/places`}>
+            <Link to={card.href}>
               <Card
                 image={card.image}
                 category={card.category}
@@ -184,7 +184,7 @@ function DiscoverySection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
           {filtered.map((card, i) => (
-            <Link to={`/places`} key={card.id}>
+            <Link to={card.href} key={card.id}>
               <Card
                 image={card.image}
                 category={card.category}
@@ -216,7 +216,7 @@ function PopularListsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {popularLists.map((card, i) => (
-            <Link to={`/guides`} key={card.id}>
+            <Link to={card.href} key={card.id}>
               <Card
                 image={card.image}
                 category={card.category}
@@ -255,7 +255,8 @@ function NewsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {newsCards.map((card, i) => (
-            <div
+            <Link
+              to={card.href}
               key={card.id}
               className="group cursor-pointer flex gap-4 items-start reveal"
               style={{ transitionDelay: `${i * 0.05}s` }}
@@ -277,7 +278,7 @@ function NewsSection() {
                 </h4>
                 <p className="text-xs text-black/40 mt-1">{card.date}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -305,7 +306,7 @@ function NeighborhoodSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
           {neighborhoodCards.map((card, i) => (
             <Link
-              to={`/places`}
+              to={card.href}
               key={card.id}
               className="group relative aspect-[3/4] rounded-2xl overflow-hidden reveal"
               style={{ transitionDelay: `${i * 0.1}s` }}

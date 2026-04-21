@@ -1,8 +1,26 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import FilterTabs from '../components/FilterTabs'
 import useScrollReveal from '../hooks/useScrollReveal'
 import { eventCards, eventFilterTabs } from '../data'
+
+// Venue string → district slug mapping for events
+function venueToHref(venue: string): string {
+  const v = venue.toLowerCase()
+  if (v.includes('kültürpark') || v.includes('fuar')) return '/guides/izmir-fuar-konser-takvimi'
+  if (v.includes('ahmed adnan saygun') || v.includes('opera')) return '/guides/izmir-tiyatro-kultur-sanat'
+  if (v.includes('alsancak') || v.includes('kordon')) return '/districts/alsancak-ve-kordon'
+  if (v.includes('karşıyaka') || v.includes('bostanlı')) return '/districts/karsiyaka'
+  if (v.includes('çeşme') || v.includes('aya yorgi') || v.includes('paparazzi')) return '/districts/cesme'
+  if (v.includes('alaçatı')) return '/districts/alacati'
+  if (v.includes('urla')) return '/districts/urla'
+  if (v.includes('konak')) return '/districts/konak'
+  if (v.includes('bornova')) return '/districts/bornova'
+  if (v.includes('güzelyalı')) return '/districts/konak'
+  if (v.includes('selçuk') || v.includes('efes')) return '/guides/efes-antik-kenti-rehberi'
+  return '/guides/izmir-fuar-konser-takvimi'
+}
 
 function EventCardComp({
   day,
@@ -26,7 +44,8 @@ function EventCardComp({
   index: number
 }) {
   return (
-    <div
+    <Link
+      to={venueToHref(venue)}
       className="group flex flex-col sm:flex-row gap-5 bg-white border border-black/[0.06] rounded-2xl p-5 hover:border-black/[0.12] hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)] transition-all duration-300 cursor-pointer reveal"
       style={{ transitionDelay: `${index * 0.1}s` }}
     >
@@ -70,7 +89,7 @@ function EventCardComp({
           Detaylar <ArrowRight className="w-3.5 h-3.5" />
         </span>
       </div>
-    </div>
+    </Link>
   )
 }
 
