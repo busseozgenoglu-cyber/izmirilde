@@ -89,6 +89,14 @@ export default function GuidesPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/70" />
 
+          {/* Sparkle overlay */}
+          <div className="absolute inset-0 sparkle-overlay pointer-events-none" />
+          <div className="sparkle-star" style={{ top: '20%', left: '15%', animationDelay: '0s' }} />
+          <div className="sparkle-star" style={{ top: '30%', left: '80%', animationDelay: '0.7s' }} />
+          <div className="sparkle-star" style={{ top: '60%', left: '25%', animationDelay: '1.3s' }} />
+          <div className="sparkle-star" style={{ top: '40%', left: '60%', animationDelay: '0.4s' }} />
+          <div className="shimmer-sweep" />
+
           <div className="relative z-10 text-center px-4 max-w-3xl">
             <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider mb-6 reveal">
               50 Rehber · Editör Seçimi · 2025

@@ -7,6 +7,8 @@ import PlacesPage from './pages/PlacesPage'
 import EventsPage from './pages/EventsPage'
 import GuidesPage from './pages/GuidesPage'
 import BlogDetailPage from './pages/BlogDetailPage'
+import DistrictsPage from './pages/DistrictsPage'
+import DistrictDetailPage from './pages/DistrictDetailPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import NotFoundPage from './pages/NotFoundPage'
@@ -30,6 +32,8 @@ function App() {
         <Route path="/events" element={<EventsPage />} />
         <Route path="/guides" element={<GuidesPage />} />
         <Route path="/guides/:slug" element={<BlogDetailPage />} />
+        <Route path="/districts" element={<DistrictsPage />} />
+        <Route path="/districts/:slug" element={<DistrictDetailPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />

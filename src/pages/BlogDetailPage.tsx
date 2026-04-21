@@ -117,6 +117,13 @@ export default function BlogDetailPage() {
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80" />
           </div>
 
+          {/* Sparkle overlay */}
+          <div className="absolute inset-0 sparkle-overlay pointer-events-none" />
+          <div className="sparkle-star" style={{ top: '25%', left: '20%', animationDelay: '0s' }} />
+          <div className="sparkle-star" style={{ top: '40%', left: '75%', animationDelay: '0.6s' }} />
+          <div className="sparkle-star" style={{ top: '65%', left: '15%', animationDelay: '1.1s' }} />
+          <div className="shimmer-sweep" />
+
           <div className="relative z-10 h-full flex flex-col justify-end max-w-[900px] mx-auto px-4 sm:px-8 pb-16">
             <Link
               to="/guides"

@@ -29,6 +29,22 @@ function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
       </div>
 
+      {/* Sparkle overlay — animated tiny stars all over */}
+      <div className="absolute inset-0 sparkle-overlay pointer-events-none" />
+
+      {/* Large positioned sparkle stars */}
+      <div className="sparkle-star" style={{ top: '15%', left: '12%', animationDelay: '0s' }} />
+      <div className="sparkle-star" style={{ top: '25%', left: '85%', animationDelay: '0.5s' }} />
+      <div className="sparkle-star" style={{ top: '45%', left: '8%', animationDelay: '1s' }} />
+      <div className="sparkle-star" style={{ top: '60%', left: '92%', animationDelay: '1.5s' }} />
+      <div className="sparkle-star" style={{ top: '35%', left: '50%', animationDelay: '0.3s' }} />
+      <div className="sparkle-star" style={{ top: '75%', left: '30%', animationDelay: '0.8s' }} />
+      <div className="sparkle-star" style={{ top: '20%', left: '70%', animationDelay: '1.2s' }} />
+      <div className="sparkle-star" style={{ top: '80%', left: '65%', animationDelay: '1.7s' }} />
+
+      {/* Shimmer sweep */}
+      <div className="shimmer-sweep" />
+
       {/* Centered content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
         <span className="inline-block px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white text-xs font-semibold uppercase tracking-[0.2em] mb-8 animate-fade-in">
@@ -74,10 +90,10 @@ function HeroSection() {
             </svg>
           </Link>
           <Link
-            to="/places"
+            to="/districts"
             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white/15 backdrop-blur-md border border-white/30 text-white font-semibold hover:bg-white/25 transition-colors"
           >
-            Mekanları Gör
+            32 İlçeyi Gör
           </Link>
         </div>
       </div>
