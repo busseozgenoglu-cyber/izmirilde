@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import SectionHeader from '../components/SectionHeader'
@@ -16,95 +16,248 @@ import {
 } from '../data'
 import { hiddenPlaces } from '../data/hiddenPlaces'
 
-// ===================== HERO SECTION (SADECE GÖRSEL) =====================
+// ===================== HERO SLIDER DATA =====================
+const heroSlides = [
+  {
+    image: '/images/izmir-hero-still.jpg',
+    badge: 'Ege\'nin İncisi · 2026 Rehberi',
+    title: 'İzmir\'in En İyi',
+    highlight: 'Mekanlarını',
+    titleEnd: 'Keşfet',
+    desc: 'Efes\'ten Alaçatı\'ya, Kordon\'dan Kemeraltı\'na — editörlerimizin hazırladığı 50 detaylı rehberle İzmir\'i yaşayın.',
+    cta1: { label: '50 Rehberi Keşfet', href: '/guides' },
+    cta2: { label: '32 İlçeyi Gör', href: '/districts' },
+    accent: 'from-orange-600 via-red-500 to-orange-400',
+  },
+  {
+    image: '/images/alacati-hero.jpg',
+    badge: 'Alaçatı · 2026 Sezonu',
+    title: 'Rüzgarın Kenti',
+    highlight: 'Alaçatı\'da',
+    titleEnd: 'Hayat Güzel',
+    desc: 'Taş sokaklardan butik otellere, surf okullarından ünlü restoranlarına — Alaçatı\'nın tam rehberi burada.',
+    cta1: { label: 'Alaçatı\'yı Keşfet', href: '/districts/alacati' },
+    cta2: { label: 'Rehberleri Gör', href: '/guides' },
+    accent: 'from-amber-500 via-orange-500 to-red-500',
+  },
+  {
+    image: '/images/cesme-hero.jpg',
+    badge: 'Çeşme · Yaz 2026',
+    title: 'Berrak Sular,',
+    highlight: 'Sonsuz',
+    titleEnd: 'Mavi',
+    desc: 'Altın kumları, kristal suları ve eşsiz beach club\'larıyla Çeşme — İzmir\'in en gözde tatil cenneti.',
+    cta1: { label: 'Çeşme Rehberi', href: '/districts/cesme' },
+    cta2: { label: 'En İyi Plajlar', href: '/guides' },
+    accent: 'from-orange-500 via-amber-400 to-yellow-400',
+  },
+  {
+    image: '/images/kordon-hero.jpg',
+    badge: 'Kordon · İzmir 2026',
+    title: 'Günbatımının',
+    highlight: 'Adresi',
+    titleEnd: 'Kordon',
+    desc: 'Ege kıyısında akşam yürüyüşü, deniz ürünleri ve İzmir\'in muhteşem silueti — Kordon\'u keşfedin.',
+    cta1: { label: 'Kordon Rehberi', href: '/guides' },
+    cta2: { label: 'Mekanları Gör', href: '/places' },
+    accent: 'from-red-600 via-orange-500 to-amber-400',
+  },
+]
+
+// ===================== HERO SECTION =====================
 function HeroSection() {
+  const [current, setCurrent] = useState(0)
+  const [animating, setAnimating] = useState(false)
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+  const goTo = (idx: number) => {
+    if (animating || idx === current) return
+    setAnimating(true)
+    setTimeout(() => {
+      setCurrent(idx)
+      setAnimating(false)
+    }, 400)
+  }
+
+  const next = () => goTo((current + 1) % heroSlides.length)
+  const prev = () => goTo((current - 1 + heroSlides.length) % heroSlides.length)
+
+  useEffect(() => {
+    timerRef.current = setInterval(() => {
+      setCurrent(c => (c + 1) % heroSlides.length)
+    }, 5500)
+    return () => { if (timerRef.current) clearInterval(timerRef.current) }
+  }, [])
+
+  const slide = heroSlides[current]
+
   return (
-    <section className="relative w-full h-screen min-h-[600px] overflow-hidden">
-      {/* Background Image with slow zoom */}
-      <div className="absolute inset-0">
-        <img
-          src="/images/izmir-hero-still.jpg"
-          alt="İzmir"
-          className="w-full h-full object-cover scale-110 animate-slow-zoom"
+    <section className="relative w-full h-screen min-h-[600px] overflow-hidden hero-slider-root">
+      {/* Slide backgrounds — crossfade */}
+      {heroSlides.map((s, i) => (
+        <div
+          key={i}
+          className="absolute inset-0 transition-opacity duration-700"
+          style={{ opacity: i === current ? 1 : 0, zIndex: 0 }}
+        >
+          <img
+            src={s.image}
+            alt="İzmir"
+            className="w-full h-full object-cover scale-[1.06] animate-slow-zoom"
+            loading={i === 0 ? 'eager' : 'lazy'}
+            onError={(e) => { (e.target as HTMLImageElement).src = '/images/izmir-hero-still.jpg' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-black/75" />
+        </div>
+      ))}
+
+      {/* Sparkle overlay */}
+      <div className="absolute inset-0 sparkle-overlay pointer-events-none z-[1]" />
+
+      {/* Orange sparkle stars */}
+      {[
+        { top: '15%', left: '12%', delay: '0s', size: 'large' },
+        { top: '25%', left: '85%', delay: '0.7s', size: 'medium' },
+        { top: '45%', left: '6%', delay: '1.2s', size: 'small' },
+        { top: '60%', left: '93%', delay: '0.4s', size: 'large' },
+        { top: '35%', left: '52%', delay: '1.8s', size: 'small' },
+        { top: '78%', left: '28%', delay: '0.9s', size: 'medium' },
+        { top: '18%', left: '68%', delay: '1.5s', size: 'small' },
+        { top: '82%', left: '72%', delay: '2.1s', size: 'large' },
+        { top: '50%', left: '40%', delay: '0.3s', size: 'small' },
+        { top: '10%', left: '45%', delay: '1.0s', size: 'medium' },
+      ].map((star, i) => (
+        <div
+          key={i}
+          className={`hero-sparkle-star hero-sparkle-${star.size}`}
+          style={{ top: star.top, left: star.left, animationDelay: star.delay, zIndex: 2 }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/70" />
-      </div>
-
-      {/* Sparkle overlay — animated tiny stars all over */}
-      <div className="absolute inset-0 sparkle-overlay pointer-events-none" />
-
-      {/* Large positioned sparkle stars */}
-      <div className="sparkle-star" style={{ top: '15%', left: '12%', animationDelay: '0s' }} />
-      <div className="sparkle-star" style={{ top: '25%', left: '85%', animationDelay: '0.5s' }} />
-      <div className="sparkle-star" style={{ top: '45%', left: '8%', animationDelay: '1s' }} />
-      <div className="sparkle-star" style={{ top: '60%', left: '92%', animationDelay: '1.5s' }} />
-      <div className="sparkle-star" style={{ top: '35%', left: '50%', animationDelay: '0.3s' }} />
-      <div className="sparkle-star" style={{ top: '75%', left: '30%', animationDelay: '0.8s' }} />
-      <div className="sparkle-star" style={{ top: '20%', left: '70%', animationDelay: '1.2s' }} />
-      <div className="sparkle-star" style={{ top: '80%', left: '65%', animationDelay: '1.7s' }} />
+      ))}
 
       {/* Shimmer sweep */}
-      <div className="shimmer-sweep" />
+      <div className="shimmer-sweep z-[2]" />
 
-      {/* Centered content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
-        <span className="inline-block px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white text-xs font-semibold uppercase tracking-[0.2em] mb-8 animate-fade-in">
-          Ege'nin İncisi · 2025 Rehberi
+      {/* Orange glow orbs */}
+      <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-20 z-[1]" style={{ background: 'radial-gradient(circle, #FF6600, transparent)' }} />
+      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full blur-[100px] opacity-15 z-[1]" style={{ background: 'radial-gradient(circle, #FF4500, transparent)' }} />
+
+      {/* Content */}
+      <div
+        className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center"
+        style={{ opacity: animating ? 0 : 1, transform: animating ? 'translateY(12px)' : 'translateY(0)', transition: 'opacity 0.4s ease, transform 0.4s ease' }}
+      >
+        <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/25 text-white text-xs font-semibold uppercase tracking-[0.22em] mb-8 animate-fade-in hero-badge-glow">
+          {slide.badge}
         </span>
 
         <h1
           className="text-white font-bold text-center mb-6 px-4 animate-fade-in-up"
           style={{
             fontFamily: "'Playfair Display', serif",
-            fontSize: 'clamp(40px, 8vw, 88px)',
+            fontSize: 'clamp(38px, 7.5vw, 90px)',
             lineHeight: 0.95,
             letterSpacing: '-0.03em',
-            textShadow: '0 2px 20px rgba(0,0,0,0.3)',
+            textShadow: '0 2px 32px rgba(0,0,0,0.4)',
           }}
         >
-          İzmir'in En İyi
+          {slide.title}
           <br />
-          <em className="gradient-text-sunset not-italic">Mekanlarını</em> Keşfet
+          <em
+            className="not-italic"
+            style={{
+              background: `linear-gradient(135deg, #FF8C00, #FF4500, #FF6600, #FFB347)`,
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 0 20px rgba(255,102,0,0.6))',
+            }}
+          >
+            {slide.highlight}
+          </em>{' '}
+          {slide.titleEnd}
         </h1>
 
         <p
-          className="text-white/90 text-lg sm:text-xl max-w-2xl leading-relaxed mb-10 animate-fade-in-up"
-          style={{ animationDelay: '0.2s' }}
+          className="text-white/88 text-lg sm:text-xl max-w-2xl leading-relaxed mb-10 animate-fade-in-up"
+          style={{ animationDelay: '0.15s', textShadow: '0 1px 8px rgba(0,0,0,0.3)' }}
         >
-          Efes'ten Alaçatı'ya, Kordon'dan Kemeraltı'na —
-          <br className="hidden sm:block" />
-          editörlerimizin hazırladığı 50 detaylı rehberle İzmir'i yaşayın.
+          {slide.desc}
         </p>
 
         {/* CTA Buttons */}
-        <div
-          className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
-          style={{ animationDelay: '0.4s' }}
-        >
+        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           <Link
-            to="/guides"
-            className="group inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full gradient-sunset text-white font-semibold shadow-xl hover:scale-[1.03] transition-transform"
+            to={slide.cta1.href}
+            className="group inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full text-white font-semibold shadow-2xl hover:scale-[1.04] transition-all duration-300 hero-cta-primary"
+            style={{ background: 'linear-gradient(135deg, #FF4500, #FF6600, #FF8C00)', boxShadow: '0 0 30px rgba(255,102,0,0.5), 0 4px 20px rgba(0,0,0,0.3)' }}
           >
-            50 Rehberi Keşfet
+            {slide.cta1.label}
             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
           <Link
-            to="/districts"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white/15 backdrop-blur-md border border-white/30 text-white font-semibold hover:bg-white/25 transition-colors"
+            to={slide.cta2.href}
+            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white/12 backdrop-blur-md border border-white/30 text-white font-semibold hover:bg-white/22 hover:border-white/50 transition-all duration-300"
           >
-            32 İlçeyi Gör
+            {slide.cta2.label}
           </Link>
         </div>
       </div>
 
+      {/* Slider Controls */}
+      {/* Prev / Next arrows */}
+      <button
+        onClick={prev}
+        aria-label="Önceki"
+        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-orange-500/70 hover:border-orange-400 transition-all duration-300 hover:scale-110"
+      >
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        onClick={next}
+        aria-label="Sonraki"
+        className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/30 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-orange-500/70 hover:border-orange-400 transition-all duration-300 hover:scale-110"
+      >
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      {/* Dot indicators */}
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3">
+        {heroSlides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goTo(i)}
+            aria-label={`Slayt ${i + 1}`}
+            className="transition-all duration-400 rounded-full"
+            style={{
+              width: i === current ? '32px' : '8px',
+              height: '8px',
+              background: i === current
+                ? 'linear-gradient(90deg, #FF4500, #FF8C00)'
+                : 'rgba(255,255,255,0.4)',
+              boxShadow: i === current ? '0 0 12px rgba(255,102,0,0.7)' : 'none',
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-0.5 z-20 bg-white/10">
+        <div
+          className="h-full hero-progress-bar"
+          style={{ background: 'linear-gradient(90deg, #FF4500, #FF8C00)' }}
+        />
+      </div>
+
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-        <div className="w-px h-10 bg-white scroll-indicator-line" />
-        <span className="text-[11px] text-white uppercase tracking-[0.1em]">
-          Keşfet
-        </span>
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+        <div className="w-px h-8 bg-white/50 scroll-indicator-line" />
+        <span className="text-[10px] text-white/70 uppercase tracking-[0.15em]">Keşfet</span>
       </div>
     </section>
   )

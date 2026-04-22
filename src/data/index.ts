@@ -1,4 +1,4 @@
-// ===================== GERÇEK MEKANLAR - İZMİR 2025 =====================
+// ===================== GERÇEK MEKANLAR - İZMİR 2026 =====================
 // Tüm mekanlar web araştırması sonucu bulunan, İzmir'de aktif hizmet veren gerçek mekanlardır.
 
 // ===================== TRENDING / ANA SAYFA KARTLARI (6) =====================
@@ -180,7 +180,7 @@ export const popularLists: PopularList[] = [
     id: 'p2',
     image: '/images/alacati-gece.jpg',
     category: '🌃 Rehber',
-    title: 'Alaçatı Gece Hayatı Rehberi 2025',
+    title: 'Alaçatı Gece Hayatı Rehberi 2026',
     subtitle: 'Asma Yaprağı, Fava, Sota ve yazın en iyi adresleri',
     readTime: '6 dk okuma',
     href: '/districts/alacati',
@@ -207,7 +207,7 @@ export const popularLists: PopularList[] = [
     id: 'p5',
     image: '/images/duman-konser.jpg',
     category: '🎵 Rehber',
-    title: '2025 İzmir Konser Takvimi',
+    title: '2026 İzmir Konser Takvimi',
     subtitle: 'Duman, Sıla, Yaşar, Monolink ve daha fazlası',
     readTime: '5 dk okuma',
     href: '/guides/izmir-fuar-konser-takvimi',
@@ -239,7 +239,7 @@ export const newsCards: NewsCard[] = [
     id: 'n2',
     image: '/images/izmir-fuar.jpg',
     category: '📰 Gündem',
-    title: 'İzmir Fuarı 2025 Programı Açıklandı',
+    title: 'İzmir Fuarı 2026 Programı Açıklandı',
     description: 'İzmir Enternasyonal Fuarı\'nın 2025 yılı programı büyük bir coşkuyla açıklandı. 92. kez düzenlenecek olan fuar, Agustos-Eylül aylarında Kültürpark\'ta kapılarını açacak. Bu yıl uluslararası konuk ülke s',
     date: '5 saat önce',
     href: '/guides/izmir-fuar-konser-takvimi',
@@ -482,7 +482,7 @@ export const newsCards: NewsCard[] = [
     id: 'n29',
     image: '/images/izmir-tiyatro.jpg',
     category: '🎵 Müzik',
-    title: 'İzmir Tiyatro Festivali 2025 Programı Belli Oldu',
+    title: 'İzmir Tiyatro Festivali 2026 Programı Belli Oldu',
     description: 'İzmir Büyükşehir Belediyesi tarafından düzenlenen İzmir Tiyatro Festivali\'nin 2025 yılı programı açıklandı. Türkiye\'nin dört bir yanından ve yurt dışından gelen tiyatro gruplarının sahne alacağı festi',
     date: '1 ay önce',
     href: '/guides/izmir-tiyatro-kultur-sanat',
@@ -1057,7 +1057,7 @@ export const eventCards: EventCard[] = [
     dayName: 'Cumartesi',
     image: '/images/kahve-festivali.jpg',
     category: '☕ FESTİVAL',
-    title: 'İzmir Kahve Festivali 2025',
+    title: 'İzmir Kahve Festivali 2026',
     venue: '📍 Alsancak, İzmir',
     time: '🕐 09:00 - 21:00',
   },
@@ -1176,7 +1176,7 @@ export const guideCards: GuideCard[] = [
     id: 'g2',
     image: '/images/alacati-gece.jpg',
     category: '🌃 GECE HAYATI',
-    title: 'Alaçatı Gece Hayatı Rehberi 2025',
+    title: 'Alaçatı Gece Hayatı Rehberi 2026',
     subtitle: 'Asma Yaprağı, Fava, Sota ve yazın en iyi adresleri',
     readTime: '6 dk okuma',
     author: 'Editör — 1 hafta önce',
@@ -1239,7 +1239,7 @@ export const guideCards: GuideCard[] = [
     id: 'g9',
     image: '/images/cesme-marina.jpg',
     category: '🏖 SAHİL',
-    title: 'Çeşme-Alaçatı Beach Rehberi 2025',
+    title: 'Çeşme-Alaçatı Beach Rehberi 2026',
     subtitle: 'Sole Mare, Fly-Inn, Before Sunset ve en iyi beachler',
     readTime: '8 dk okuma',
     author: 'Editör — 5 gün önce',

@@ -53,7 +53,7 @@ export default function BestPlacesPage() {
   return (
     <>
       <Helmet>
-        <title>İzmir'in En İyi 30 Mekanı — Kahvaltı, Öğle ve Akşam Yemeği Rehberi 2025 | izmirilde</title>
+        <title>İzmir'in En İyi 30 Mekanı — Kahvaltı, Öğle ve Akşam Yemeği Rehberi 2026 | izmirilde</title>
         <meta
           name="description"
           content="İzmir'in en iyi 30 mekanı: 10 Kahvaltı, 10 Öğle, 10 Akşam yemeği. Michelin yıldızlı Urla restoranları, Bib Gourmand ödüllü esnaf lokantaları ve daha fazlası."
@@ -63,7 +63,7 @@ export default function BestPlacesPage() {
           content="İzmir en iyi kahvaltı, İzmir en iyi öğle yemeği, İzmir en iyi akşam yemeği, İzmir Michelin, Urla restoran, Morisi, Magro, OD Urla, Teruar, Vino Locale, Asma Yaprağı"
         />
         <link rel="canonical" href="https://izmirilde.com/best-places" />
-        <meta property="og:title" content="İzmir'in En İyi 30 Mekanı — 2025 Rehberi" />
+        <meta property="og:title" content="İzmir'in En İyi 30 Mekanı — 2026 Rehberi" />
         <meta property="og:description" content="Editörlerin seçtiği: 10 Kahvaltı + 10 Öğle + 10 Akşam" />
         <meta property="og:url" content="https://izmirilde.com/best-places" />
         <meta property="og:type" content="website" />

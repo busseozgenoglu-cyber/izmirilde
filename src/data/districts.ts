@@ -786,7 +786,7 @@ export const districts: District[] = [
     dinner: [
       { name: 'Karabağlar Meyhaneleri', description: 'İlçe merkezindeki meyhaneler, meze çeşitleriyle akşam yemekleri için seçenek sunar.' },
       { name: 'Karabağlar Et Lokantaları', description: 'Izgara ve kebap çeşitleri sunan et lokantaları, akşam yemeği için ekonomik seçenekler sunar.' },
-      { name: 'İlçe Merkezi Restoranları', description: 'Karabağlar merkezdeki restoranlar, çeşitli mutfaklardan seçeneklerle akşam yemeği imkanı sunar.  **Ege\'nin İncisi\'nde Lezzet ve Keşif**  İzmir\'in 30 İlçesinde 270\'den Fazla Mekan Önerisi  2025 İzmir İlçe Rehberi | Tüm Hakları Saklıdır  1 / 1' }
+      { name: 'İlçe Merkezi Restoranları', description: 'Karabağlar merkezdeki restoranlar, çeşitli mutfaklardan seçeneklerle akşam yemeği imkanı sunar.  **Ege\'nin İncisi\'nde Lezzet ve Keşif**  İzmir\'in 30 İlçesinde 270\'den Fazla Mekan Önerisi  2026 İzmir İlçe Rehberi | Tüm Hakları Saklıdır  1 / 1' }
     ],
   }
 ];

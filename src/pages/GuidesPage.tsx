@@ -100,7 +100,7 @@ export default function GuidesPage() {
 
           <div className="relative z-10 text-center px-4 max-w-3xl">
             <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider mb-6 reveal">
-              50 Rehber · Editör Seçimi · 2025
+              50 Rehber · Editör Seçimi · 2026
             </span>
             <h1
               className="font-bold text-white leading-[0.95] tracking-[-0.03em] reveal reveal-delay-1"

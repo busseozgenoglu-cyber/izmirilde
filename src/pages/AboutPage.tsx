@@ -165,7 +165,7 @@ export default function AboutPage() {
                   keşfetmeni sağlayan bir dijital platform.
                 </p>
                 <p>
-                  2025 yılında, İzmir&apos;in zengin kültürünü, lezzetlerini ve enerjisini dünyaya
+                  2026 yılında, İzmir&apos;in zengin kültürünü, lezzetlerini ve enerjisini dünyaya
                   duyurmak için yola çıktık. Editörlerimiz şehrin her semtini adım adım dolaşıyor,
                   en iyi adresleri seçiyor ve senin için derliyor.
                 </p>

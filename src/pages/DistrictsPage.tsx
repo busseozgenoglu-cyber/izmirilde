@@ -93,7 +93,7 @@ export default function DistrictsPage() {
 
           <div className="relative z-10 text-center px-4 max-w-3xl">
             <span className="inline-block px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/25 text-white text-xs font-semibold uppercase tracking-[0.2em] mb-6 reveal">
-              32 İlçe · 270+ Mekan · 2025
+              32 İlçe · 270+ Mekan · 2026
             </span>
             <h1
               className="font-bold text-white leading-[0.95] tracking-[-0.03em] reveal reveal-delay-1"

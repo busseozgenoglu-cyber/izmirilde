@@ -1,4 +1,4 @@
-// ===================== 30 EN İYİ İZMİR MEKANI (2025) =====================
+// ===================== 30 EN İYİ İZMİR MEKANI (2026) =====================
 // 10 Kahvaltı + 10 Öğle Yemeği + 10 Akşam Yemeği
 // Tüm mekanlar gerçek adresleri, telefonları ve Instagram hesaplarıyla birlikte.
 

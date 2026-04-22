@@ -413,3 +413,80 @@ details summary::-webkit-details-marker {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
 }
+
+/* ===================== HERO SLIDER ===================== */
+.hero-slider-root {
+  position: relative;
+}
+
+/* Orange sparkle stars for hero */
+.hero-sparkle-star {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: heroStarPulse 2.5s ease-in-out infinite;
+}
+
+.hero-sparkle-large {
+  width: 6px;
+  height: 6px;
+  background: #FF8C00;
+  box-shadow: 0 0 8px 3px rgba(255,140,0,0.9),
+              0 0 18px 6px rgba(255,102,0,0.6),
+              0 0 30px 10px rgba(255,69,0,0.3);
+}
+
+.hero-sparkle-medium {
+  width: 4px;
+  height: 4px;
+  background: #FFA500;
+  box-shadow: 0 0 6px 2px rgba(255,165,0,0.9),
+              0 0 14px 5px rgba(255,102,0,0.5);
+}
+
+.hero-sparkle-small {
+  width: 3px;
+  height: 3px;
+  background: #FFB347;
+  box-shadow: 0 0 5px 2px rgba(255,179,71,0.8),
+              0 0 10px 4px rgba(255,102,0,0.4);
+}
+
+@keyframes heroStarPulse {
+  0%, 100% { transform: scale(0.4) rotate(0deg); opacity: 0.2; }
+  30% { transform: scale(1.3) rotate(15deg); opacity: 1; }
+  60% { transform: scale(0.8) rotate(-10deg); opacity: 0.6; }
+}
+
+/* Hero badge glow */
+.hero-badge-glow {
+  box-shadow: 0 0 20px rgba(255,102,0,0.3), 0 0 40px rgba(255,102,0,0.15);
+  border-color: rgba(255,140,0,0.4) !important;
+}
+
+/* Hero primary CTA hover glow */
+.hero-cta-primary:hover {
+  box-shadow: 0 0 40px rgba(255,102,0,0.7), 0 4px 24px rgba(0,0,0,0.3) !important;
+}
+
+/* Hero progress bar animation */
+.hero-progress-bar {
+  animation: heroProgress 5.5s linear infinite;
+  transform-origin: left center;
+}
+
+@keyframes heroProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* Slide transition utility */
+.slide-fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.slide-fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
