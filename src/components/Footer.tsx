@@ -95,14 +95,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-6 border-t border-white/20 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/60">2025 izmirilde</p>
+          <p className="text-xs text-white/60">2026 izmirilde</p>
           <div className="flex items-center gap-6">
-            <span className="text-xs text-white/60 cursor-pointer hover:text-white/80 transition-colors">
-              Gizlilik
-            </span>
-            <span className="text-xs text-white/60 cursor-pointer hover:text-white/80 transition-colors">
-              Kullanım Koşulları
-            </span>
+            <Link to="/gizlilik-politikasi" className="text-xs text-white/60 hover:text-white/80 transition-colors">
+              Gizlilik Politikası
+            </Link>
+            <Link to="/hizmet-sartlari" className="text-xs text-white/60 hover:text-white/80 transition-colors">
+              Hizmet Şartları
+            </Link>
           </div>
         </div>
       </div>

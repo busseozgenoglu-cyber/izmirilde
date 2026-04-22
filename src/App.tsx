@@ -109,6 +109,8 @@ import HiddenPlacesPage from './pages/HiddenPlacesPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import NotFoundPage from './pages/NotFoundPage'
+import PrivacyPage from './pages/PrivacyPage'
+import TermsPage from './pages/TermsPage'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -135,6 +137,8 @@ function App() {
         <Route path="/hidden-places" element={<HiddenPlacesPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/gizlilik-politikasi" element={<PrivacyPage />} />
+        <Route path="/hizmet-sartlari" element={<TermsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
