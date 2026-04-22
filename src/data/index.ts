@@ -260,7 +260,7 @@ export const newsCards: NewsCard[] = [
     title: 'Çeşme\'de Yeni Beach Club Açılışları',
     description: '2025 yaz sezonu öncesinde Çeşme\'de birçok yeni beach club kapılarını açtı. Alaçatı ve Çeşme sahil şeridinde hizmete giren yeni işletmeler, dünya çapında DJ performansları, lüks konsept partiler ve öze',
     date: '1 gün önce',
-    href: '/districts/cesme',
+    href: '/guides/cesme-beach-club-eglence',
   },
   {
     id: 'n5',
@@ -278,7 +278,7 @@ export const newsCards: NewsCard[] = [
     title: 'Efes Antik Kenti\'nde Yeni Kazı Alanları Açıldı',
     description: 'UNESCO Dünya Mirası Listesi\'ndeki Efes Antik Kenti\'nde 2024 kazı sezonunda yeni alanlar ziyarete açıldı. Yenilenen ziyaretçi merkezi, artırılan aydınlatma sistemi ve yeni arkeolojik buluntuların sergi',
     date: '2 gün önce',
-    href: '/districts/selcuk',
+    href: '/guides/efes-antik-kenti-rehberi',
   },
   {
     id: 'n7',
@@ -287,7 +287,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Elektrikli Otobüs Filosu Genişliyor',
     description: 'İzmir Büyükşehir Belediyesi, toplu ulaşımda çevre dostu araç filosunu genişletmeye devam ediyor. 2025 yılı içinde 100 yeni elektrikli otobüsün daha hizmete girmesi planlanıyor. ESHOT tarafından işleti',
     date: '2 gün önce',
-    href: '/districts',
+    href: '/districts/konak',
   },
   {
     id: 'n8',
@@ -314,7 +314,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir Doğal Yaşam Parkı Yeni Hayvan Türleriyle Zenginleşti',
     description: 'Sasalı\'daki İzmir Doğal Yaşam Parkı, yeni hayvan türlerinin kazandırılmasıyla daha da çeşitli hale geldi. 2024 yılında parka getirilen zebra, zürafa ve antilop türleri, özellikle çocuklu ailelerin ilg',
     date: '4 gün önce',
-    href: '/districts',
+    href: '/guides/izmir-hayvanat-bahcesi-sasali',
   },
   {
     id: 'n11',
@@ -323,7 +323,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Yeni Bisiklet Yolları Açıldı',
     description: 'İzmir Büyükşehir Belediyesi\'nin bisikletli ulaşımı teşvik etmek amacıyla başlattığı proje kapsamında, 2024-2025 döneminde 50 kilometre yeni bisiklet yolu daha hizmete açıldı. Kordon\'dan Bostanlı\'ya, G',
     date: '4 gün önce',
-    href: '/districts',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'n12',
@@ -341,7 +341,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir-Adnan Menderes Havalimanı Yeni Terminal Açılışı',
     description: 'İzmir-Adnan Menderes Havalimanı\'nda yapılan genişletme çalışmaları kapsamında yeni bir iç hatlar terminal binası hizmete açıldı. Modern mimarisi, artırılmış kapasitesi ve gelişmiş teknolojik altyapısı',
     date: '5 gün önce',
-    href: '/districts',
+    href: '/districts/gaziemir',
   },
   {
     id: 'n14',
@@ -377,7 +377,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir Körfezi\'nde Deniz Otobüsü Seferleri Artırıldı',
     description: 'İzmir Büyükşehir Belediyesi İZDENİZ, deniz ulaşımında hizmet kalitesini artırıyor. 2025 yılı itibarıyla Karşıyaka-Konak, Bostanlı-Konak ve Üçkuyular-Alsancak hatlarında sefer sayıları artırıldı. Yeni',
     date: '1 hafta önce',
-    href: '/districts',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'n18',
@@ -395,7 +395,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Akıllı Durak Sistemine Geçiş',
     description: 'İzmir\'deki otobüs durakları, akıllı durak sistemiyle donatılmaya başlandı. Dijital ekranlar, gerçek zamanlı otobüs takibi ve QR kodlu ödeme sistemleriyle donatılan yeni duraklar, İzmirli\'nin toplu ula',
     date: '2 hafta önce',
-    href: '/districts',
+    href: '/districts/konak',
   },
   {
     id: 'n20',
@@ -413,7 +413,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Yeni Bir Stadyum Projesi Gündemde',
     description: 'İzmir\'in spor altyapısını güçlendirmek amacıyla yeni bir çok amaçlı stadyum projesi gündeme geldi. 40.000 kişi kapasiteli olarak planlanan yeni stadyum, hem futbol hem de atletizm müsabakalarına ev sa',
     date: '2 hafta önce',
-    href: '/districts',
+    href: '/districts/bornova',
   },
   {
     id: 'n22',
@@ -431,7 +431,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir Tarihi Asansör\'de Yenileme Çalışmaları',
     description: '1907 yılından bu yana hizmet veren Tarihi Asansör, kapsamlı bir restorasyon ve renovasyondan geçti. Yenilenen asansör kabini, restore edilen teras alanı ve modernize edilen güvenlik sistemleriyle tari',
     date: '3 hafta önce',
-    href: '/guides/tarihi-asansor-karatas',
+    href: '/hidden-places',
   },
   {
     id: 'n24',
@@ -458,7 +458,7 @@ export const newsCards: NewsCard[] = [
     title: 'Ödemiş Gölcük\'te Yeni Bungalov Evler Hizmete Açıldı',
     description: 'Bozdağlar\'ın eteklerindeki Gölcük Tabiat Parkı\'nda yeni bungalov evler misafirlerini ağırlamaya başladı. Göl manzaralı, ahşap bungalovlar, doğayla iç içe konaklama deneyimi arayanlar için ideal. Yeni',
     date: '1 ay önce',
-    href: '/districts/odemis',
+    href: '/guides/golcuk-tabiat-parki',
   },
   {
     id: 'n27',
@@ -467,7 +467,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Yeni Bir Arkeoloji Müzesi Açılıyor',
     description: 'İzmir\'in arkeolojik zenginliklerini daha iyi sergilemek amacıyla yeni bir arkeoloji müzesi projesi hayata geçiriliyor. Konak ilçesinde yapılması planlanan yeni müze, Efes, Bergama, Teos ve Claros gibi',
     date: '1 ay önce',
-    href: '/districts',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n28',
@@ -494,7 +494,7 @@ export const newsCards: NewsCard[] = [
     title: 'Buca\'da Yeni Metro Hattı Çalışmaları Başladı',
     description: 'İzmir metrosunun Buca hattında inşaat çalışmaları resmen başladı. Üçyol\'dan Buca Koop\'a kadar uzanacak 13 kilometrelik hat, İzmir metrosunun en önemli genişletme projelerinden biri. Yapımı planlanan 1',
     date: '1 ay önce',
-    href: '/districts/buca',
+    href: '/districts/konak',
   },
   {
     id: 'n31',
@@ -503,7 +503,7 @@ export const newsCards: NewsCard[] = [
     title: 'Urla\'da Yeni Zeytinyağı Müzesi Açıldı',
     description: 'Urla\'nın zeytinyağı kültürünü tanıtmak amacıyla yeni bir zeytinyağı müzesi açıldı. Tarihi bir taş binada hizmet veren müze, zeytinyağı üretiminin tarihçesini, geleneksel üretim yöntemlerini ve modern',
     date: '2 ay önce',
-    href: '/districts/urla',
+    href: '/guides/agora-oren-yeri-izmir',
   },
   {
     id: 'n32',
@@ -521,7 +521,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Gıda Atölyeleri ve Mutfak Kursları Yaygınlaşıyor',
     description: 'İzmir\'de son yıllarda gastronomi eğitimine ilgi büyük artış gösterdi. Şehirde açılan yeni gıda atölyeleri ve mutfak kursları, amatör şeflere ve gastronomi tutkunlarına profesyonel eğitim imkanı sunuyo',
     date: '2 ay önce',
-    href: '/districts',
+    href: '/guides/kemeralti-boyoz-kumru',
   },
   {
     id: 'n34',
@@ -530,7 +530,7 @@ export const newsCards: NewsCard[] = [
     title: 'Bornova\'da Yeni Bilim Merkezi ve Planetaryum Açıldı',
     description: 'Bornova\'da Ege Üniversitesi kampüsü yakınlarında yeni bir bilim merkezi ve planetaryum hizmete açıldı. Modern teknolojilerle donatılan merkez, öğrencilere ve halka interaktif bilim sergileri, uzay gös',
     date: '2 ay önce',
-    href: '/districts/bornova',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n35',
@@ -557,7 +557,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmirli Şefler Türkiye\'nin En İyi 50\'si Arasında',
     description: 'İzmirli şefler, Türkiye\'nin en iyi 50 şefi listesinde önemli başarılar elde etti. Şef Osman Sezener (OD Urla), Şef Osman Serdaroğlu (Teruar Urla) ve Şef Ahmet Güzelyağdöken (Balmumu) gibi isimler, İzm',
     date: '2 ay önce',
-    href: '/districts',
+    href: '/best-places',
   },
   {
     id: 'n38',
@@ -566,7 +566,7 @@ export const newsCards: NewsCard[] = [
     title: 'Gaziemir\'de Yeni Havacılık ve Uzay Müzesi',
     description: 'Gaziemir\'deki İzmir Havacılık Müzesi, genişletme çalışmalarıyla daha kapsamlı bir hale getirildi. Yeni eklenen uzay bölümü, Türkiye\'nin uzay çalışmalarına dair interaktif sergiler sunuyor. Özellikle ç',
     date: '3 ay önce',
-    href: '/districts/gaziemir',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n39',
@@ -575,7 +575,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir Körfezi\'nde Deniz Temizlik Hareketi',
     description: 'İzmir Büyükşehir Belediyesi ve sivil toplum kuruluşlarının ortaklaşa başlattığı Körfez Temizlik Hareketi, 2024-2025 döneminde önemli sonuçlar elde etti. Deniz dibinden toplanan atıklar, deniz canlılar',
     date: '3 ay önce',
-    href: '/districts',
+    href: '/hidden-places',
   },
   {
     id: 'n40',
@@ -584,7 +584,7 @@ export const newsCards: NewsCard[] = [
     title: 'Selçuk\'ta Efes Antik Tiyatrosu\'nda Yeni Konserler',
     description: 'UNESCO Dünya Mirası Listesi\'ndeki Efes Antik Tiyatrosu, 2025 yaz sezonunda dünya çapında sanatçıların konserlerine ev sahipliği yapacak. 25.000 kişi kapasiteli antik tiyatro, akustiği ve tarihi atmosf',
     date: '3 ay önce',
-    href: '/districts/selcuk',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n41',
@@ -593,7 +593,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de E-Spor Arena Projesi',
     description: 'Genç nüfusu ve teknoloji altyapısıyla öne çıkan İzmir, e-spor alanında da iddialı projelere imza atıyor. Bornova\'da yapılması planlanan yeni e-spor arena, ulusal ve uluslararası turnuvalara ev sahipli',
     date: '3 ay önce',
-    href: '/districts',
+    href: '/guides/izmir-fuar-konser-takvimi',
   },
   {
     id: 'n42',
@@ -611,7 +611,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Yeni Kütüphane ve Kültür Merkezleri Açılıyor',
     description: 'İzmir\'in kültür ve eğitim altyapısını güçlendirmek amacıyla her ilçede yeni kütüphane ve kültür merkezleri açılıyor. Dijital kütüphane hizmetleri, atölye çalışmaları ve kültürel etkinliklerle donatıla',
     date: '3 ay önce',
-    href: '/districts',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n44',
@@ -629,7 +629,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Yeni Bir Deniz Müzesi Planlanıyor',
     description: 'İzmir\'in denizcilik tarihini sergilemek amacıyla Konak\'ta yeni bir deniz müzesi projesi gündeme geldi. Tarihi İskele binasının restorasyonuyla hayata geçirilecek müze, Ege Denizi\'nin denizcilik kültür',
     date: '4 ay önce',
-    href: '/districts',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n46',
@@ -647,7 +647,7 @@ export const newsCards: NewsCard[] = [
     title: 'Torbalı\'da Tarım Teknolojileri Merkezi Kuruldu',
     description: 'Torbalı\'da modern tarım teknolojilerinin tanıtıldığı yeni bir merkez hizmete açıldı. Drone ile tarım, akıllı sulama sistemleri ve dijital tarım uygulamalarının sergilendiği merkez, bölge çiftçilerine',
     date: '4 ay önce',
-    href: '/districts/torbali',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n48',
@@ -656,7 +656,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Sokak Sanatı Festivali Büyük İlgi Gördü',
     description: 'İzmir sokaklarında düzenlenen sokak sanatı festivali, rekor katılımla gerçekleşti. Alsancak, Karşıyaka ve Konak\'taki duvarlarda gerçekleştirilen mural çalışmaları, şehri açık hava sanat galerisine dön',
     date: '5 ay önce',
-    href: '/districts',
+    href: '/guides/izmir-tiyatro-kultur-sanat',
   },
   {
     id: 'n49',
@@ -674,7 +674,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir 2026\'da Dünya Şehirleri Zirvesi\'ne Ev Sahipliği Yapacak',
     description: 'İzmir, 2026 yılında Uluslararası Dünya Şehirleri Zirvesi\'ne ev sahipliği yapacak. Sürdürülebilir kentleşme, iklim değişikliği ve akıllı şehir teknolojileri konularında dünya çapında uzmanların katılac',
     date: '6 ay önce',
-    href: '/districts',
+    href: '/hidden-places',
   }
 ];
 
