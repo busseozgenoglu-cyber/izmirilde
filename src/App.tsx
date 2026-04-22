@@ -21,7 +21,22 @@ function InstagramFloatButton() {
 
   return (
     <a
-      href="https://www.instagram.com/izmirilde"
+      href="instagram://user?username=izmirilde"
+      onClick={(e) => {
+        // Mobilde app'i dene, açılmazsa web'e düş
+        e.preventDefault()
+        const appUrl = 'instagram://user?username=izmirilde'
+        const webUrl = 'https://www.instagram.com/izmirilde'
+        const start = Date.now()
+        window.location.href = appUrl
+        setTimeout(() => {
+          // Eğer uygulama açıldıysa sayfa hâlâ burada olur ama odak gider
+          // 1.5sn içinde hâlâ buradaysak web'e yönlendir
+          if (Date.now() - start < 2000) {
+            window.open(webUrl, '_blank')
+          }
+        }, 1500)
+      }}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Instagram'da bizi takip edin @izmirilde"
