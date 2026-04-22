@@ -534,3 +534,14 @@ details summary::-webkit-details-marker {
 .ig-float-btn.is-pulsing {
   animation: igPulseRing 1.2s ease-out;
 }
+
+/* Hero description text — parlak beyaz, turuncu glow */
+.hero-desc-text {
+  color: rgba(255, 255, 255, 0.93) !important;
+  text-shadow:
+    0 1px 12px rgba(0,0,0,0.65),
+    0 0 40px rgba(255, 120, 0, 0.25),
+    0 0 80px rgba(255, 80, 0, 0.12);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}

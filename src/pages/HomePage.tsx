@@ -157,6 +157,7 @@ function HeroSection() {
             fontSize: 'clamp(38px, 7.5vw, 90px)',
             lineHeight: 0.95,
             letterSpacing: '-0.03em',
+            color: '#ffffff',
             textShadow: '0 2px 32px rgba(0,0,0,0.4)',
           }}
         >
@@ -178,8 +179,13 @@ function HeroSection() {
         </h1>
 
         <p
-          className="text-white/88 text-lg sm:text-xl max-w-2xl leading-relaxed mb-10 animate-fade-in-up"
-          style={{ animationDelay: '0.15s', textShadow: '0 1px 8px rgba(0,0,0,0.3)' }}
+          className="text-lg sm:text-xl max-w-2xl leading-relaxed mb-10 animate-fade-in-up hero-desc-text"
+          style={{
+            animationDelay: '0.15s',
+            color: 'rgba(255,255,255,0.92)',
+            textShadow: '0 1px 12px rgba(0,0,0,0.6), 0 0 30px rgba(255,102,0,0.2)',
+            fontWeight: 500,
+          }}
         >
           {slide.desc}
         </p>
