@@ -20,7 +20,7 @@ export const trendingCards: TrendingCard[] = [
     title: '1888 Bar & Lounge',
     subtitle: 'Tarihi binada modern kokteyl deneyimi',
     location: '📍 Alsancak, İzmir',
-    href: '/districts/alsancak-ve-kordon',
+    href: '/guides/alsancak-gece-hayati-barlar',
   },
   {
     id: '2',
@@ -29,7 +29,7 @@ export const trendingCards: TrendingCard[] = [
     title: 'Poka Coffee Roasters',
     subtitle: 'Kendi çekirdeklerini kavuran, üçüncü dalga kahve',
     location: '📍 Alsancak, İzmir',
-    href: '/districts/alsancak-ve-kordon',
+    href: '/guides/alsancak-en-iyi-kahvalti',
   },
   {
     id: '3',
@@ -38,7 +38,7 @@ export const trendingCards: TrendingCard[] = [
     title: 'Sole Mare Beach Club',
     subtitle: "Aya Yorgi Koyu'nun en popüler beach'i",
     location: '📍 Çeşme, İzmir',
-    href: '/districts/cesme',
+    href: '/guides/cesme-beach-club-eglence',
   },
   {
     id: '4',
@@ -56,7 +56,7 @@ export const trendingCards: TrendingCard[] = [
     title: 'Asma Yaprağı',
     subtitle: 'Michelin Bib Gourmand ödüllü Ege mutfağı',
     location: '📍 Alaçatı, Çeşme',
-    href: '/districts/alacati',
+    href: '/best-places',
   },
   {
     id: '6',
@@ -97,7 +97,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: 'Monolink — Yuzu Beach',
     subtitle: 'Elektronik müzik ve Ege’nin buluştuğu an',
     location: '📍 Çeşme, İzmir',
-    href: '/districts/cesme',
+    href: '/guides/cesme-beach-club-eglence',
   },
   {
     id: 'd3',
@@ -106,7 +106,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: 'BeWater Coffee & Bookstore',
     subtitle: 'Kitap ve kahvenin buluştuğu mekan',
     location: '📍 Alsancak, İzmir',
-    href: '/districts/alsancak-ve-kordon',
+    href: '/guides/alsancak-en-iyi-kahvalti',
   },
   {
     id: 'd4',
@@ -142,7 +142,7 @@ export const discoveryCards: DiscoveryCard[] = [
     title: 'Narımor',
     subtitle: 'Alsancakın Michelin Yıldızlı şef restoranı',
     location: '📍 Alsancak, İzmir',
-    href: '/districts/alsancak-ve-kordon',
+    href: '/best-places',
   },
   {
     id: 'd8',
@@ -183,7 +183,7 @@ export const popularLists: PopularList[] = [
     title: 'Alaçatı Gece Hayatı Rehberi 2026',
     subtitle: 'Asma Yaprağı, Fava, Sota ve yazın en iyi adresleri',
     readTime: '6 dk okuma',
-    href: '/districts/alacati',
+    href: '/guides/alsancak-gece-hayati-barlar',
   },
   {
     id: 'p3',
@@ -201,7 +201,7 @@ export const popularLists: PopularList[] = [
     title: "İzmir'in Michelin Yıldızlı Restoranları",
     subtitle: 'Narımor, OD Urla, Vino Locale, Teruar',
     readTime: '7 dk okuma',
-    href: '/guides/urla-deniz-kenari-yemek',
+    href: '/best-places',
   },
   {
     id: 'p5',
@@ -233,7 +233,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'e 3 Yeni Michelin Yıldızlı Restoran',
     description: '2024 yılında İzmir mutfağı uluslararası gastronomi sahnesinde tarihi bir başarıya imza attı. OD Urla şef Osman Sezener yönetiminde, Teruar Urla şef Osman Serdaroğlu liderliğinde ve Vino Locale Ozan-Se',
     date: '2 saat önce',
-    href: '/guides/urla-deniz-kenari-yemek',
+    href: '/best-places',
   },
   {
     id: 'n2',
@@ -323,7 +323,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Yeni Bisiklet Yolları Açıldı',
     description: 'İzmir Büyükşehir Belediyesi\'nin bisikletli ulaşımı teşvik etmek amacıyla başlattığı proje kapsamında, 2024-2025 döneminde 50 kilometre yeni bisiklet yolu daha hizmete açıldı. Kordon\'dan Bostanlı\'ya, G',
     date: '4 gün önce',
-    href: '/districts/karsiyaka',
+    href: '/districts/konak',
   },
   {
     id: 'n12',
@@ -377,7 +377,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir Körfezi\'nde Deniz Otobüsü Seferleri Artırıldı',
     description: 'İzmir Büyükşehir Belediyesi İZDENİZ, deniz ulaşımında hizmet kalitesini artırıyor. 2025 yılı itibarıyla Karşıyaka-Konak, Bostanlı-Konak ve Üçkuyular-Alsancak hatlarında sefer sayıları artırıldı. Yeni',
     date: '1 hafta önce',
-    href: '/districts/karsiyaka',
+    href: '/districts/konak',
   },
   {
     id: 'n18',
@@ -431,7 +431,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir Tarihi Asansör\'de Yenileme Çalışmaları',
     description: '1907 yılından bu yana hizmet veren Tarihi Asansör, kapsamlı bir restorasyon ve renovasyondan geçti. Yenilenen asansör kabini, restore edilen teras alanı ve modernize edilen güvenlik sistemleriyle tari',
     date: '3 hafta önce',
-    href: '/hidden-places',
+    href: '/guides/tarihi-asansor-karatas',
   },
   {
     id: 'n24',
@@ -467,7 +467,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Yeni Bir Arkeoloji Müzesi Açılıyor',
     description: 'İzmir\'in arkeolojik zenginliklerini daha iyi sergilemek amacıyla yeni bir arkeoloji müzesi projesi hayata geçiriliyor. Konak ilçesinde yapılması planlanan yeni müze, Efes, Bergama, Teos ve Claros gibi',
     date: '1 ay önce',
-    href: '/guides/izmir-tiyatro-kultur-sanat',
+    href: '/guides/agora-oren-yeri-izmir',
   },
   {
     id: 'n28',
@@ -494,7 +494,7 @@ export const newsCards: NewsCard[] = [
     title: 'Buca\'da Yeni Metro Hattı Çalışmaları Başladı',
     description: 'İzmir metrosunun Buca hattında inşaat çalışmaları resmen başladı. Üçyol\'dan Buca Koop\'a kadar uzanacak 13 kilometrelik hat, İzmir metrosunun en önemli genişletme projelerinden biri. Yapımı planlanan 1',
     date: '1 ay önce',
-    href: '/districts/konak',
+    href: '/districts/buca',
   },
   {
     id: 'n31',
@@ -503,7 +503,7 @@ export const newsCards: NewsCard[] = [
     title: 'Urla\'da Yeni Zeytinyağı Müzesi Açıldı',
     description: 'Urla\'nın zeytinyağı kültürünü tanıtmak amacıyla yeni bir zeytinyağı müzesi açıldı. Tarihi bir taş binada hizmet veren müze, zeytinyağı üretiminin tarihçesini, geleneksel üretim yöntemlerini ve modern',
     date: '2 ay önce',
-    href: '/guides/agora-oren-yeri-izmir',
+    href: '/districts/urla',
   },
   {
     id: 'n32',
@@ -530,7 +530,7 @@ export const newsCards: NewsCard[] = [
     title: 'Bornova\'da Yeni Bilim Merkezi ve Planetaryum Açıldı',
     description: 'Bornova\'da Ege Üniversitesi kampüsü yakınlarında yeni bir bilim merkezi ve planetaryum hizmete açıldı. Modern teknolojilerle donatılan merkez, öğrencilere ve halka interaktif bilim sergileri, uzay gös',
     date: '2 ay önce',
-    href: '/guides/izmir-tiyatro-kultur-sanat',
+    href: '/districts/bornova',
   },
   {
     id: 'n35',
@@ -566,7 +566,7 @@ export const newsCards: NewsCard[] = [
     title: 'Gaziemir\'de Yeni Havacılık ve Uzay Müzesi',
     description: 'Gaziemir\'deki İzmir Havacılık Müzesi, genişletme çalışmalarıyla daha kapsamlı bir hale getirildi. Yeni eklenen uzay bölümü, Türkiye\'nin uzay çalışmalarına dair interaktif sergiler sunuyor. Özellikle ç',
     date: '3 ay önce',
-    href: '/guides/izmir-tiyatro-kultur-sanat',
+    href: '/districts/gaziemir',
   },
   {
     id: 'n39',
@@ -575,7 +575,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir Körfezi\'nde Deniz Temizlik Hareketi',
     description: 'İzmir Büyükşehir Belediyesi ve sivil toplum kuruluşlarının ortaklaşa başlattığı Körfez Temizlik Hareketi, 2024-2025 döneminde önemli sonuçlar elde etti. Deniz dibinden toplanan atıklar, deniz canlılar',
     date: '3 ay önce',
-    href: '/hidden-places',
+    href: '/districts/karsiyaka',
   },
   {
     id: 'n40',
@@ -584,7 +584,7 @@ export const newsCards: NewsCard[] = [
     title: 'Selçuk\'ta Efes Antik Tiyatrosu\'nda Yeni Konserler',
     description: 'UNESCO Dünya Mirası Listesi\'ndeki Efes Antik Tiyatrosu, 2025 yaz sezonunda dünya çapında sanatçıların konserlerine ev sahipliği yapacak. 25.000 kişi kapasiteli antik tiyatro, akustiği ve tarihi atmosf',
     date: '3 ay önce',
-    href: '/guides/izmir-tiyatro-kultur-sanat',
+    href: '/guides/efes-antik-kenti-rehberi',
   },
   {
     id: 'n41',
@@ -593,7 +593,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de E-Spor Arena Projesi',
     description: 'Genç nüfusu ve teknoloji altyapısıyla öne çıkan İzmir, e-spor alanında da iddialı projelere imza atıyor. Bornova\'da yapılması planlanan yeni e-spor arena, ulusal ve uluslararası turnuvalara ev sahipli',
     date: '3 ay önce',
-    href: '/guides/izmir-fuar-konser-takvimi',
+    href: '/districts/bornova',
   },
   {
     id: 'n42',
@@ -629,7 +629,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Yeni Bir Deniz Müzesi Planlanıyor',
     description: 'İzmir\'in denizcilik tarihini sergilemek amacıyla Konak\'ta yeni bir deniz müzesi projesi gündeme geldi. Tarihi İskele binasının restorasyonuyla hayata geçirilecek müze, Ege Denizi\'nin denizcilik kültür',
     date: '4 ay önce',
-    href: '/guides/izmir-tiyatro-kultur-sanat',
+    href: '/districts/konak',
   },
   {
     id: 'n46',
@@ -647,7 +647,7 @@ export const newsCards: NewsCard[] = [
     title: 'Torbalı\'da Tarım Teknolojileri Merkezi Kuruldu',
     description: 'Torbalı\'da modern tarım teknolojilerinin tanıtıldığı yeni bir merkez hizmete açıldı. Drone ile tarım, akıllı sulama sistemleri ve dijital tarım uygulamalarının sergilendiği merkez, bölge çiftçilerine',
     date: '4 ay önce',
-    href: '/guides/izmir-tiyatro-kultur-sanat',
+    href: '/districts/torbali',
   },
   {
     id: 'n48',
@@ -656,7 +656,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir\'de Sokak Sanatı Festivali Büyük İlgi Gördü',
     description: 'İzmir sokaklarında düzenlenen sokak sanatı festivali, rekor katılımla gerçekleşti. Alsancak, Karşıyaka ve Konak\'taki duvarlarda gerçekleştirilen mural çalışmaları, şehri açık hava sanat galerisine dön',
     date: '5 ay önce',
-    href: '/guides/izmir-tiyatro-kultur-sanat',
+    href: '/districts/alsancak-ve-kordon',
   },
   {
     id: 'n49',
@@ -674,7 +674,7 @@ export const newsCards: NewsCard[] = [
     title: 'İzmir 2026\'da Dünya Şehirleri Zirvesi\'ne Ev Sahipliği Yapacak',
     description: 'İzmir, 2026 yılında Uluslararası Dünya Şehirleri Zirvesi\'ne ev sahipliği yapacak. Sürdürülebilir kentleşme, iklim değişikliği ve akıllı şehir teknolojileri konularında dünya çapında uzmanların katılac',
     date: '6 ay önce',
-    href: '/hidden-places',
+    href: '/districts/konak',
   }
 ];
 
