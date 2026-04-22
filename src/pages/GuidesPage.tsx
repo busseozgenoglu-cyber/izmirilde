@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { Search, Calendar, Clock, User, ArrowRight } from 'lucide-react'
 import useScrollReveal from '../hooks/useScrollReveal'
 import { blogPosts } from '../data/blogs'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 const categoryFilters = [
   { label: 'Tümü', value: 'all' },
@@ -183,6 +184,13 @@ export default function GuidesPage() {
             </div>
           </section>
         )}
+
+        {/* BREADCRUMBS */}
+        <div className="bg-white border-b border-black/5">
+          <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-4">
+            <Breadcrumbs items={[{ label: 'Rehberler' }]} />
+          </div>
+        </div>
 
         {/* FILTER & SEARCH */}
         <section className="py-8 bg-white border-y border-black/5 sticky top-[72px] z-30 backdrop-blur-md bg-white/95">

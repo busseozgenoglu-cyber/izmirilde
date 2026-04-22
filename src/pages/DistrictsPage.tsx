@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { Search, MapPin, ArrowRight, Utensils } from 'lucide-react'
 import useScrollReveal from '../hooks/useScrollReveal'
 import { districts } from '../data/districts'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 const groupFilters = [
   { label: 'Tümü', value: 'all' },
@@ -109,6 +110,13 @@ export default function DistrictsPage() {
             İlçeleri Keşfet
           </div>
         </section>
+
+        {/* BREADCRUMBS */}
+        <div className="bg-white border-b border-black/5">
+          <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-4">
+            <Breadcrumbs items={[{ label: 'İlçeler' }]} />
+          </div>
+        </div>
 
         {/* FILTER & SEARCH */}
         <section className="py-8 bg-white border-b border-black/5 sticky top-[72px] z-30 backdrop-blur-md bg-white/95">

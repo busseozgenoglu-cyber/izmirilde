@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { Search, MapPin, Navigation, Compass, Sparkles } from 'lucide-react'
 import useScrollReveal from '../hooks/useScrollReveal'
 import { hiddenPlaces, hiddenCategories } from '../data/hiddenPlaces'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 export default function HiddenPlacesPage() {
   const [activeCategory, setActiveCategory] = useState<string>('all')
@@ -106,6 +107,13 @@ export default function HiddenPlacesPage() {
             </p>
           </div>
         </section>
+
+        {/* BREADCRUMBS */}
+        <div className="bg-white border-b border-black/5">
+          <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-4">
+            <Breadcrumbs items={[{ label: 'Gizli Yerler' }]} />
+          </div>
+        </div>
 
         {/* STATS BAR */}
         <section className="bg-gradient-to-r from-orange-50 via-red-50 to-orange-50 border-y border-orange-100 py-8">

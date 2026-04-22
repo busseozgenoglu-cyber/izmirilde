@@ -1,9 +1,10 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowLeft, Clock, Calendar, User, Tag, Share2, BookOpen, ChevronRight } from 'lucide-react'
+import { Clock, Calendar, User, Tag, Share2, BookOpen, ChevronRight } from 'lucide-react'
 import { blogPosts } from '../data/blogs'
 import useScrollReveal from '../hooks/useScrollReveal'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>()
@@ -130,13 +131,15 @@ export default function BlogDetailPage() {
           <div className="shimmer-sweep" />
 
           <div className="relative z-10 h-full flex flex-col justify-end max-w-[900px] mx-auto px-4 sm:px-8 pb-16">
-            <Link
-              to="/guides"
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 text-sm font-medium transition-colors w-fit"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Tüm Rehberler
-            </Link>
+            <div className="mb-6 reveal">
+              <Breadcrumbs
+                theme="dark"
+                items={[
+                  { label: 'Rehberler', href: '/guides' },
+                  { label: post.title },
+                ]}
+              />
+            </div>
 
             <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold text-white gradient-sunset mb-4 w-fit reveal">
               {post.category}

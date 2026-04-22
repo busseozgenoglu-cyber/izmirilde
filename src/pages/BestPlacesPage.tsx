@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { Search, MapPin, Phone, Instagram, Trophy, Star } from 'lucide-react'
 import useScrollReveal from '../hooks/useScrollReveal'
 import { bestPlaces } from '../data/bestPlaces'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 const mealFilters = [
   { label: 'Tümü', value: 'all', emoji: '✨' },
@@ -102,6 +103,13 @@ export default function BestPlacesPage() {
             </p>
           </div>
         </section>
+
+        {/* BREADCRUMBS */}
+        <div className="bg-white border-b border-black/5">
+          <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-4">
+            <Breadcrumbs items={[{ label: 'En İyi 30 Mekan' }]} />
+          </div>
+        </div>
 
         {/* FILTER & SEARCH */}
         <section className="py-8 bg-white border-b border-black/5 sticky top-[72px] z-30 backdrop-blur-md bg-white/95">
