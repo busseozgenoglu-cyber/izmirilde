@@ -24,8 +24,8 @@ const heroSlides = [
     title: 'İzmir\'in En İyi',
     highlight: 'Mekanlarını',
     titleEnd: 'Keşfet',
-    desc: 'Efes\'ten Alaçatı\'ya, Kordon\'dan Kemeraltı\'na — editörlerimizin hazırladığı 50 detaylı rehberle İzmir\'i yaşayın.',
-    cta1: { label: '50 Rehberi Keşfet', href: '/guides' },
+    desc: 'Efes\'ten Alaçatı\'ya, Kordon\'dan Kemeraltı\'na — editörlerimizin hazırladığı 60 detaylı rehberle İzmir\'i yaşayın.',
+    cta1: { label: '60 Rehberi Keşfet', href: '/guides' },
     cta2: { label: '32 İlçeyi Gör', href: '/districts' },
     accent: 'from-orange-600 via-red-500 to-orange-400',
   },
@@ -670,7 +670,7 @@ export default function HomePage() {
         <title>izmirilde — İzmir Rehberi, Mekanlar, Etkinlikler ve Keşfedilecek 50 Yer</title>
         <meta
           name="description"
-          content="İzmir'in en iyi mekanları, etkinlikleri ve gezilecek yerleri. Efes, Alaçatı, Çeşme, Kordon, Kemeraltı ve daha fazlası için editör rehberi. 50 detaylı blog yazısı."
+          content="İzmir'in en iyi mekanları, etkinlikleri ve gezilecek yerleri. Efes, Alaçatı, Çeşme, Kordon, Kemeraltı ve daha fazlası için editör rehberi. 60 detaylı blog yazısı."
         />
         <meta
           name="keywords"
@@ -678,7 +678,7 @@ export default function HomePage() {
         />
         <link rel="canonical" href="https://izmirilde.com/" />
         <meta property="og:title" content="izmirilde — İzmir Rehberi, Mekanlar, Etkinlikler" />
-        <meta property="og:description" content="İzmir'de ne yapılır, nereye gidilir? 50 detaylı rehberle Ege'nin incisini keşfedin." />
+        <meta property="og:description" content="İzmir'de ne yapılır, nereye gidilir? 60 detaylı rehberle Ege'nin incisini keşfedin." />
         <meta property="og:url" content="https://izmirilde.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://izmirilde.com/images/izmir-hero-still.jpg" />
@@ -688,7 +688,7 @@ export default function HomePage() {
             '@type': 'WebSite',
             name: 'izmirilde',
             url: 'https://izmirilde.com/',
-            description: "İzmir rehberi, mekanlar, etkinlikler ve 50 detaylı keşif yazısı",
+            description: "İzmir rehberi, mekanlar, etkinlikler ve 60 detaylı keşif yazısı",
             inLanguage: 'tr-TR',
             potentialAction: {
               '@type': 'SearchAction',

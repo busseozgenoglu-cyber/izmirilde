@@ -64,6 +64,8 @@ Disallow: /
 
 # Sitemap
 Sitemap: https://izmirilde.com/sitemap.xml
+Sitemap: https://izmirilde.com/news-sitemap.xml
+Sitemap: https://izmirilde.com/sitemap-index.xml
 
 # Host directive
 Host: https://izmirilde.com

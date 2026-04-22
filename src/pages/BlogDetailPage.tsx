@@ -2,9 +2,74 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Clock, Calendar, User, Tag, Share2, BookOpen, ChevronRight } from 'lucide-react'
-import { blogPosts } from '../data/blogs'
+import { allBlogPosts as blogPosts } from '../data/blogs'
 import useScrollReveal from '../hooks/useScrollReveal'
 import Breadcrumbs from '../components/Breadcrumbs'
+
+// ===================== İÇ LİNKLEME SİSTEMİ =====================
+function getInternalLinks(currentSlug: string, category: string): { title: string; href: string }[] {
+  const linkMap: Record<string, { title: string; href: string }[]> = {
+    '🏛 Tarih': [
+      { title: 'Efes Antik Kenti Tam Rehberi', href: '/guides/efes-antik-kenti-rehberi' },
+      { title: 'Agora Ören Yeri — İzmir\'in Roma Mirası', href: '/guides/agora-oren-yeri-izmir' },
+      { title: 'Bergama Asklepion Rehberi', href: '/guides/bergama-asklepion' },
+      { title: 'Tarihi Asansör ve Karataş', href: '/guides/tarihi-asansor-karatas' },
+      { title: 'İzmir 32 İlçe Rehberi', href: '/districts' },
+    ],
+    '🏖 Plaj': [
+      { title: 'Çeşme Beach Club Rehberi 2026', href: '/guides/cesme-beach-club-eglence' },
+      { title: 'Çeşme Ilıca Plajı Rehberi', href: '/guides/cesme-ilica-plaji' },
+      { title: 'Dikili Gizli Koylar', href: '/guides/dikili-gizli-koylar' },
+      { title: 'Mordoğan Tekne Turu', href: '/guides/mordogan-tekne-turu' },
+      { title: 'Pamucak Plajı Selçuk', href: '/guides/pamucak-plaji-selcuk' },
+    ],
+    '🍽 Yemek': [
+      { title: 'İzmir\'in En İyi 30 Mekanı', href: '/best-places' },
+      { title: 'Kemeraltı Boyoz ve Kumru', href: '/guides/kemeralti-boyoz-kumru' },
+      { title: 'Kordon\'da Midye ve Deniz Ürünleri', href: '/guides/kordon-midye-dolma' },
+      { title: 'Alsancak En İyi Kahvaltı', href: '/guides/alsancak-en-iyi-kahvalti' },
+      { title: 'Urla Zeytinyağı ve Şarap Rotası', href: '/guides/urla-zeytinyagi-sarap-rotasi' },
+    ],
+    '🌿 Doğa': [
+      { title: 'Yamanlar Dağı Trekking', href: '/guides/yamanlar-dagi-trekking' },
+      { title: 'Spil Dağı Milli Parkı', href: '/guides/spil-dagi-milli-parki' },
+      { title: 'Gölcük Tabiat Parkı', href: '/guides/golcuk-tabiat-parki' },
+      { title: 'Balçova Teleferik', href: '/guides/balcova-teleferik-trekking' },
+      { title: 'İzmir Gizli 50 Yer', href: '/hidden-places' },
+    ],
+    '🌙 Gece': [
+      { title: 'Alsancak Gece Hayatı ve Barlar', href: '/guides/alsancak-gece-hayati-barlar' },
+      { title: 'Kordon\'da Gece Yürüyüşü', href: '/guides/kordon-gece-yuruyusu' },
+      { title: 'İzmir Fuar ve Konser Takvimi', href: '/guides/izmir-fuar-konser-takvimi' },
+      { title: 'Karşıyaka Nostaljik Gece', href: '/guides/karsiyaka-nostaljik-gece' },
+    ],
+    '🎭 Kültür': [
+      { title: 'İzmir Tiyatro ve Kültür Sanat', href: '/guides/izmir-tiyatro-kultur-sanat' },
+      { title: 'İzmir Doğal Tarih Müzesi', href: '/guides/izmir-dogal-tarih-muzesi' },
+      { title: 'İzmir Bilim Merkezi — Çocukla Gezi', href: '/guides/izmir-bilim-merkezi-cocuk' },
+    ],
+    '🛍 Alışveriş': [
+      { title: 'Kemeraltı Çarşısı Alışveriş', href: '/guides/kemeralti-carsisi-alisveris' },
+      { title: 'Konak Pier Alışveriş', href: '/guides/konak-pier-alisveris' },
+      { title: 'Alaçatı Butik Mağazalar', href: '/guides/alacati-butik-magazalar' },
+      { title: 'Bostanlı Organik Pazar', href: '/guides/bostanli-pazar-organik' },
+    ],
+  }
+
+  // Kategori bazlı link bul, mevcut slug hariç tut
+  const catKey = Object.keys(linkMap).find(k => category.includes(k.replace(/[🏛🏖🍽🌿🌙🎭🛍]\s/, '').split(' ')[0]))
+  const links = (catKey ? linkMap[catKey] : linkMap['🏛 Tarih'])
+    .filter(l => !l.href.includes(currentSlug))
+    .slice(0, 4)
+
+  // Her zaman ilçeler ve best places ekle (zaten yukarıdakilerden farklıysa)
+  const extras = [
+    { title: 'İzmir\'in En İyi 30 Mekanı', href: '/best-places' },
+    { title: 'Tüm İzmir Rehberleri', href: '/guides' },
+  ].filter(l => !links.some(x => x.href === l.href))
+
+  return [...links, ...extras].slice(0, 5)
+}
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>()
@@ -225,6 +290,21 @@ export default function BlogDetailPage() {
                     {section.content}
                   </p>
                 )}
+
+                {/* İç Linkleme — 2. bölümden sonra */}
+                {idx === 1 && (() => {
+                  const relatedLinks = getInternalLinks(post.slug, post.category)
+                  return relatedLinks.length > 0 ? (
+                    <div className="internal-links-box my-8">
+                      <h3>📍 İlgili Rehberler</h3>
+                      {relatedLinks.map((link, i) => (
+                        <Link key={i} to={link.href}>
+                          <span>→</span> {link.title}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null
+                })()}
 
                 {section.image && (
                   <div className="my-8 rounded-2xl overflow-hidden shadow-xl">

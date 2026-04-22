@@ -285,7 +285,7 @@ export default function HiddenPlacesPage() {
               Daha Fazlasını <span className="gradient-text-sunset">Keşfet</span>
             </h2>
             <p className="text-lg text-white/70 mb-8 leading-relaxed">
-              50 gizli yer yetmez. İzmir'in 32 ilçesini, 50 detaylı blog yazısını ve 30 en iyi mekanını da keşfedin.
+              50 gizli yer yetmez. İzmir'in 32 ilçesini, 60 detaylı blog yazısını ve 30 en iyi mekanını da keşfedin.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
