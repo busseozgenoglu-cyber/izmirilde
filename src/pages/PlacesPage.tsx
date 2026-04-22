@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { Search } from 'lucide-react'
 import Card from '../components/Card'
 import useScrollReveal from '../hooks/useScrollReveal'
@@ -88,7 +89,22 @@ export default function PlacesPage() {
   useScrollReveal()
 
   return (
-    <main>
+    <>
+      <Helmet>
+        <title>İzmir Mekanları — Kahvaltı, Restoran, Kafe ve Daha Fazlası | izmirilde</title>
+        <meta name="description" content="İzmir'in en iyi mekanları: kahvaltı yerleri, restoranlar, kafeler, barlar ve gece hayatı. 270+ gerçek mekan önerisi izmirilde editörlerinden." />
+        <link rel="canonical" href="https://izmirilde.com/places" />
+        <meta property="og:title" content="İzmir Mekanları — 270+ Editör Önerisi | izmirilde" />
+        <meta property="og:description" content="İzmir'in en iyi mekanları: kahvaltı, restoran, kafe, bar ve gece hayatı için editör seçimleri." />
+        <meta property="og:url" content="https://izmirilde.com/places" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="İzmir Mekanları — 270+ Editör Önerisi | izmirilde" />
+        <meta name="twitter:description" content="İzmir'in en iyi mekanları: kahvaltı, restoran, kafe ve bar önerileri." />
+        <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
+      </Helmet>
+      <main>
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img
@@ -294,5 +310,6 @@ export default function PlacesPage() {
         </div>
       </section>
     </main>
+    </>
   )
 }

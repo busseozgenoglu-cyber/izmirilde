@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 function useCountUp(end: number, duration: number = 1500) {
@@ -113,6 +114,21 @@ export default function AboutPage() {
   useScrollReveal()
 
   return (
+    <>
+      <Helmet>
+        <title>Hakkımızda — izmirilde Kimdir? | İzmir Rehberi</title>
+        <meta name="description" content="izmirilde, İzmir'i seven bir ekip tarafından hazırlanan bağımsız şehir rehberidir. 50+ editör yazısı, 270+ mekan önerisi ve 32 ilçe rehberiyle İzmir'i keşfedin." />
+        <link rel="canonical" href="https://izmirilde.com/about" />
+        <meta property="og:title" content="Hakkımızda — izmirilde | İzmir Rehberi" />
+        <meta property="og:description" content="İzmir'i seven bir ekip tarafından hazırlanan bağımsız şehir rehberi. 50+ yazı, 270+ mekan, 32 ilçe." />
+        <meta property="og:url" content="https://izmirilde.com/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Hakkımızda — izmirilde | İzmir Rehberi" />
+        <meta name="twitter:description" content="İzmir'i seven bir ekip tarafından hazırlanan bağımsız şehir rehberi." />
+        <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
+      </Helmet>
     <main>
       {/* Hero */}
       <section className="relative h-[55vh] min-h-[440px] flex items-center justify-center overflow-hidden">
@@ -224,5 +240,6 @@ export default function AboutPage() {
         </div>
       </section>
     </main>
+    </>
   )
 }

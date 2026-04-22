@@ -67,6 +67,13 @@ export default function BestPlacesPage() {
         <meta property="og:description" content="Editörlerin seçtiği: 10 Kahvaltı + 10 Öğle + 10 Akşam" />
         <meta property="og:url" content="https://izmirilde.com/best-places" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="İzmir'in En İyi 30 Mekanı — 2026 Rehberi | izmirilde" />
+        <meta name="twitter:description" content="Editörlerin seçtiği İzmir'in en iyi 30 mekanı: kahvaltı, öğle ve akşam yemeği." />
+        <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

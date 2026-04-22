@@ -77,6 +77,13 @@ export default function GuidesPage() {
         <meta property="og:description" content="İzmir'de gezilecek yerler için editör rehberi. 50 gerçek içerikli yazı." />
         <meta property="og:url" content="https://izmirilde.com/guides" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="İzmir Rehberleri — 50 Detaylı Keşif Yazısı | izmirilde" />
+        <meta name="twitter:description" content="İzmir'de gezilecek yerler için editör rehberi. 50 gerçek içerikli yazı." />
+        <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

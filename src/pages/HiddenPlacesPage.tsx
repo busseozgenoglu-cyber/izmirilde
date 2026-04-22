@@ -70,6 +70,13 @@ export default function HiddenPlacesPage() {
         <meta property="og:description" content="Ege'nin saklı cennetleri: 50 gizli nokta, 7 kategori" />
         <meta property="og:url" content="https://izmirilde.com/hidden-places" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="İzmir'de Keşfedilmemiş 50 Yer | izmirilde" />
+        <meta name="twitter:description" content="Ege'nin saklı cennetleri: gizli koylar, antik kalıntılar ve saklı köyler." />
+        <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

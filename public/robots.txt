@@ -1,5 +1,5 @@
 # izmirilde.com — robots.txt
-# Son güncelleme: 2025
+# Son güncelleme: 2026-04-22
 
 User-agent: *
 Allow: /

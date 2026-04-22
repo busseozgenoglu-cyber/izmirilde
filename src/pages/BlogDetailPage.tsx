@@ -89,9 +89,12 @@ export default function BlogDetailPage() {
         ))}
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@izmirilde" />
+        <meta name="twitter:creator" content="@izmirilde" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:image" content={`https://izmirilde.com${post.image}`} />
+        <meta property="og:site_name" content="izmirilde" />
         {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         {faqJsonLd && (

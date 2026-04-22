@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { Instagram, Mail, Plus } from 'lucide-react'
 import useScrollReveal from '../hooks/useScrollReveal'
 
@@ -15,7 +16,22 @@ export default function ContactPage() {
   useScrollReveal()
 
   return (
-    <main>
+    <>
+      <Helmet>
+        <title>İletişim — izmirilde | İzmir Rehberi</title>
+        <meta name="description" content="izmirilde ile iletişime geçin. İzmir hakkında öneri, işbirliği veya içerik talepleriniz için bize yazın." />
+        <link rel="canonical" href="https://izmirilde.com/contact" />
+        <meta property="og:title" content="İletişim — izmirilde" />
+        <meta property="og:description" content="Öneri, işbirliği veya içerik talepleriniz için bize yazın." />
+        <meta property="og:url" content="https://izmirilde.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="İletişim — izmirilde" />
+        <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
+      <main>
       {/* Hero */}
       <section className="relative h-[40vh] min-h-[320px] flex items-center justify-center overflow-hidden">
         <img
@@ -162,5 +178,6 @@ export default function ContactPage() {
         </div>
       </section>
     </main>
+    </>
   )
 }

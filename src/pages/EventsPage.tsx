@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { ArrowRight } from 'lucide-react'
 import FilterTabs from '../components/FilterTabs'
 import useScrollReveal from '../hooks/useScrollReveal'
@@ -99,7 +100,22 @@ export default function EventsPage() {
   useScrollReveal()
 
   return (
-    <main>
+    <>
+      <Helmet>
+        <title>İzmir Etkinlikleri 2026 — Konserler, Festivaller, Sergiler | izmirilde</title>
+        <meta name="description" content="İzmir'deki güncel etkinlikler: konserler, festivaller, tiyatro, sergi ve daha fazlası. İzmir 2026 etkinlik takvimi izmirilde'de." />
+        <link rel="canonical" href="https://izmirilde.com/events" />
+        <meta property="og:title" content="İzmir Etkinlikleri 2026 — Konserler, Festivaller | izmirilde" />
+        <meta property="og:description" content="İzmir'deki güncel etkinlikler: konserler, festivaller, tiyatro ve sergi takvimi." />
+        <meta property="og:url" content="https://izmirilde.com/events" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="İzmir Etkinlikleri 2026 | izmirilde" />
+        <meta name="twitter:description" content="İzmir'deki güncel etkinlikler: konserler, festivaller, tiyatro ve sergi takvimi." />
+        <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
+      </Helmet>
+      <main>
       {/* Hero */}
       <section className="relative h-[45vh] min-h-[360px] flex items-center justify-center overflow-hidden">
         <img
@@ -151,5 +167,6 @@ export default function EventsPage() {
         </div>
       </section>
     </main>
+    </>
   )
 }

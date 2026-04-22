@@ -76,9 +76,11 @@ export default function DistrictDetailPage() {
         <meta property="og:image" content={`https://izmirilde.com${district.image}`} />
         <meta property="og:url" content={`https://izmirilde.com/districts/${district.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@izmirilde" />
         <meta name="twitter:title" content={`İzmir ${district.name} Rehberi`} />
         <meta name="twitter:description" content={district.intro} />
         <meta name="twitter:image" content={`https://izmirilde.com${district.image}`} />
+        <meta property="og:site_name" content="izmirilde" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 

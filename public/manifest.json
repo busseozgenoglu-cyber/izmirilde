@@ -1,0 +1,59 @@
+{
+  "name": "izmirilde — İzmir Rehberi",
+  "short_name": "izmirilde",
+  "description": "İzmir'in en iyi mekanları, 32 ilçe rehberi ve 50+ editör yazısı",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "lang": "tr",
+  "scope": "/",
+  "categories": ["travel", "lifestyle", "food"],
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/izmirilde-icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Rehberler",
+      "short_name": "Rehberler",
+      "description": "50 detaylı İzmir rehberi",
+      "url": "/guides",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "En İyi Mekanlar",
+      "short_name": "En İyiler",
+      "description": "İzmir'in en iyi 30 mekanı",
+      "url": "/best-places",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Gizli Yerler",
+      "short_name": "Gizli Yerler",
+      "description": "50 keşfedilmemiş İzmir noktası",
+      "url": "/hidden-places",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    }
+  ]
+}
