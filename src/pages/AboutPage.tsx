@@ -128,6 +128,30 @@ export default function AboutPage() {
         <meta name="twitter:title" content="Hakkımızda — izmirilde | İzmir Rehberi" />
         <meta name="twitter:description" content="İzmir'i seven bir ekip tarafından hazırlanan bağımsız şehir rehberi." />
         <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          name: 'Hakkımızda — izmirilde',
+          description: 'izmirilde, İzmir\'i seven bir ekip tarafından hazırlanan bağımsız şehir rehberidir.',
+          url: 'https://izmirilde.com/about',
+          inLanguage: 'tr-TR',
+          publisher: {
+            '@type': 'Organization',
+            name: 'izmirilde',
+            url: 'https://izmirilde.com',
+            logo: 'https://izmirilde.com/izmirilde-icon-256.png',
+            foundingDate: '2025',
+            areaServed: { '@type': 'City', name: 'İzmir' },
+            sameAs: ['https://www.instagram.com/izmirilde'],
+          },
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://izmirilde.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Hakkımızda', item: 'https://izmirilde.com/about' },
+            ],
+          },
+        })}</script>
       </Helmet>
     <main>
       {/* Hero */}

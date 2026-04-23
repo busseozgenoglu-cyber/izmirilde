@@ -78,6 +78,7 @@ export default function HiddenPlacesPage() {
         <meta name="twitter:description" content="Ege'nin saklı cennetleri: gizli koylar, antik kalıntılar ve saklı köyler." />
         <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://izmirilde.com/"}, {"@type": "ListItem", "position": 2, "name": "Gizli Yerler", "item": "https://izmirilde.com/hidden-places"}]})}</script>
       </Helmet>
 
       <main>

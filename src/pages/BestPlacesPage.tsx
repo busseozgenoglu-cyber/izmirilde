@@ -75,6 +75,7 @@ export default function BestPlacesPage() {
         <meta name="twitter:description" content="Editörlerin seçtiği İzmir'in en iyi 30 mekanı: kahvaltı, öğle ve akşam yemeği." />
         <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://izmirilde.com/"}, {"@type": "ListItem", "position": 2, "name": "En \u0130yi Mekanlar", "item": "https://izmirilde.com/best-places"}]})}</script>
       </Helmet>
 
       <main>

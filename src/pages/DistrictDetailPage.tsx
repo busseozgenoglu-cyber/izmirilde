@@ -82,6 +82,15 @@ export default function DistrictDetailPage() {
         <meta name="twitter:image" content={`https://izmirilde.com${district.image}`} />
         <meta property="og:site_name" content="izmirilde" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://izmirilde.com/' },
+            { '@type': 'ListItem', position: 2, name: 'İlçeler', item: 'https://izmirilde.com/districts' },
+            { '@type': 'ListItem', position: 3, name: `İzmir ${district.name}`, item: `https://izmirilde.com/districts/${district.slug}` },
+          ],
+        })}</script>
       </Helmet>
 
       <main className="bg-white">

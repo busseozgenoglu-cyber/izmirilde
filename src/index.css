@@ -583,3 +583,8 @@ details summary::-webkit-details-marker {
 .internal-links-box a:last-child {
   border-bottom: none;
 }
+
+/* Suspense spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

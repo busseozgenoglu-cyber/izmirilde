@@ -97,20 +97,23 @@ function InstagramFloatButton() {
     </a>
   )
 }
-import HomePage from './pages/HomePage'
-import PlacesPage from './pages/PlacesPage'
-import EventsPage from './pages/EventsPage'
-import GuidesPage from './pages/GuidesPage'
-import BlogDetailPage from './pages/BlogDetailPage'
-import DistrictsPage from './pages/DistrictsPage'
-import DistrictDetailPage from './pages/DistrictDetailPage'
-import BestPlacesPage from './pages/BestPlacesPage'
-import HiddenPlacesPage from './pages/HiddenPlacesPage'
-import AboutPage from './pages/AboutPage'
-import ContactPage from './pages/ContactPage'
-import NotFoundPage from './pages/NotFoundPage'
-import PrivacyPage from './pages/PrivacyPage'
-import TermsPage from './pages/TermsPage'
+import { lazy, Suspense } from 'react'
+
+// Lazy loaded pages — bundle splitting için
+const HomePage = lazy(() => import('./pages/HomePage'))
+const PlacesPage = lazy(() => import('./pages/PlacesPage'))
+const EventsPage = lazy(() => import('./pages/EventsPage'))
+const GuidesPage = lazy(() => import('./pages/GuidesPage'))
+const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage'))
+const DistrictsPage = lazy(() => import('./pages/DistrictsPage'))
+const DistrictDetailPage = lazy(() => import('./pages/DistrictDetailPage'))
+const BestPlacesPage = lazy(() => import('./pages/BestPlacesPage'))
+const HiddenPlacesPage = lazy(() => import('./pages/HiddenPlacesPage'))
+const AboutPage = lazy(() => import('./pages/AboutPage'))
+const ContactPage = lazy(() => import('./pages/ContactPage'))
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'))
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage'))
+const TermsPage = lazy(() => import('./pages/TermsPage'))
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -125,22 +128,28 @@ function App() {
     <>
       <ScrollToTop />
       <Navigation />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/places" element={<PlacesPage />} />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/guides" element={<GuidesPage />} />
-        <Route path="/guides/:slug" element={<BlogDetailPage />} />
-        <Route path="/districts" element={<DistrictsPage />} />
-        <Route path="/districts/:slug" element={<DistrictDetailPage />} />
-        <Route path="/best-places" element={<BestPlacesPage />} />
-        <Route path="/hidden-places" element={<HiddenPlacesPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/gizlilik-politikasi" element={<PrivacyPage />} />
-        <Route path="/hizmet-sartlari" element={<TermsPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={
+        <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: 40, height: 40, border: '3px solid #FF4500', borderTopColor: 'transparent', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} />
+        </div>
+      }>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/places" element={<PlacesPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/guides" element={<GuidesPage />} />
+          <Route path="/guides/:slug" element={<BlogDetailPage />} />
+          <Route path="/districts" element={<DistrictsPage />} />
+          <Route path="/districts/:slug" element={<DistrictDetailPage />} />
+          <Route path="/best-places" element={<BestPlacesPage />} />
+          <Route path="/hidden-places" element={<HiddenPlacesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/gizlilik-politikasi" element={<PrivacyPage />} />
+          <Route path="/hizmet-sartlari" element={<TermsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
       <Footer />
       <InstagramFloatButton />
     </>

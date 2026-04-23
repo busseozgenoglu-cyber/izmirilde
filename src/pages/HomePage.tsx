@@ -667,10 +667,10 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>izmirilde — İzmir Rehberi, Mekanlar, Etkinlikler ve Keşfedilecek 50 Yer</title>
+        <title>İzmir Rehberi 2026 — Gezilecek Yerler, Mekanlar, Etkinlikler | izmirilde</title>
         <meta
           name="description"
-          content="İzmir'in en iyi mekanları, etkinlikleri ve gezilecek yerleri. Efes, Alaçatı, Çeşme, Kordon, Kemeraltı ve daha fazlası için editör rehberi. 60 detaylı blog yazısı."
+          content="İzmir'de gezilecek en iyi yerler, mekanlar ve etkinlikler. Efes, Alaçatı, Çeşme, Kordon, Kemeraltı için 60 detaylı editör rehberi. İzmir'in gizli köşeleri burada."
         />
         <meta
           name="keywords"
@@ -705,6 +705,13 @@ export default function HomePage() {
             },
           })}
         </script>
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://izmirilde.com/' },
+          ],
+        })}</script>
       </Helmet>
       <main>
         <HeroSection />

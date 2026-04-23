@@ -99,16 +99,23 @@ export default function BlogDetailPage() {
     image: `https://izmirilde.com${post.image}`,
     datePublished: post.publishDate,
     dateModified: post.publishDate,
+    inLanguage: 'tr-TR',
+    wordCount: post.sections.reduce((acc, s) => acc + (s.content?.split(' ').length || 0), 0) + post.intro.split(' ').length,
+    timeRequired: post.readTime,
     author: {
       '@type': 'Person',
       name: post.author,
+      url: 'https://izmirilde.com/about',
     },
     publisher: {
       '@type': 'Organization',
       name: 'izmirilde',
+      url: 'https://izmirilde.com',
       logo: {
         '@type': 'ImageObject',
         url: 'https://izmirilde.com/izmirilde-icon-256.png',
+        width: 256,
+        height: 256,
       },
     },
     mainEntityOfPage: {
@@ -117,6 +124,26 @@ export default function BlogDetailPage() {
     },
     keywords: post.tags.join(', '),
     articleSection: post.category,
+    about: {
+      '@type': 'Place',
+      name: 'İzmir',
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 38.4237,
+        longitude: 27.1428,
+      },
+    },
+  }
+
+  // BreadcrumbList schema
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://izmirilde.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Rehberler', item: 'https://izmirilde.com/guides' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://izmirilde.com/guides/${post.slug}` },
+    ],
   }
 
   // FAQPage schema if FAQs exist
@@ -162,6 +189,7 @@ export default function BlogDetailPage() {
         <meta property="og:site_name" content="izmirilde" />
         {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
         {faqJsonLd && (
           <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         )}

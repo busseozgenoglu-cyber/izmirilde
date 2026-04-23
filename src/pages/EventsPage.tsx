@@ -114,6 +114,22 @@ export default function EventsPage() {
         <meta name="twitter:title" content="İzmir Etkinlikleri 2026 | izmirilde" />
         <meta name="twitter:description" content="İzmir'deki güncel etkinlikler: konserler, festivaller, tiyatro ve sergi takvimi." />
         <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'İzmir Etkinlikleri 2026',
+          description: 'İzmir konserler, festivaller, tiyatro ve sergi etkinlikleri takvimi',
+          url: 'https://izmirilde.com/events',
+          inLanguage: 'tr-TR',
+          about: { '@type': 'City', name: 'İzmir' },
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://izmirilde.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Etkinlikler', item: 'https://izmirilde.com/events' },
+            ],
+          },
+        })}</script>
       </Helmet>
       <main>
       {/* Hero */}

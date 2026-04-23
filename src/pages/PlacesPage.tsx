@@ -103,6 +103,22 @@ export default function PlacesPage() {
         <meta name="twitter:title" content="İzmir Mekanları — 270+ Editör Önerisi | izmirilde" />
         <meta name="twitter:description" content="İzmir'in en iyi mekanları: kahvaltı, restoran, kafe ve bar önerileri." />
         <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'İzmir Mekanları — 270+ Editör Önerisi',
+          description: 'İzmir\'in en iyi mekanları: kahvaltı, restoran, kafe, bar ve gece hayatı',
+          url: 'https://izmirilde.com/places',
+          inLanguage: 'tr-TR',
+          about: { '@type': 'City', name: 'İzmir' },
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://izmirilde.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Mekanlar', item: 'https://izmirilde.com/places' },
+            ],
+          },
+        })}</script>
       </Helmet>
       <main>
       {/* Hero */}
