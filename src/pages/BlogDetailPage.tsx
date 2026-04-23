@@ -1,10 +1,11 @@
-import { useParams, Link, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { Clock, Calendar, User, Tag, Share2, BookOpen, ChevronRight } from 'lucide-react'
 import { allBlogPosts as blogPosts } from '../data/blogs'
 import useScrollReveal from '../hooks/useScrollReveal'
 import Breadcrumbs from '../components/Breadcrumbs'
+import NotFoundPage from './NotFoundPage'
+import { isValidSlug } from '../lib/slug'
 
 // ===================== İÇ LİNKLEME SİSTEMİ =====================
 function getInternalLinks(currentSlug: string, category: string): { title: string; href: string }[] {
@@ -73,18 +74,21 @@ function getInternalLinks(currentSlug: string, category: string): { title: strin
 
 export default function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>()
-  const navigate = useNavigate()
-  const post = blogPosts.find((p) => p.slug === slug)
 
   useScrollReveal()
 
-  useEffect(() => {
-    if (!post) {
-      navigate('/guides', { replace: true })
-    }
-  }, [post, navigate])
+  // Slug validation: malformed/injection-riskli slug'lar data lookup'a hiç gitmesin
+  if (!isValidSlug(slug)) {
+    return <NotFoundPage />
+  }
 
-  if (!post) return null
+  const post = blogPosts.find((p) => p.slug === slug)
+
+  // Sessiz redirect yerine gerçek 404 render — SEO için noindex ve doğru status,
+  // kullanıcı için de "bu yazı yok" netliği (önceden /guides'a atıyordu, kafa karıştırıcıydı)
+  if (!post) {
+    return <NotFoundPage />
+  }
 
   const related = (post.relatedIds || [])
     .map((id) => blogPosts.find((p) => p.id === id))

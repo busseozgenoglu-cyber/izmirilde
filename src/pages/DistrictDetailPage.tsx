@@ -1,25 +1,28 @@
-import { useEffect } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { MapPin, Utensils, Coffee, Sun, Moon, Sparkles } from 'lucide-react'
 import { districts } from '../data/districts'
 import useScrollReveal from '../hooks/useScrollReveal'
 import Breadcrumbs from '../components/Breadcrumbs'
+import NotFoundPage from './NotFoundPage'
+import { isValidSlug } from '../lib/slug'
 
 export default function DistrictDetailPage() {
   const { slug } = useParams<{ slug: string }>()
-  const navigate = useNavigate()
-  const district = districts.find((d) => d.slug === slug)
 
   useScrollReveal()
 
-  useEffect(() => {
-    if (!district) {
-      navigate('/districts', { replace: true })
-    }
-  }, [district, navigate])
+  // Slug validation — data lookup'tan önce
+  if (!isValidSlug(slug)) {
+    return <NotFoundPage />
+  }
 
-  if (!district) return null
+  const district = districts.find((d) => d.slug === slug)
+
+  // Sessiz redirect yerine gerçek 404 render
+  if (!district) {
+    return <NotFoundPage />
+  }
 
   const totalVenues = district.breakfast.length + district.lunch.length + district.dinner.length
 

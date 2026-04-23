@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import ErrorBoundary from './components/ErrorBoundary'
 
 // ===================== INSTAGRAM FLOAT BUTTON =====================
 function InstagramFloatButton() {
@@ -133,22 +134,24 @@ function App() {
           <div style={{ width: 40, height: 40, border: '3px solid #FF4500', borderTopColor: 'transparent', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} />
         </div>
       }>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/places" element={<PlacesPage />} />
-          <Route path="/events" element={<EventsPage />} />
-          <Route path="/guides" element={<GuidesPage />} />
-          <Route path="/guides/:slug" element={<BlogDetailPage />} />
-          <Route path="/districts" element={<DistrictsPage />} />
-          <Route path="/districts/:slug" element={<DistrictDetailPage />} />
-          <Route path="/best-places" element={<BestPlacesPage />} />
-          <Route path="/hidden-places" element={<HiddenPlacesPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/gizlilik-politikasi" element={<PrivacyPage />} />
-          <Route path="/hizmet-sartlari" element={<TermsPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/places" element={<PlacesPage />} />
+            <Route path="/events" element={<EventsPage />} />
+            <Route path="/guides" element={<GuidesPage />} />
+            <Route path="/guides/:slug" element={<BlogDetailPage />} />
+            <Route path="/districts" element={<DistrictsPage />} />
+            <Route path="/districts/:slug" element={<DistrictDetailPage />} />
+            <Route path="/best-places" element={<BestPlacesPage />} />
+            <Route path="/hidden-places" element={<HiddenPlacesPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/gizlilik-politikasi" element={<PrivacyPage />} />
+            <Route path="/hizmet-sartlari" element={<TermsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </ErrorBoundary>
       </Suspense>
       <Footer />
       <InstagramFloatButton />
