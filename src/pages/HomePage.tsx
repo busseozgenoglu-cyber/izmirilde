@@ -20,45 +20,45 @@ import { hiddenPlaces } from '../data/hiddenPlaces'
 const heroSlides = [
   {
     image: '/images/izmir-hero-still.jpg',
-    badge: 'Ege\'nin İncisi · 2026 Rehberi',
-    title: 'İzmir\'in En İyi',
-    highlight: 'Mekanlarını',
-    titleEnd: 'Keşfet',
+    badge: 'İzmir Rehberi · 2026 Güncel',
+    title: 'İzmir\'de Gezilecek',
+    highlight: 'En İyi Yerler',
+    titleEnd: '— 2026 Rehberi',
     desc: 'Efes\'ten Alaçatı\'ya, Kordon\'dan Kemeraltı\'na — editörlerimizin hazırladığı 60 detaylı rehberle İzmir\'i yaşayın.',
-    cta1: { label: '60 Rehberi Keşfet', href: '/guides' },
+    cta1: { label: 'İzmir Rehberini İncele', href: '/guides/izmir-gezilecek-yerler-tam-rehber' },
     cta2: { label: '32 İlçeyi Gör', href: '/districts' },
     accent: 'from-orange-600 via-red-500 to-orange-400',
   },
   {
     image: '/images/alacati-hero.jpg',
-    badge: 'Alaçatı · 2026 Sezonu',
-    title: 'Rüzgarın Kenti',
-    highlight: 'Alaçatı\'da',
-    titleEnd: 'Hayat Güzel',
+    badge: 'Alaçatı Rehberi · 2026 Sezonu',
+    title: 'Alaçatı\'da',
+    highlight: 'Gezilecek Yerler',
+    titleEnd: 've Mekanlar',
     desc: 'Taş sokaklardan butik otellere, surf okullarından ünlü restoranlarına — Alaçatı\'nın tam rehberi burada.',
-    cta1: { label: 'Alaçatı\'yı Keşfet', href: '/districts/alacati' },
-    cta2: { label: 'Rehberleri Gör', href: '/guides' },
+    cta1: { label: 'Alaçatı Rehberi', href: '/guides/alacati-gezi-rehberi-2026' },
+    cta2: { label: 'Çeşme Plajları', href: '/guides/cesme-plajlari-rehberi-2026' },
     accent: 'from-amber-500 via-orange-500 to-red-500',
   },
   {
     image: '/images/cesme-hero.jpg',
-    badge: 'Çeşme · Yaz 2026',
-    title: 'Berrak Sular,',
-    highlight: 'Sonsuz',
-    titleEnd: 'Mavi',
+    badge: 'Çeşme Plajları · Yaz 2026',
+    title: 'Çeşme\'nin',
+    highlight: 'En İyi Plajları',
+    titleEnd: 've Beach Club\'ları',
     desc: 'Altın kumları, kristal suları ve eşsiz beach club\'larıyla Çeşme — İzmir\'in en gözde tatil cenneti.',
-    cta1: { label: 'Çeşme Rehberi', href: '/districts/cesme' },
-    cta2: { label: 'En İyi Plajlar', href: '/guides' },
+    cta1: { label: 'Çeşme Plaj Rehberi', href: '/guides/cesme-plajlari-rehberi-2026' },
+    cta2: { label: 'Çeşme İlçesi', href: '/districts/cesme' },
     accent: 'from-orange-500 via-amber-400 to-yellow-400',
   },
   {
     image: '/images/kordon-hero.jpg',
-    badge: 'Kordon · İzmir 2026',
-    title: 'Günbatımının',
-    highlight: 'Adresi',
-    titleEnd: 'Kordon',
-    desc: 'Ege kıyısında akşam yürüyüşü, deniz ürünleri ve İzmir\'in muhteşem silueti — Kordon\'u keşfedin.',
-    cta1: { label: 'Kordon Rehberi', href: '/guides' },
+    badge: 'İzmir Kordon · 2026',
+    title: 'İzmir\'de',
+    highlight: 'Yapılacak Şeyler',
+    titleEnd: 've Rotalar',
+    desc: 'Ege kıyısında akşam yürüyüşü, deniz ürünleri ve İzmir\'in muhteşem silueti — İzmir\'i 3 günde keşfedin.',
+    cta1: { label: 'İzmir 3 Günlük Rota', href: '/guides/izmir-3-gunluk-rota' },
     cta2: { label: 'Mekanları Gör', href: '/places' },
     accent: 'from-red-600 via-orange-500 to-amber-400',
   },
@@ -279,8 +279,8 @@ function TrendingSection() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-[4vw]">
         <SectionHeader
           label="01 — Keşfet"
-          title="Şu An Trend"
-          description="İzmir'de şu anda en çok konuşulan mekanlar ve etkinlikler"
+          title="İzmir'de Şu An Trend"
+          description="İzmir'de şu an en çok ziyaret edilen mekanlar, koylar ve etkinlikler"
           linkText="Tümünü Gör"
           linkHref="/places"
         />
@@ -328,8 +328,8 @@ function DiscoverySection() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-[4vw]">
         <SectionHeader
           label="02 — Keşfet"
-          title="Ne Yapsam?"
-          description="İzmir'de keşfedilecek mekanlar, katılınacak etkinlikler ve ilham veren rehberler"
+          title="İzmir'de Ne Yapılır?"
+          description="İzmir'de yapılacak şeyler: mekanlar, gezilecek yerler ve editör rehberleri"
           linkText="Tümünü Gör"
           linkHref="/guides"
         />
@@ -368,8 +368,8 @@ function PopularListsSection() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-[4vw]">
         <SectionHeader
           label="03 — Popüler Listeler"
-          title="En İyiler"
-          description="Editörlerimizin seçtiği, İzmir'in en iyileri"
+          title="İzmir'in En İyi Mekanları"
+          description="Editörlerimizin seçtiği İzmir'in en iyi kahvaltı, restoran ve gece hayatı mekanları"
           linkText="Tüm Rehberler"
           linkHref="/guides"
         />
@@ -402,17 +402,16 @@ function NewsSection() {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
           <div>
             <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-black/50 mb-2 reveal">
-              04 — Haberler
+              04 — İzmir Haberleri
             </p>
             <h2 className="text-h3 font-semibold leading-[1.2] tracking-[-0.02em] reveal reveal-delay-1">
-              Son Dakika
+              İzmir Güncel Haberler
             </h2>
           </div>
           <span className="text-sm text-black/40 reveal reveal-delay-1 shrink-0">
             {newsCards.length} haber
           </span>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {newsCards.map((card, i) => (
             <Link
@@ -456,10 +455,10 @@ function NeighborhoodSection() {
             05 — Mahalleler
           </p>
           <h2 className="text-h2 font-semibold leading-[1.1] tracking-[-0.03em] reveal reveal-delay-1">
-            Semt Semt İzmir
+            İzmir'de Gezilecek Semtler
           </h2>
           <p className="mt-3 text-lg text-black/50 max-w-[500px] leading-relaxed reveal reveal-delay-2">
-            Her semtin kendine özgü ritmi, mekanları ve hikayesi var
+            İzmir'in en güzel semtleri: Alsancak, Karşıyaka, Çeşme, Urla ve daha fazlası
           </p>
         </div>
 
@@ -545,7 +544,7 @@ function HiddenPlacesSection() {
               className="text-4xl sm:text-5xl font-bold leading-[0.95] tracking-[-0.02em] max-w-3xl"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Turistlerin <em className="gradient-text-sunset not-italic">Bilmediği</em><br />
+              İzmir&apos;de <em className="gradient-text-sunset not-italic">Keşfedilmemiş</em><br />
               50 Gizli Yer
             </h2>
             <p className="mt-4 text-black/60 text-lg max-w-2xl">
@@ -615,7 +614,7 @@ function CTASection() {
       <div className="absolute inset-0">
         <img
           src="/images/izmir-hero-still.jpg"
-          alt="İzmir"
+          alt="İzmir Körfezi manzarası — izmirilde İzmir rehberi"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
@@ -624,7 +623,7 @@ function CTASection() {
       <div className="relative z-10 max-w-[900px] mx-auto px-4 sm:px-[4vw] text-center">
         <img
           src="/izmirilde-icon-256.png"
-          alt="izmirilde"
+          alt="izmirilde — İzmir şehir rehberi logosu"
           className="h-24 w-24 mx-auto mb-6 drop-shadow-2xl animate-parallax-float"
         />
         <h2
@@ -634,25 +633,25 @@ function CTASection() {
             fontSize: 'clamp(40px, 8vw, 80px)',
           }}
         >
-          İZMİR&apos;DE BUGÜN
+          İZMİR&apos;DE GEZILECEK
           <br />
-          NE YAPSAM?
+          EN İYİ YERLER
         </h2>
         <p className="text-white/85 text-lg mb-10 max-w-[500px] mx-auto">
-          Şehrin en iyi mekanlarını, etkinliklerini ve gizli köşelerini keşfet.
+          İzmir'in en iyi mekanları, gezilecek yerleri, etkinlikleri ve gizli köşeleri — editör rehberiyle keşfet.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Link
-            to="/places"
+            to="/guides/izmir-gezilecek-yerler-tam-rehber"
             className="px-8 py-3.5 bg-white text-black rounded-lg font-semibold text-base hover:scale-[1.02] transition-all duration-300"
           >
-            Mekanları Keşfet
+            İzmir Rehberini İncele
           </Link>
           <Link
-            to="/events"
+            to="/guides/izmir-3-gunluk-rota"
             className="px-8 py-3.5 border border-white/40 text-white rounded-lg font-semibold text-base hover:bg-white/10 transition-all duration-300"
           >
-            Etkinlikleri Gör
+            3 Günlük Rota
           </Link>
         </div>
       </div>

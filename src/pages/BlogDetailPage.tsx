@@ -193,6 +193,24 @@ export default function BlogDetailPage() {
         {faqJsonLd && (
           <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         )}
+        {/* HowTo schema - rota ve pratik rehberler için */}
+        {post.sections.length >= 3 && (
+          <script type="application/ld+json">{JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'HowTo',
+            name: post.title,
+            description: post.excerpt,
+            image: `https://izmirilde.com${post.image}`,
+            totalTime: post.readTime?.replace(' dk okuma', ' minutes') || 'PT10M',
+            step: post.sections.map((s, i) => ({
+              '@type': 'HowToStep',
+              position: i + 1,
+              name: s.heading,
+              text: s.content?.slice(0, 200) || s.heading,
+              image: s.image ? `https://izmirilde.com${s.image}` : `https://izmirilde.com${post.image}`,
+            })),
+          })}</script>
+        )}
       </Helmet>
 
       <main className="bg-white">
@@ -208,7 +226,7 @@ export default function BlogDetailPage() {
           <div className="absolute inset-0">
             <img
               src={post.image}
-              alt={post.title}
+              alt={`${post.title} — İzmir ${post.category.replace(/[🏛🏖🍽🌿🌙🎭🛍🗺💰📸👨‍👩‍👧🎵📰⛵🚌🌿⚽💻]\s*/g, '')} rehberi | izmirilde`}
               className="w-full h-full object-cover scale-110 animate-slow-zoom"
               onError={(e) => {
                 const target = e.target as HTMLImageElement
@@ -338,7 +356,7 @@ export default function BlogDetailPage() {
                   <div className="my-8 rounded-2xl overflow-hidden shadow-xl">
                     <img
                       src={section.image}
-                      alt={section.heading}
+                      alt={`${section.heading} — ${post.title} | İzmir rehberi izmirilde`}
                       className="w-full h-auto card-image-zoom"
                       loading="lazy"
                     />

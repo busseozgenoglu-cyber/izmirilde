@@ -734,14 +734,14 @@ export const neighborhoodCards: NeighborhoodCard[] = [
 
 // ===================== MARQUEE ÖGELERİ =====================
 export const marqueeItems = [
-  '500+ GERÇEK MEKAN',
-  '📍 ALSANCAK • KARŞIYAKA • ÇEŞME • URLA',
-  '🎭 HAFTALIK ETKİNLİK TAKVİMİ',
-  '☕ EN İYİ KAFELER',
-  '🍽 EDİTÖR ONAYLI RESTORANLAR',
-  '🌅 AEGEAN BEACH GUIDE',
-  '📰 GÜNLÜK İZMİR HABERLERİ',
-  '📱 INSTAGRAM @IZMIRILDE',
+  '📍 İZMİR GEZİLECEK YERLER REHBERİ 2026',
+  '🏖 ALAÇATI • ÇEŞME • FOÇA • URLA • EFESس',
+  '🍽 MİCHELİN YILDIZLI RESTORANLAR',
+  '☕ İZMİR KAHVALTI YERLERİ',
+  '🌅 ÇEŞME PLAJLARI VE BEACH CLUB REHBERİ',
+  '🏛 EFESس ANTIK KENTİ • BERGAMA • AGORA',
+  '📰 İZMİR GÜNCEL HABERLER',
+  '🗺 32 İLÇE • 60 REHBER • 270+ MEKAN',
 ];
 
 // ===================== MEKANLAR SAYFASI KARTLARI (24 GERÇEK) =====================
@@ -1270,16 +1270,18 @@ export const navLinks = [
 ];
 
 export const footerExploreLinks = [
-  'Popüler Mekanlar',
-  'Yeni Açılanlar',
-  'Trend Etkinlikler',
-  'Mahalle Rehberleri',
+  { label: 'İzmir Gezilecek Yerler', href: '/guides/izmir-gezilecek-yerler-tam-rehber' },
+  { label: 'İzmir Kahvaltı Yerleri', href: '/guides/izmir-kahvalti-yerleri-rehberi' },
+  { label: 'Alaçatı Gezi Rehberi', href: '/guides/alacati-gezi-rehberi-2026' },
+  { label: 'Çeşme Plajları', href: '/guides/cesme-plajlari-rehberi-2026' },
+  { label: 'İzmir 3 Günlük Rota', href: '/guides/izmir-3-gunluk-rota' },
+  { label: 'İzmir Gizli Yerler', href: '/hidden-places' },
 ];
 
 export const footerCategoryLinks = [
-  'Kafeler',
-  'Restoranlar',
-  'Beach & Bar',
-  'Gece Hayatı',
-  'Sanat',
+  { label: 'En İyi Mekanlar', href: '/best-places' },
+  { label: 'İzmir İlçeleri', href: '/districts' },
+  { label: 'İzmir Rehberleri', href: '/guides' },
+  { label: 'İzmir Etkinlikleri', href: '/events' },
+  { label: 'İzmir Mekanları', href: '/places' },
 ];

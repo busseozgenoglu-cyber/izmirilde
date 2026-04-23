@@ -61,7 +61,7 @@ export default function DistrictsPage() {
   return (
     <>
       <Helmet>
-        <title>İzmir İlçeleri Rehberi — 32 İlçede Yapılacaklar ve Mekan Önerileri | izmirilde</title>
+        <title>İzmir İlçeleri 2026 — 32 İlçe Gezilecek Yerler ve Mekan Rehberi | izmirilde</title>
         <meta
           name="description"
           content="İzmir'in 32 ilçesi için detaylı rehber: Konak, Karşıyaka, Bornova, Çeşme, Alaçatı, Urla, Foça, Bergama, Selçuk ve daha fazlası. Her ilçe için kahvaltı, öğle, akşam yemeği mekanları."

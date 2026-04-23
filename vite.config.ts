@@ -2,7 +2,6 @@ import path from "path"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
-// https://vite.dev/config/
 export default defineConfig({
   base: '/',
   plugins: [react()],
@@ -15,13 +14,41 @@ export default defineConfig({
     },
   },
   build: {
+    chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['lucide-react', '@radix-ui/react-accordion'],
+        manualChunks(id) {
+          // Vendor
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'vendor-react'
+          }
+          if (id.includes('node_modules/react-router')) {
+            return 'vendor-router'
+          }
+          if (id.includes('node_modules/@radix-ui')) {
+            return 'vendor-ui'
+          }
+          if (id.includes('node_modules/lucide-react')) {
+            return 'vendor-icons'
+          }
+          // Data files
+          if (id.includes('/data/blogs')) {
+            return 'data-blogs'
+          }
+          if (id.includes('/data/districts')) {
+            return 'data-districts'
+          }
+          if (id.includes('/data/hiddenPlaces')) {
+            return 'data-hidden'
+          }
+          if (id.includes('/data/bestPlaces')) {
+            return 'data-best'
+          }
+          if (id.includes('/data/index')) {
+            return 'data-index'
+          }
         }
       }
     }
   }
-});
+})

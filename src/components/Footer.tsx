@@ -52,10 +52,13 @@ export default function Footer() {
             <h4 className="font-semibold text-base mb-4">Keşfet</h4>
             <ul className="space-y-3">
               {footerExploreLinks.map((link) => (
-                <li key={link}>
-                  <span className="text-sm text-white/70 hover:text-white transition-colors cursor-pointer leading-relaxed">
-                    {link}
-                  </span>
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-white/70 hover:text-white transition-colors leading-relaxed"
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -66,10 +69,13 @@ export default function Footer() {
             <h4 className="font-semibold text-base mb-4">Kategoriler</h4>
             <ul className="space-y-3">
               {footerCategoryLinks.map((link) => (
-                <li key={link}>
-                  <span className="text-sm text-white/70 hover:text-white transition-colors cursor-pointer leading-relaxed">
-                    {link}
-                  </span>
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-white/70 hover:text-white transition-colors leading-relaxed"
+                  >
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

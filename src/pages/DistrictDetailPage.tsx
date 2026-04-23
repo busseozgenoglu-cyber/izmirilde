@@ -99,7 +99,7 @@ export default function DistrictDetailPage() {
           <div className="absolute inset-0">
             <img
               src={district.image}
-              alt={district.name}
+              alt={`İzmir ${district.name} — gezilecek yerler, mekanlar ve rehber | izmirilde`}
               className="w-full h-full object-cover scale-110 animate-slow-zoom"
               onError={(e) => {
                 const target = e.target as HTMLImageElement

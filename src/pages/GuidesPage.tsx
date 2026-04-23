@@ -63,7 +63,7 @@ export default function GuidesPage() {
   return (
     <>
       <Helmet>
-        <title>İzmir Rehberleri — 60 Detaylı Keşif Yazısı | izmirilde</title>
+        <title>İzmir Gezilecek Yerler Rehberi — 60 Detaylı İzmir Rehberi | izmirilde</title>
         <meta
           name="description"
           content="İzmir'de gezilecek yerler, yapılacak şeyler, yeme-içme, sahil ve tarih rehberleri. Efes, Alaçatı, Çeşme, Kordon, Kemeraltı ve daha fazlası için 60 detaylı yazı."
@@ -73,7 +73,7 @@ export default function GuidesPage() {
           content="İzmir gezilecek yerler, İzmir yapılacak şeyler, Efes, Alaçatı, Çeşme, Kordon, Kemeraltı, İzmir rehberi, İzmir tatil, İzmir blog"
         />
         <link rel="canonical" href="https://izmirilde.com/guides" />
-        <meta property="og:title" content="İzmir Rehberleri — 60 Detaylı Keşif Yazısı" />
+        <meta property="og:title" content="İzmir Gezilecek Yerler Rehberi — 60 Detaylı Rehber" />
         <meta property="og:description" content="İzmir'de gezilecek yerler için editör rehberi. 60 editör rehberi." />
         <meta property="og:url" content="https://izmirilde.com/guides" />
         <meta property="og:type" content="website" />
@@ -81,7 +81,7 @@ export default function GuidesPage() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="İzmir Rehberleri — 60 Detaylı Keşif Yazısı | izmirilde" />
+        <meta name="twitter:title" content="İzmir Gezilecek Yerler Rehberi — 60 Detaylı İzmir Rehberi | izmirilde" />
         <meta name="twitter:description" content="İzmir'de gezilecek yerler için editör rehberi. 60 editör rehberi." />
         <meta name="twitter:image" content="https://izmirilde.com/izmirilde-og.png" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -114,10 +114,10 @@ export default function GuidesPage() {
               className="font-bold text-white leading-[0.95] tracking-[-0.03em] reveal reveal-delay-1"
               style={{ fontFamily: "'Playfair Display', serif", fontSize: 'clamp(40px, 6vw, 72px)' }}
             >
-              İzmir <em className="gradient-text-sunset not-italic">Keşif</em> Rehberleri
+              İzmir <em className="gradient-text-sunset not-italic">Gezilecek Yerler</em> Rehberi
             </h1>
             <p className="mt-6 text-white/90 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed reveal reveal-delay-2">
-              Efes'ten Alaçatı'ya, Kordon'dan Kemeraltı'na — İzmir'i derinlemesine keşfetmek için editörlerimizin hazırladığı 60 detaylı rehber.
+              Efes'ten Alaçatı'ya, Kordon'dan Kemeraltı'na — İzmir'de gezilecek en iyi yerler, mekanlar ve rotalar için editörlerimizin hazırladığı 60 detaylı rehber.
             </p>
           </div>
 

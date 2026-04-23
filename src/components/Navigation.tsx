@@ -3,9 +3,9 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { label: 'Keşfet', href: '/' },
+  { label: 'Ana Sayfa', href: '/' },
   { label: 'Gizli Yerler', href: '/hidden-places' },
-  { label: 'En İyi 30 Mekan', href: '/best-places' },
+  { label: 'En İyi Mekanlar', href: '/best-places' },
   { label: 'İlçeler', href: '/districts' },
   { label: 'Rehberler', href: '/guides' },
 ]
