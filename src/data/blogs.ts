@@ -2337,7 +2337,7 @@ export const newBlogPosts: BlogPost[] = [
         list: [
           '07:30 — İzmir\'den hareket',
           '08:30 — Efes girişi (kalabalık gelmeden)',
-          '11:00 — Efes'ten çıkış',
+          "11:00 — Efes'ten çıkış",
           '12:00 — Selçuk\'ta öğle yemeği',
           '13:30 — Şirince köyü',
           '16:00 — Geri dönüş başlangıcı',
