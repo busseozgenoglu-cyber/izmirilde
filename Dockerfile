@@ -1,20 +1,6 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 ENV NODE_OPTIONS="--max-old-space-size=4096"
-
-# react-snap (Puppeteer) için sistem Chromium'u kullan.
-# Alpine'da Puppeteer'ın kendi Chromium'u çalışmıyor — apk paketi + ENV yönlendirmesi
-# en güvenilir çözüm. Build aşamasında lazım, runtime imajında gerekmiyor.
-RUN apk add --no-cache \
-    chromium \
-    nss \
-    freetype \
-    harfbuzz \
-    ca-certificates \
-    ttf-freefont
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
-    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
-
 COPY package.json package-lock.json ./
 RUN npm install --legacy-peer-deps
 COPY . .

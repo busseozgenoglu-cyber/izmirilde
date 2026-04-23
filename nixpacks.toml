@@ -1,12 +1,8 @@
 [variables]
 NODE_OPTIONS = "--max-old-space-size=4096"
-# react-snap (Puppeteer) nixpkgs Chromium'unu kullansın — kendi download'u yapmasın
-PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
-PUPPETEER_EXECUTABLE_PATH = "/usr/bin/chromium"
 
 [phases.setup]
-# chromium: react-snap build aşamasında SPA'yı render edebilsin diye
-nixPkgs = ["nodejs_20", "chromium"]
+nixPkgs = ["nodejs_20"]
 
 [phases.install]
 cmds = ["npm install --legacy-peer-deps"]
