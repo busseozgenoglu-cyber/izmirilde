@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview --port $PORT",
-    "start": "serve dist --single --listen tcp://0.0.0.0:$PORT",
+    "start": "node server.js",
     "type-check": "tsc -b"
   },
   "dependencies": {
