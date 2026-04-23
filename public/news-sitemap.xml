@@ -132,4 +132,115 @@
     </news:news>
   </url>
 
+
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-gizli-plajlar-sakli-koylar</loc>
+    <news:news>
+      <news:publication>
+        <news:name>izmirilde</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-23</news:publication_date>
+      <news:title>İzmir'de Sadece Yerel Halkın Bildiği 12 Saklı Plaj</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-antik-kent-gunubirlik-rotalar</loc>
+    <news:news>
+      <news:publication>
+        <news:name>izmirilde</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-23</news:publication_date>
+      <news:title>İzmir'den Günübirlik: 1 Saat Uzaklıktaki 8 Antik Kent</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-serpme-kahvalti-mekanlar-2026</loc>
+    <news:news>
+      <news:publication>
+        <news:name>izmirilde</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-23</news:publication_date>
+      <news:title>İzmir Kahvaltı Rehberi 2026 — En İyi 15 Serpme Kahvaltı Mekanı</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-ucretsiz-aktiviteler-butce-dostu</loc>
+    <news:news>
+      <news:publication>
+        <news:name>izmirilde</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-23</news:publication_date>
+      <news:title>İzmir'de Ücretsiz Yapılabilecek 20 Aktivite</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-karavan-kamp-rotalari-foca-karaburun</loc>
+    <news:news>
+      <news:publication>
+        <news:name>izmirilde</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-23</news:publication_date>
+      <news:title>Foça'dan Karaburun'a: İzmir Karavan ve Kamp Rotaları</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-hafta-sonu-48-saat-program</loc>
+    <news:news>
+      <news:publication>
+        <news:name>izmirilde</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-23</news:publication_date>
+      <news:title>İzmir'de Hafta Sonu Ne Yapılır? 48 Saatlik Program</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-tarihi-lezzetler-geleneksel-urunler</loc>
+    <news:news>
+      <news:publication>
+        <news:name>izmirilde</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-23</news:publication_date>
+      <news:title>İzmir'in Tarihi Lezzetleri: 7 Nesildir Üretilen 10 Ürün</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-cocukla-aktiviteler-aile-rehberi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>izmirilde</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-23</news:publication_date>
+      <news:title>İzmir'de Çocuklu Aileler İçin En İyi 12 Aktivite</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-gun-batimi-fotograf-noktalari</loc>
+    <news:news>
+      <news:publication>
+        <news:name>izmirilde</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-23</news:publication_date>
+      <news:title>İzmir'de En Güzel Gün Batımı Noktaları — Fotoğrafçılar İçin</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-yunan-adalari-feribot-rehberi</loc>
+    <news:news>
+      <news:publication>
+        <news:name>izmirilde</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2026-04-23</news:publication_date>
+      <news:title>İzmir'den Yunan Adalarına Feribot Rehberi</news:title>
+    </news:news>
+  </url>
 </urlset>

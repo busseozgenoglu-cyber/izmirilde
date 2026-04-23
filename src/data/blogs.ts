@@ -2369,4 +2369,540 @@ export const newBlogPosts: BlogPost[] = [
 ]
 
 // Tüm blog yazılarını birleştir (mevcut + yeni)
-export const allBlogPosts: BlogPost[] = [...blogPosts, ...newBlogPosts]
+export const allBlogPosts: BlogPost[] = [...blogPosts, ...newBlogPosts, ...pdfBlogPosts]
+
+// ===================== PDF BLOG KOLEKSİYONU — 10 YENİ DETAYLI REHBERs =====================
+
+export const pdfBlogPosts: BlogPost[] = [
+  {
+    id: 'pb1',
+    slug: 'izmir-gizli-plajlar-sakli-koylar',
+    image: '/images/gizli-koylar.jpg',
+    category: '🏖 Plaj',
+    title: "İzmir'de Sadece Yerel Halkın Bildiği 12 Saklı Plaj",
+    subtitle: 'Kalabalıktan uzak, berrak sulu ve sadece yerellerin bildiği İzmir gizli koyları',
+    excerpt: "İzmir'in kalabalık plajlarının ötesinde, sadece yerel halkın bildiği 12 saklı koy ve gizli plaj. Dikili'den Karaburun'a, Urla'dan Seferihisar'a Ege'nin en tenha kıyıları bu rehberde.",
+    readTime: '9 dk okuma',
+    author: 'izmirilde Editörü',
+    publishDate: '2026-04-23',
+    displayDate: '23 Nisan 2026',
+    tags: ['İzmir gizli plaj', 'saklı koylar', 'kalabalık olmayan plajlar', 'Ege koy'],
+    intro: "İzmir, Türkiye'nin en güzel kıyı şeritlerinden birine sahip olmasına rağmen birçok ziyaretçi kalabalık Ilıca veya Alaybey plajlarından öteye gitmez. Oysa İzmir'in kıyıları sadece yerel halkın bildiği saklı koylar ve gizli plajlarla doludur. İşte kalabalıktan uzak, berrak sulu 12 gizli cennet.",
+    sections: [
+      {
+        heading: 'Dikili Bademli Koyu — Doğanın Gizli Cenneti',
+        content: "Dikili ilçesine bağlı Bademli Mahallesi'nde bulunan bu koy, İzmir saklı koylar listesinin en başında gelir. Berrak turkuaz suyu ve ince kumlu sahiliyle hafta sonları bile oldukça sakin olmayı başarır. Dikili merkezden Bademli yönünde ilerleyerek ulaşılır. Özellikle Mayıs-Haziran aylarında suyun berraklığı eşsizdir. Koyda tesis bulunmadığından yanınızda su, atıştırmalık ve güneş koruyucu getirmeniz gerekir.",
+        tip: 'Hafta içi gidin — hafta sonları bile sakin olan bu koy, Cuma sabahı için ideal.',
+        list: [
+          'Ulaşım: Dikili merkez → Bademli yönü, 15 dk',
+          'Tesis: Yok — kendi imkanlarınızı getirin',
+          'En iyi dönem: Mayıs-Haziran, berrak su garantisi',
+          'Özellik: İnce kumlu, turkuaz su, tamamen doğal',
+        ]
+      },
+      {
+        heading: 'Karaburun Mordoğan Koyları — El Değmemiş Güzellik',
+        content: "Karaburun Yarımadası, İzmir'in en az dokunulmuş kıyılarına ev sahipliği yapar. Mordoğan beldesi çevresindeki küçük koylar hafta içi tamamen tenha olabilir. Kayalık ve kumsal karışık yapısıyla şnorkel için de mükemmel. Mordoğan merkezden yürüyerek veya kısa araç yolculuğuyla ulaşılır.",
+      },
+      {
+        heading: 'Seferihisar Sığacık Gizli Koyları — CittaSlow\'nun Sakin Kıyıları',
+        content: "Seferihisar, Türkiye'nin ilk CittaSlow ünvanını taşır ve bu ruh kıyılarına da yansır. Sığacık Kalesi'nin yanındaki küçük koylar gün batımında büyüleyicidir. Tekne turlarıyla ulaşılabilen daha küçük koylarda gününüzü geçirebilir, akşam Sığacık sahilinde taze deniz ürünleri yiyebilirsiniz.",
+        tip: "Tekne kiralama: Sığacık marinasında günlük 800-1500 TL arası.",
+      },
+      {
+        heading: 'Foça Gizli Koyları — Akdeniz Foklarının Yurdu',
+        content: "Foça, turistik merkezlerden uzaklaştığınızda özel koylar sunar. Orak Adası ve İncir Adası çevresindeki koylara tekneyle ulaşabilirsiniz. Fokların bazen ziyaret ettiği bu koylarda yüzmek Ege deneyiminizi özelleştirir. Foça Belediyesi'nin düzenlediği tekne turları veya özel tekne kiralama seçenekleriyle bu gizli koyları keşfedebilirsiniz.",
+      },
+      {
+        heading: 'Urla ve Çeşme\'nin Gizli Koyları',
+        content: "Urla'da Balıklıova, Güvendik ve Zeytinalanı bölgelerindeki küçük koylar, yerel halkın yaz tatillerini geçirdiği noktalardır. Çeşme'de ise Delikli Koy ve Yelken Koyu daha sakin alternatifler sunar. Alaçatı'ya yakın bu koylar hafta içi erken saatlerde neredeyse tenhadır.",
+        list: [
+          'Urla — Balıklıova: şarap rotasına yakın, tenha koy',
+          'Çeşme Delikli Koy: kayalık yapı, doğal havuzlar',
+          'Çeşme Yelken Koyu: sakin, yerel kitle',
+          'Karaburun İğdeli: orman + deniz, kamp imkanı',
+          'Dikili Nebiler: kuzey Ege\'nin sakinliği',
+          'Menderes Özdere gizli koyları: güney Ege huzuru',
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'İzmir\'in en gizli plajı hangisi?', a: 'Karaburun Tekke Burnu ve İğdeli Koyu en az bilinen noktalardır. Ulaşım zor ama manzara eşsiz.' },
+      { q: 'İzmir gizli plajlarına nasıl ulaşılır?', a: 'Çoğuna özel araç veya tekne gerekir. Foça, Mordoğan ve Sığacık\'tan tekne turları kalkar.' },
+      { q: 'Hangi ayda gizli koylar en sakin?', a: 'Mayıs, Haziran ve Eylül. Temmuz-Ağustos\'ta yerel halk da bu koylara gider.' },
+      { q: 'İzmir gizli koylarında tesis var mı?', a: 'Genellikle yok. Su, yiyecek, şemsiye ve güneş koruyucu mutlaka yanınızda olsun.' },
+      { q: 'Karaburun\'a İzmir\'den nasıl gidilir?', a: 'İzmir\'den Karaburun ilçe merkezine yaklaşık 90 km, 1.5 saat. Özel araç şart.' },
+    ],
+    relatedIds: ['b12', 'b13', 'b15', 'nb8', 'b9'],
+  },
+  {
+    id: 'pb2',
+    slug: 'izmir-antik-kent-gunubirlik-rotalar',
+    image: '/images/ephesus-beach-listing.jpg',
+    category: '🏛 Tarih',
+    title: "İzmir'den Günübirlik: 1 Saat Uzaklıktaki 8 Antik Kent Rehberi",
+    subtitle: 'Efes\'ten Pergamon\'a, Teos\'tan Erythrai\'ya — İzmir çevresinin antik hazineleri',
+    excerpt: "İzmir merkeze sadece 1 saat uzaklıkta 8 eşsiz antik kent. UNESCO Dünya Mirası Efes ve Bergama'dan az bilinen Claros ve Erythrai'ye tarih yolculuğu rehberi.",
+    readTime: '11 dk okuma',
+    author: 'izmirilde Editörü',
+    publishDate: '2026-04-23',
+    displayDate: '23 Nisan 2026',
+    tags: ['İzmir antik kentler', 'Efes rehberi', 'Bergama rehberi', 'günübirlik tarihi gezi'],
+    intro: "İzmir, binlerce yıllık tarihiyle dünyanın en eski yerleşim yerlerinden birinin üzerine kuruludur. Etrafı antik kentlerle çevrili bu şehir, İzmir merkezden sadece bir saatlik mesafede UNESCO Dünya Mirası kentlerden daha az bilinen ama bir o kadar etkileyici kalıntılara kadar onlarca seçenek sunar.",
+    sections: [
+      {
+        heading: 'Efes Antik Kenti — Dünya Mirasının Kalbi',
+        content: "Selçuk ilçesinde yer alan Efes, dünyanın en iyi korunmuş antik kentlerinden biridir ve 2015'te UNESCO Dünya Mirası Listesi'ne alınmıştır. İzmir'den 80 km mesafede. 300 bin nüfuslu bu devasa kentte Celsus Kütüphanesi, Büyük Tiyatro, Hadrian Tapınağı ve Mermerli Yol mutlaka görülmeli. Sabah erkenden gidin; saat 10'da tur gruplarıyla dolup taşıyor.",
+        tip: 'Efes\'e yazın 08:00\'den önce girin. Öğleden sonra 40°C\'yi aşan sıcaklık ve kalabalık birlikte tolere edilemez.',
+        list: [
+          'Mesafe: İzmir\'den 80 km, ~1 saat',
+          'Giriş: MüzeKart veya ~300 TL (2026)',
+          'Süre: Minimum 3 saat',
+          'Mutlaka: Celsus Kütüphanesi, Büyük Tiyatro, Hadrian Tapınağı',
+          'Kombine: Şirince köyü + Meryem Ana Evi',
+        ]
+      },
+      {
+        heading: 'Pergamon (Bergama) — Tepe Üstündeki İhtişam',
+        content: "Bergama ilçesinde, 2014 UNESCO Dünya Mirası. İzmir'den ~100 km. Akropol, Asklepion ve Kızıl Avlu olmak üzere üç ayrı alan. 200 bin parşömenlik kütüphanesi ve 10 bin kişilik tiyatrosuyla etkileyici. Teleferikle akropole çıkabilirsiniz. Bergama şehir merkezi de gezmeye değer.",
+        tip: 'Bergama için tam gün ayırın. Üç bölgeyi tek günde görmek için sabah 09:00\'da başlayın.',
+      },
+      {
+        heading: 'Teos, Claros ve Erythrai — Az Bilinen Hazineler',
+        content: "Teos (Seferihisar): Denize sıfır konumlu, İzmir'den 70 km. Dionysos Tapınağı ve antik liman. Claros (Menderes): Apollon'un kehanet merkezi, İzmir'den 60 km. Erythrai (Çeşme-Ildırı): Antik Ionia Birliği kenti, deniz manzaralı, 80 km. Bu üç kent kalabalık değil — sakin antik kent deneyimi arayanlar için mükemmel.",
+      },
+      {
+        heading: 'Sardes, Milet ve Priene — Farklı Medeniyetler',
+        content: "Sardes (Salihli): Kral Kroisos'un başkenti, para basımının ilk yapıldığı yer, İzmir'den 100 km. Milet (Aydın-Didim): Felsefenin doğduğu topraklar, Thales ve Anaksimandros'un kenti. 25 bin kişilik tiyatro etkileyici. Priene (Söke): Grid planlı antik kent, Athena Tapınağı manzarası. Milet-Priene-Didim üçgenini tek günde gezebilirsiniz.",
+        list: [
+          'Milet-Priene-Didim üçgeni: 1 tam gün rota',
+          'Sardes: 1 gün, Salihli yönü',
+          'Teos + Sığacık: yarım gün + deniz',
+          'Claros + Efes: tarih yoğun 1 tam gün',
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Efes\'e sabah kaçta gidilmeli?', a: 'Yaz aylarında kesinlikle 08:00-08:30 arası. Saat 10\'dan sonra hem sıcak hem kalabalık katlanılmaz.' },
+      { q: 'Bergama\'ya İzmir\'den nasıl gidilir?', a: '100 km, özel araçla 1.5 saat. Otogardan Bergama otobüsleri de var.' },
+      { q: 'MüzeKart hangi antik kentlerde geçerli?', a: 'Efes, Bergama, Sardes, Priene, Milet, Teos ve diğer devlet müzelerinde. Yıllık 490 TL (2026).' },
+      { q: 'Hangi antik kent en az kalabalık?', a: 'Teos, Claros ve Erythrai en sakin olanları. Priene de Efes ve Bergama\'ya kıyasla sessiz.' },
+      { q: 'İzmir\'den antik kent turu için araç gerekli mi?', a: 'Efes ve Bergama\'ya otobüs var. Ama Teos, Claros, Erythrai için özel araç şart.' },
+    ],
+    relatedIds: ['b2', 'b7', 'nb4', 'b1', 'b3'],
+  },
+  {
+    id: 'pb3',
+    slug: 'izmir-serpme-kahvalti-mekanlar-2026',
+    image: '/images/morisi-kahvalti.jpg',
+    category: '🍽 Yemek',
+    title: "İzmir Kahvaltı Rehberi 2026 — En İyi 15 Serpme Kahvaltı Mekanı",
+    subtitle: 'Kordon\'dan Urla\'ya, Alaçatı\'dan Tire\'ye İzmir\'in en iyi serpme kahvaltı adresleri',
+    excerpt: "İzmir kahvaltı kültürünün en iyi temsilcileri. Veli Usta'dan Urla Zeytinler Altı'na, Foça'dan Tire'ye 15 mekanın detaylı rehberi. Fiyatlar, öneriler ve ipuçları.",
+    readTime: '10 dk okuma',
+    author: 'izmirilde Editörü',
+    publishDate: '2026-04-23',
+    displayDate: '23 Nisan 2026',
+    tags: ['İzmir kahvaltı', 'serpme kahvaltı İzmir', 'İzmir kahvaltı mekanları', 'Ege kahvaltısı'],
+    intro: "İzmir, Türkiye'nin kahvaltı kültürü en gelişmiş şehirlerinden biridir. Ege'nin bereketli topraklarından çıkan taze ürünler, zeytinyağının başrolde olduğu sofralar ve saatlerce süren keyifli sohbetlerle serpme kahvaltı İzmir deneyimi şehrin en önemli sosyal aktivitelerinden biridir.",
+    sections: [
+      {
+        heading: 'Şehir Merkezinin En İyi Kahvaltı Mekanları',
+        content: "Veli Usta (Kordon): 30 yılı aşkın süredir hizmet veren, 30+ çeşit serpme kahvaltısıyla ikonik mekan. Deniz manzaralı bölüm için hafta sonu rezervasyon şart. Sakız Alsancak (Kıbrıs Şehitleri Cd.): Modern konsept, gençlerin favorisi. Ev yapımı reçeller ve avokadolu omlet öne çıkıyor. Lor Lokantası (Karşıyaka): 40+ çeşitle İzmir'in en zengin serpme tabağı.",
+        list: [
+          'Veli Usta — Kordon: geleneksel, deniz manzarası, orta-üst fiyat',
+          'Sakız Alsancak — KŞC: modern konsept, gençlerin favorisi',
+          'Lor Lokantası — Karşıyaka: 40+ çeşit, köy peynirleri',
+          'Bornova Küçük Park çevresi: uygun fiyatlı, öğrenci kitlesi',
+          'Bostanlı İskele civarı: deniz manzaralı, makul fiyat',
+        ],
+        tip: 'Hafta sonu 09:00-11:00 en yoğun saatler. Erken gidin veya rezervasyon yaptırın.',
+      },
+      {
+        heading: 'Urla, Alaçatı ve Çeşme\'de Kahvaltı',
+        content: "Urla Zeytinler Altı: Kendi ürettikleri zeytinyağı, bahçeden toplanan sebzeler, enginarlı yumurta. Fiyat yüksek ama deneyim paha biçilmez. Alaçatı Köy Kahvaltıları: Zahide Alaçatı, Kaptan'ın Yeri, Demirtepe çiftlik kahvaltıları. Hepsi doğal ürünler, taze ekmek. Cumartesi Alaçatı pazarı + kahvaltı kombinasyonu harika.",
+        tip: 'Urla\'da kahvaltı için 09:00\'da orada olun. Öğleye doğru şarap evlerine geçin — mükemmel bir gün.',
+      },
+      {
+        heading: 'Kırsalın En Otantik Kahvaltıları',
+        content: "Seferihisar Sığacık: Deniz börülcesi, deniz fasulyesi gibi Ege\'ye özel lezzetler. Kale surlarından Ege manzarası. Tire: Tire peyniri, kehva ve sıkmayla tam köy kahvaltısı. Cumartesi Tire pazarıyla kombine. Foça Eski Foça: Martı sesleri eşliğinde antik liman kenarında kahvaltı. Kemalpaşa Nif Dağı etekleri: Doğa içinde bahçe kahvaltıları.",
+        list: [
+          'Tire: Tire peyniri + kehva + sıkma = tam Ege',
+          'Sığacık: deniz ürünleri + kale manzarası',
+          'Foça: antik atmosfer, martı sesleri',
+          'Kemalpaşa: doğa içi, bahar ve sonbahar ideal',
+          'Menemen: menemenin memleketinde otantik',
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'İzmir\'de serpme kahvaltı kaç TL?', a: '2026 itibarıyla kişi başı 250-800 TL arası. Urla ve Alaçatı üst segment, Bornova ve Bostanlı uygun fiyatlı.' },
+      { q: 'İzmir\'de kahvaltı için en iyi saat?', a: '09:00-10:00 arası en taze ürünler ve en az kalabalık. Hafta sonları 11:00\'den sonra yer bulmak zorlaşır.' },
+      { q: 'Boyoz nereden alınır?', a: 'Kemeraltı\'ndaki geleneksel fırınlar sabah 06:00\'dan itibaren taze boyoz çıkarır. Sıcakken yemek şart.' },
+      { q: 'Alaçatı\'da kahvaltı Cumartesi daha mı güzel?', a: 'Evet. Pazar sabahı Alaçatı\'ya kahvaltıya gitmek geleneksel bir İzmir ritüeli. Erken gidin.' },
+    ],
+    relatedIds: ['b24', 'b30', 'nb2', 'b27', 'b28'],
+  },
+  {
+    id: 'pb4',
+    slug: 'izmir-ucretsiz-aktiviteler-butce-dostu',
+    image: '/images/tarihi-asansor.jpg',
+    category: '💰 Bütçe',
+    title: "İzmir'de Ücretsiz Yapılabilecek 20 Aktivite — Bütçe Dostu Tam Rehber",
+    subtitle: 'Kordon\'dan Kadifekale\'ye, Kültürpark\'tan Karşıyaka\'ya parasız İzmir deneyimi',
+    excerpt: "Cebinizi yakmadan İzmir'in tüm güzelliklerini keşfetmek mümkün. Tarihi Asansör, Kadifekale, Kültürpark, Kordon ve daha fazlası — 20 ücretsiz aktivite tam listesi.",
+    readTime: '8 dk okuma',
+    author: 'izmirilde Editörü',
+    publishDate: '2026-04-23',
+    displayDate: '23 Nisan 2026',
+    tags: ['İzmir ücretsiz', 'bedava aktiviteler İzmir', 'ucuz gezi İzmir', 'bütçe dostu İzmir'],
+    intro: "İzmir, bütçe dostu aktiviteler sunmasıyla öne çıkan bir şehirdir. Şehirde yapılabilecek onlarca ücretsiz etkinlik bulunur ve cebinizi yakmadan dolu dolu bir İzmir deneyimi yaşayabilirsiniz.",
+    sections: [
+      {
+        heading: 'Tarihi ve Kültürel Ücretsiz Mekanlar',
+        content: "Kordon'da gün batımı yürüyüşü, martı besleme ve sokak müzisyenleri dinleme tamamen ücretsiz. Tarihi Asansör ve seyir teraslarına gitmek ücretsiz — sadece asansöre binmek ücretli (15-20 TL). Havra Sokağı ve bit pazarı Pazar günleri ücretsiz gezinme alanı. Konak Meydanı, Saat Kulesi ve Yeni Cami bahçesi ücretsiz. Kadifekale: şehrin en ikonik manzarası, giriş ücretsiz.",
+        list: [
+          'Kordon sahil yürüyüşü — her zaman, ücretsiz',
+          'Tarihi Asansör seyir terası — ücretsiz (asansör 20 TL)',
+          'Kadifekale — panoramik manzara, ücretsiz',
+          'Havra Sokağı — Pazar bit pazarı dahil ücretsiz',
+          'Konak Meydanı & Saat Kulesi — ücretsiz',
+          'Karataş-Basmane tarihi sokaklar — ücretsiz mimari tur',
+        ]
+      },
+      {
+        heading: 'Park, Doğa ve Açık Hava Aktiviteleri',
+        content: "Kültürpark: İzmir'in en büyük yeşil alanı, yürüyüş, bisiklet, piknik — tamamen ücretsiz. İnciraltı Kent Ormanı: bisiklet yolları, yürüyüş parkurları, piknik alanları ücretsiz. Yaz aylarında Adnan Saygun Açık Hava Tiyatrosu'nda ücretsiz gösteriler. Karşıyaka Çarşısı ve Bostanlı Sahil: Göztepe 60. Yıl Parkı'nda koşu, bisiklet, paten. Mavişehir Gölü çevresi: ücretsiz yürüyüş alanı.",
+        tip: 'İzmir Büyükşehir Belediyesi\'nin sosyal medyasını takip edin — yaz aylarında neredeyse her hafta ücretsiz konser var.',
+      },
+      {
+        heading: 'Müzeler ve MüzeKart İpuçları',
+        content: "Agora Ören Yeri, İzmir Doğal Tarih Müzesi ve Yeşilova Höyüğü MüzeKart ile ücretsiz. MüzeKart yıllık 490 TL — 3 müze ziyaretinde çıkıyor. Vapur yolculuğu: Üçkuyular-Bostanlı arası 10-15 TL, körfez turu niteliğinde. Belediye etkinlikleri: Kültürpark, Fuar İzmir ve sahil bandında yıl boyunca ücretsiz konserler.",
+        list: [
+          'MüzeKart: 490 TL/yıl, 30+ müzede geçerli',
+          'Smyrna Agorası: MüzeKart ile ücretsiz',
+          'Vapur turu: 10-15 TL, körfez deneyimi',
+          'Belediye konserleri: verilen ay için takip edin',
+          'Bostanlı Bit Pazarı: Pazar, ücretsiz gezinme',
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'İzmir\'de en iyi ücretsiz aktivite nedir?', a: 'Kordon\'da gün batımı yürüyüşü. Tamamen bedava, manzara ise paha biçilemez.' },
+      { q: 'İzmir\'de ücretsiz müze var mı?', a: 'Evet. MüzeKart ile İzmir Doğal Tarih Müzesi, Agora ve daha fazlası ücretsiz. Bazı müzeler Cumartesi ücretsiz açılıyor.' },
+      { q: 'Kadifekale\'ye nasıl gidilir?', a: 'Konak\'tan taksi veya servis. Toplu taşımayla da gidilebilir ama yürüme mesafesi var.' },
+      { q: 'İzmir\'de ücretsiz konserler ne zaman?', a: 'Haziran-Eylül arası Kültürpark ve Kordon\'da neredeyse her hafta. Belediye sitesi ve sosyal medya takip edilmeli.' },
+    ],
+    relatedIds: ['nb5', 'b4', 'b1', 'b44', 'nb1'],
+  },
+  {
+    id: 'pb5',
+    slug: 'izmir-karavan-kamp-rotalari-foca-karaburun',
+    image: '/images/gizli-koylar.jpg',
+    category: '🌿 Doğa',
+    title: "Foça'dan Karaburun'a: İzmir'in En Güzel Karavan ve Kamp Rotaları",
+    subtitle: 'Ege\'nin el değmemiş kıyılarında çadır ve karavan kampı için eksiksiz rehber',
+    excerpt: "Foça'dan Karaburun'a uzanan rota, Türkiye'nin en güzel karavan ve kamp güzergahlarından biri. Kamp alanları, güzergah önerileri ve ekipman tavsiyeleri bu rehberde.",
+    readTime: '10 dk okuma',
+    author: 'izmirilde Editörü',
+    publishDate: '2026-04-23',
+    displayDate: '23 Nisan 2026',
+    tags: ['İzmir kamp', 'karavan rotası İzmir', 'doğada konaklama', 'Foça kamp', 'Karaburun kamp'],
+    intro: "İzmir ve çevresi, Türkiye'nin en güzel karavan ve kamp rotalarına ev sahipliği yapar. Foça'dan Karaburun'a uzanan bu coğrafya, hem deniz hem de doğa ile iç içe konaklama imkanı sunar. Karavanınızı veya çadırınızı hazırlayın, Ege'nin saklı güzelliklerini keşfetmeye başlayın.",
+    sections: [
+      {
+        heading: 'Foça Bölgesi — Rotanın Başlangıcı',
+        content: "Foça, antik Phokaia'nın bulunduğu yarımada, hem tarihi hem de doğal güzelliklerle çevrili. Foça merkeze yakın kamp alanları elektrik, su ve duş imkanı sunar. Orak Adası tekneyle ulaşılan kamp noktası — tamamen doğal, tesis yok. Yenifoça ise daha sakin kamp alternatifi, antik tiyatro kalıntılarına yakın.",
+        list: [
+          'Foça Merkez Kamp: elektrik + su + duş, tesis imkanlı',
+          'Orak Adası: tekneyle, tamamen doğal, tesis yok',
+          'Yenifoça: sakin, antik kalıntılara yakın',
+          'Dikili Bademli Koyları: denize sıfır kamp',
+          'Çandarlı: kale manzaralı, kendi kendine yeterli',
+        ]
+      },
+      {
+        heading: 'Karaburun Yarımadası — Rotanın Zirvesi',
+        content: "Karaburun, İzmir'in en batı ucunda Ege'nin en temiz sularına sahip. Mordoğan'da market, restoran — kamp ihtiyaçları karşılanabilir. İğdeli Koyu: orman + deniz buluşması, yıldız izleme mükemmel. Eşelek ve Küçükbahçe koyları: en saklı kamp noktaları. Gerence Körfezi: berrak su, balıkçı tekneleri, tam huzur.",
+        tip: 'Karaburun\'da yakıt ikmali Mordoğan\'dan yapın. Yarımadanın ucunda akaryakıt yok.',
+      },
+      {
+        heading: '5-6 Günlük Önerilen Karavan Rotası',
+        content: "Gün 1: Foça merkez ve keşfi. Gün 2: Yenifoça ve Dikili yönünde ilerleme. Gün 3: Çandarlı ve Nebiler koylarında kamp. Gün 4: Karaburun yarımadasına geçiş, Mordoğan. Gün 5: İğdeli ve Karaburun merkez. Gün 6: Tekke Burnu ve İzmir'e dönüş. Toplam mesafe yaklaşık 250-300 km.",
+        list: [
+          'Toplam süre: 5-6 gün önerilen minimum',
+          'Mesafe: ~250-300 km yuvarlak',
+          'Yakıt: Mordoğan\'da son ikmal noktası',
+          'Su deposu: En az 3 günlük su bulundurun',
+          'İletişim: Karaburun\'da sinyal zayıf olabilir',
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'İzmir\'de en iyi kamp alanı neresi?', a: 'Foça merkez (tesis dahil) ve Karaburun İğdeli Koyu (doğal). Biri konforlu, diğeri macera.' },
+      { q: 'Karaburun\'a karavan ile gidilebilir mi?', a: 'Evet, yollar stabilize ama dar. Büyük karavan ve çekici için bazı bölümler zor.' },
+      { q: 'İzmir kamp için en iyi mevsim?', a: 'Mayıs-Haziran ve Eylül-Ekim. Temmuz-Ağustos sıcak ve kalabalık.' },
+      { q: 'Karaburun\'da kamp tesis var mı?', a: 'Mordoğan\'da bazı imkânlar var. Yarımadanın uç noktaları tamamen doğal, tesis yok.' },
+    ],
+    relatedIds: ['b12', 'b15', 'b16', 'b19', 'nb4'],
+  },
+  {
+    id: 'pb6',
+    slug: 'izmir-hafta-sonu-48-saat-program',
+    image: '/images/kordon-hero.jpg',
+    category: '🗺 Rehber',
+    title: "İzmir'de Hafta Sonu Ne Yapılır? 48 Saatlik Eksiksiz Program",
+    subtitle: 'Cumartesi sabahından Pazar akşamına — İzmir\'de 2 günlük optimize edilmiş program',
+    excerpt: "48 saatinizi İzmir'de en verimli geçirmek için Cumartesi-Pazar programı. Şehir merkezi, Urla veya Seferihisar kaçamağı, gastronomi ve gece hayatı — tümü planlandı.",
+    readTime: '9 dk okuma',
+    author: 'izmirilde Editörü',
+    publishDate: '2026-04-23',
+    displayDate: '23 Nisan 2026',
+    tags: ['İzmir hafta sonu', '2 günlük İzmir programı', 'İzmir 48 saat', 'hafta sonu İzmir ne yapılır'],
+    intro: "İzmir, hafta sonlarını değerlendirmek isteyenler için sınırsız seçenek sunar. Cumartesi sabahından Pazar akşamına, her saati planlanmış ve test edilmiş 48 saatlik İzmir programı.",
+    sections: [
+      {
+        heading: 'Cumartesi — Şehir Merkezi Keşfi',
+        content: "09:00: Kordon'da yürüyüş, martı izleme. 10:00: Kemeraltı'nda boyoz ve çay. 11:00: Tarihi Asansör ve Karataş sokakları. 12:30: Agora Ören Yeri. 14:00: Alsancak'ta öğle yemeği. 16:00: Kordon bisiklet turu veya Pasaport vapur gezisi. 18:00: Gün batımı Kordon'da. 20:00: Alsancak veya Karşıyaka'da deniz ürünleri akşam yemeği.",
+        list: [
+          '09:00 — Kordon yürüyüşü',
+          '10:00 — Kemeraltı boyoz + çay',
+          '11:00 — Tarihi Asansör + Karataş',
+          '12:30 — Agora Ören Yeri',
+          '16:00 — Vapur turu veya bisiklet',
+          '18:00 — Gün batımı Kordon',
+          '20:00 — Deniz ürünleri akşam yemeği',
+        ]
+      },
+      {
+        heading: 'Pazar — Urla veya Seferihisar Kaçamağı',
+        content: "08:00: Erken kalkış, yola çıkış. 09:00: Urla Zeytinler Altı'nda serpme kahvaltı veya Sığacık'ta köy kahvaltısı. 11:00: Urla Bağ Yolu + şarap tadımı veya Sığacık Kalesi gezisi. 13:00: Urla'da OD Urla tarzı öğle veya Sığacık deniz. 16:00: İzmir'e dönüş. 19:00: Balçova Teleferik gün batımı ve kapanış yemeği.",
+        tip: 'Pazar Bostanlı Pazarı (Pazar sabahı) veya Sığacık (her cumartesi) ile kahvaltıyı birleştirmek mükemmel.',
+      },
+      {
+        heading: 'Alternatif Program: Tarih ve Doğa',
+        content: "Tarih odaklı: Cumartesi Efes + Şirince, Pazar Bergama. Doğa odaklı: Cumartesi Yamanlar Dağı yürüyüşü + Gölcük Gölü, Pazar Karaburun koyları. Her iki alternatif de hafta sonu İzmir deneyimini farklı boyutlara taşır.",
+        list: [
+          'Tarih versiyonu: Efes + Şirince (Cmt) + Bergama (Paz)',
+          'Doğa versiyonu: Yamanlar (Cmt) + Karaburun (Paz)',
+          'Gastronomi versiyonu: Urla rotası (Cmt) + Tire pazarı (Paz)',
+          'Plaj versiyonu: Çeşme-Alaçatı (Cmt) + Foça (Paz)',
+        ]
+      },
+    ],
+    faqs: [
+      { q: '2 günde İzmir yeterli mi?', a: 'Şehir merkezi için evet. Ama Efes, Alaçatı, Urla gibi çevre yerler için 4-5 gün ideal.' },
+      { q: 'İzmir hafta sonu araç kiralamak gerekli mi?', a: 'Şehir için hayır — metro + vapur yeterli. Urla, Foça, Efes için araç lazım.' },
+      { q: 'İzmir\'de hafta sonu nerede kalınır?', a: 'Alsancak en merkezi konum. Butik otel isteyenler için Konak tarihi semti. Plaj isteyenler Çeşme veya Alaçatı.' },
+      { q: 'Cumartesi Bostanlı Pazarı kaçta başlar?', a: 'Sabah 07:00\'da kurulur, 13:00\'da dağılmaya başlar. 09:00-11:00 en canlı saatler.' },
+    ],
+    relatedIds: ['nb10', 'nb3', 'nb4', 'nb1', 'b24'],
+  },
+  {
+    id: 'pb7',
+    slug: 'izmir-tarihi-lezzetler-geleneksel-urunler',
+    image: '/images/kemeralti-boyoz-kumru.jpg',
+    category: '🍽 Yemek',
+    title: "İzmir'in Tarihi Lezzetleri — 7 Nesildir Aynı Yerde Üretilen 10 Ürün",
+    subtitle: 'Boyozdan İzmir köftesine, şambaliden kumruya — İzmir\'in nesilden nesile aktarılan lezzetleri',
+    excerpt: "Boyoz, İzmir köftesi, şambali, kumru, İzmir bombası. Bazıları 7 nesildir aynı yerde, aynı tarife göre üretiliyor. İzmir'in gastronomi mirasının en önemli 10 ürünü.",
+    readTime: '9 dk okuma',
+    author: 'izmirilde Editörü',
+    publishDate: '2026-04-23',
+    displayDate: '23 Nisan 2026',
+    tags: ['İzmir meşhur yemekler', 'boyoz', 'İzmir köftesi', 'kumru', 'geleneksel İzmir lezzetleri'],
+    intro: "İzmir, Türkiye'nin gastronomi haritasında kendine özgü bir yere sahip. Bazı lezzetler 7 nesildir aynı yöntemle, aynı topraklarda üretiliyor. Bu rehber, İzmir'in gerçek gastronomi mirasına bir yolculuk.",
+    sections: [
+      {
+        heading: 'Boyoz ve İzmir Köftesi — Şehrin Simgeleri',
+        content: "Boyoz: 1923 Mübadelesi ile Selanik'ten İzmir'e gelen lezzet mirası. Özel hamur, yağla birleştirilerek ince açılır. Tarihi Havra Sokağı'ndaki fırınlarda sabah 06:00'dan itibaren sıcak çıkar. Sıcakken yenmeli — soğumuş boyoz asla aynı değildir. İzmir Köfte: Patates ve domates sosuyla fırında pişirilen, dünyaca ünlü yemek. Basmane civarındaki tarihi lokantalarda 1950'lerden beri aynı tarifle. Yanında piyaz ve cacık ile tam set.",
+        list: [
+          'Boyoz: sıcak + haşlanmış yumurta + domates — klasik set',
+          'İzmir Köftesi: domates soslu fırın köfte + piyaz + cacık',
+          'Kumru: özel ekmek + sucuk + salam + kaşar, Çeşme yolunda',
+          'Şambali: mısır unu + yoğurt + fıstık, Kemeraltı\'nda seyyar',
+          'İzmir Bombası: çıtır kadayıf + çikolata + fıstık, pastanelerde',
+        ]
+      },
+      {
+        heading: 'Tire, Foça ve Karaburun\'un Tarihi Ürünleri',
+        content: "Tire Kehvası ve Sıkma: nohut unu + tahin + pekmez. Tire'nin en otantik sabah lezzeti. Tire Peyniri: tulum ve lor çeşitleri, koyun-keçi sütünden geleneksel mayalama. Tire Süt Müzesi çevresinde tadılabilir. Foça Bademi: Türkiye'nin en önemli badem üretim merkezlerinden biri. Badem ezmesi ve şekerleme nesillerdir aynı aileler tarafından üretilir. Karaburun Zeytinyağı: soğuk sıkım, 100+ yıllık zeytinliklerden üretim.",
+        tip: 'Tire Cumartesi pazarı + Tire Süt Müzesi kombinasyonu — tam gün lezzet turu.',
+      },
+      {
+        heading: 'Bu Lezzetleri Nereden Alınır?',
+        content: "En doğru adresler: Tire pazarı (Cumartesi), Seferihisar pazarı, Foça pazarı ve Karaburun üretici çiftlikleri. İzmir merkezde Kemeraltı Çarşısı, Kızlarağası Hanı ve Alsancak semt pazarları. Lezzet turu rotası önerisi: Sabah Kemeraltı'nda boyoz → öğlen İzmir köftesi ve kumru → akşam şambali ve İzmir bombası.",
+        list: [
+          'Boyoz: Kemeraltı fırınları, sabah 06:00+',
+          'Kumru: Çeşme yolu kumrucular, her gün',
+          'Tire peyniri: Tire Cumartesi pazarı',
+          'Foça bademi: Foça pazarı ve üretici çiftlikler',
+          'Karaburun zeytinyağı: doğrudan üreticiden',
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'Boyoz nereden alınır?', a: 'Kemeraltı\'ndaki geleneksel fırınlar en iyi adres. Sabah 06:00-10:00 arası sıcak çıkar.' },
+      { q: 'İzmir köftesinin en iyi mekanı neresi?', a: 'Basmane civarındaki tarihi lokantalar. Birinci Kordon\'daki mekanlar da kaliteli.' },
+      { q: 'Kumru nedir, nerede yenir?', a: 'Özel kumru ekmeğinde sucuk+salam+kaşar sandviç. En iyi kumrucular Çeşme yolu üzerinde.' },
+      { q: 'Tire\'ye ne zaman gidilmeli?', a: 'Cumartesi günü Tire pazarı + Tire Süt Müzesi + kahvaltı kombinasyonu ideal.' },
+    ],
+    relatedIds: ['b24', 'b25', 'b26', 'nb2', 'b27'],
+  },
+  {
+    id: 'pb8',
+    slug: 'izmir-cocukla-aktiviteler-aile-rehberi',
+    image: '/images/kulturpark-izmir.jpg',
+    category: '👨‍👩‍👧 Aile',
+    title: "İzmir'de Çocuklu Aileler İçin En İyi 12 Aktivite ve Mekan",
+    subtitle: 'Bilim merkezinden hayvanat bahçesine, Efes\'ten Ilıca plajına aile rehberi',
+    excerpt: "İzmir, Türkiye'nin çocuklu aileler için en ideal şehirlerinden biri. Bilim merkezi, doğal yaşam parkı, güvenli plajlar ve tarihi alanlar — 12 aktivite tam rehberi.",
+    readTime: '8 dk okuma',
+    author: 'izmirilde Editörü',
+    publishDate: '2026-04-23',
+    displayDate: '23 Nisan 2026',
+    tags: ['İzmir çocukla', 'aile dostu mekanlar İzmir', 'İzmir çocuk aktiviteleri', 'ailecek İzmir'],
+    intro: "İzmir, çocuklu aileler için Türkiye'nin en hazır şehirlerinden biri. Hem şehir içinde hem de çevre ilçelerinde, çocukların eğlenip öğrenebileceği onlarca mekan ve aktivite var.",
+    sections: [
+      {
+        heading: 'Eğitici ve Eğlenceli Mekanlar',
+        content: "İzmir Bilim Merkezi (Balçova): Fizik, kimya, biyoloji, astronomi alanlarında interaktif deneyler. Planetarium gösterileri, hafta sonu atölyeler. İzmir Doğal Tarih Müzesi (Kültürpark): Dinozor fosilleri, hayvan maketleri. MüzeKart ile ücretsiz. Sasalı Doğal Yaşam Parkı: Zürafa, zebra, antilop besleme deneyimi. Balçova Teleferik: Kısa ama heyecanlı, zirve piknik imkanı.",
+        list: [
+          'Bilim Merkezi: 5-15 yaş için ideal, 60+ interaktif istasyon',
+          'Doğal Tarih Müzesi: fosiller + hayvan maketleri, MüzeKart ücretsiz',
+          'Sasalı: zürafa besleme, zebra görme — çocuklar bayılıyor',
+          'Teleferik: kısa heyecan + zirve manzarası',
+          'İzmir Çocuk Tiyatroları: ücretsiz-uygun fiyat, belediye takvimi',
+        ]
+      },
+      {
+        heading: 'Plaj ve Doğa Aktiviteleri',
+        content: "Çeşme Ilıca Plajı: Sığ, kumlu, termik — çocuklar için en güvenli plaj. Aquaparklar da var. İnciraltı Kent Ormanı: Bisiklet yolları, oyun parkları, piknik — ücretsiz. Kordon: Bisiklet, scooter kiralama, balon, dondurma — klasik çocuk aktivitesi. Efes: Büyük çocuklar için tarihi canlandırma. Sığacık Kalesi: Hem tarihi hem güvenli.",
+        tip: 'Küçük çocuklar için Ilıca sığ kıyısı mükemmel. Termal su cilde faydalı — üst üste gelmeyin, erken gidin.',
+      },
+      {
+        heading: 'Pratik Aile Tavsiyeleri',
+        content: "İzmir otelleri genel olarak aile dostu, büyük otellerin havuzu var. Toplu taşımada 7 yaş altı ücretsiz. Restoran sorunu yok — İzmir kültüründe çocuk her yere girer. Mobil sağlık: Acil durum için Tepecik Eğitim Hastanesi merkezi konum.",
+        list: [
+          '7 yaş altı toplu taşıma ücretsiz',
+          'Bebek arabası: Kordon ve Kültürpark ideal',
+          'Güneş kremi: Ege güneşi kuvvetli, SPF 50+',
+          'Öğle 12-16: en sıcak saatler, kapalı alan tercih edin',
+          'Çocuk menüsü: büyük çoğunluk mekanda var',
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'İzmir\'de çocuklar için en iyi aktivite nedir?', a: 'Bilim Merkezi 5-15 yaş için mükemmel. Sasalı Doğal Yaşam Parkı ise her yaşa hitap ediyor.' },
+      { q: 'Efes çocukla gezilir mi?', a: 'Büyük çocuklar için evet, çok etkileyici. 5 yaş altı için yorucu — sabah erkenden gidin ve öğleye dönün.' },
+      { q: 'İzmir\'de çocuklu aile için plaj hangisi?', a: 'Çeşme Ilıca en güvenli — sığ, kumlu, termik su. Güzelbahçe halk plajı da ücretsiz ve sakin.' },
+      { q: 'İnciraltı Kent Ormanı nerede?', a: 'Balçova ilçesinde, İzmir merkezden ~20 dk. Ücretsiz, bisiklet kiralama mevcut.' },
+    ],
+    relatedIds: ['nb9', 'b47', 'b48', 'b45', 'nb4'],
+  },
+  {
+    id: 'pb9',
+    slug: 'izmir-gun-batimi-fotograf-noktalari',
+    image: '/images/bostanli-sunset.jpg',
+    category: '📸 Fotoğraf',
+    title: "İzmir'de En Güzel Gün Batımı İzleyebileceğiniz 10 Nokta",
+    subtitle: 'Asansör\'den Kadifekale\'ye, Tekke Burnu\'ndan Alaçatı Port\'a — fotoğrafçılar için rehber',
+    excerpt: "İzmir gün batımı fotoğrafçılığı için Türkiye'nin en iyi şehirlerinden biri. Asansör, Kadifekale, Karaburun Tekke Burnu, Sığacık Kalesi — 10 mükemmel nokta ve profesyonel ipuçları.",
+    readTime: '8 dk okuma',
+    author: 'izmirilde Editörü',
+    publishDate: '2026-04-23',
+    displayDate: '23 Nisan 2026',
+    tags: ['İzmir gün batımı', 'manzara fotoğrafı İzmir', 'instagramlık yerler İzmir', 'fotoğrafçılık İzmir'],
+    intro: "İzmir, Ege Denizi'nin büyülü atmosferiyle Türkiye'nin en güzel gün batımlarından bazılarına ev sahipliği yapar. Fotoğrafçılar, sosyal medya tutkunları ve romantik anlar arayanlar için 10 mükemmel nokta.",
+    sections: [
+      {
+        heading: 'Şehir İçi Manzara Noktaları',
+        content: "Asansör Seyir Terası: İzmir'in klasik gün batımı noktası. Karataş'tan İzmir Körfezi'nin tamamı görünür. Son 30 dakika altın saat. Tripod şart. Kordon: İkonik İzmir deneyimi. Atatürk Anıtı'ndan Konak Pier'e uzanan sahil şeridi. Martılar ve yelkenliler en iyi çerçeveleri oluşturur. Kadifekale: Panoramik manzara, şehrin en yüksek noktalarından biri. Kızıl-orange tonlarla bürünen İzmir en iyi burada.",
+        list: [
+          'Asansör: en erişilebilir, İzmir klasiği',
+          'Kadifekale: panoramik, geniş açı gerektirir',
+          'Kordon: şehir + deniz kompozisyonu',
+          'Balçova Teleferik zirvesi: kuş bakışı şehir',
+          'İnciraltı sahili: körfez yansıması, az bilinen',
+        ],
+        tip: 'Gün batımından 45 dk önce noktada olun. Mavi saat (gün batımı sonrası 20-30 dk) kaçırmayın — en dramatik ışık o zaman.',
+      },
+      {
+        heading: 'Çevre İlçelerin Manzara Noktaları',
+        content: "Karaburun Tekke Burnu: Ege'nin en batısı. Güneşin ufukta kaybolduğu an en spektaküler sahne. Yanınızda ışık kaynağı alın — dönüş karanlıkta. Alaçatı Port: Yelken direkleri ve su yansıması. Şık, romantik, fotojenik. Sığacık Kalesi: Tarihi siluet — kale duvarlarının arkasından batan güneş. Foça Beş Kapılar Kalesi: Antik atmosfer + körfez + balıkçı tekneleri.",
+        tip: 'Karaburun Tekke Burnu\'na ulaşım zor ama manzara Türkiye\'nin en iyi gün batımlarından. En az 2 saat önceden yola çıkın.',
+      },
+      {
+        heading: 'Profesyonel Fotoğrafçılık İpuçları',
+        content: "En iyi mevsim: İlkbahar ve sonbahar — nem düşük, ufuk net. Kışın en net gökyüzü elde edilir. Yaz aylarında nem ufku bulanıklaştırır. Ekipman: Tripod şart, graduated ND filtre tavsiye edilir. RAW formatında çekin. Mavi saat: Gün batımı sonrası 20-30 dakika şehir ışıkları + gökyüzü mükemmel tablo oluşturur.",
+        list: [
+          'Altın saat: gün batımından 40-60 dk önce',
+          'Mavi saat: gün batımından 20-30 dk sonra',
+          'En iyi mevsim: Mart-Mayıs ve Eylül-Kasım',
+          'Ekipman: tripod + geniş açı + graduated ND',
+          'RAW formatı: post-processing için şart',
+        ]
+      },
+    ],
+    faqs: [
+      { q: 'İzmir\'de gün batımı kaçta?', a: 'Mevsime göre 17:30-20:30 arası değişir. Yaz aylarında 20:00-20:30, kış 17:30-18:00.' },
+      { q: 'Karaburun Tekke Burnu\'na nasıl gidilir?', a: 'Karaburun ilçe merkezinden 20-25 dk. Stabilize yol, özel araç gerekli. GPS ile gidin.' },
+      { q: 'İzmir\'de en iyi Instagram fotoğrafı nerede çekilir?', a: 'Asansör ve Alaçatı\'nın taş sokakları en çok paylaşılan noktalar. Kadifekale panoramik için en iyi.' },
+      { q: 'Alaçatı Port kaçta ziyaret edilmeli?', a: 'Gün batımından 30-60 dk önce. Yelken direklerinin su yansıması o saatte mükemmel.' },
+    ],
+    relatedIds: ['nb7', 'b4', 'b38', 'b16', 'b12'],
+  },
+  {
+    id: 'pb10',
+    slug: 'izmir-yunan-adalari-feribot-rehberi',
+    image: '/images/cesme-marina.jpg',
+    category: '⛵ Turizm',
+    title: "İzmir'den Yunan Adalarına Feribot Rehberi — Sakız, Midilli, Sisam",
+    subtitle: 'Çeşme\'den Sakız\'a, Ayvalık\'tan Midilli\'ye — Ege\'nin iki yakasını birleştiren tam rehber',
+    excerpt: "İzmir çevresinden Ege adalarına feribot seferleri, bilet fiyatları, vize prosedürleri ve adalarda yapılacaklar. Sakız, Midilli ve Sisam için 2026 güncel bilgiler.",
+    readTime: '10 dk okuma',
+    author: 'izmirilde Editörü',
+    publishDate: '2026-04-23',
+    displayDate: '23 Nisan 2026',
+    tags: ['İzmir Yunan adaları feribot', 'Sakız adası feribot', 'Midilli gezi', 'Sisam adası', 'Ege adaları'],
+    intro: "İzmir, coğrafi konumu sayesinde Ege'nin en güzel Yunan adalarına kapı aralar. Sakız, Midilli ve Sisam adalarına feribot seferleri, İzmir'den yapılabilecek en keyifli yurt dışı kaçamaklarından biri.",
+    sections: [
+      {
+        heading: 'Sakız Adası (Chios) — En Yakın Ada',
+        content: "Çeşme'den kalkan feribotlarla 35-45 dakika. Yaz aylarında sık sefer (Mayıs-Ekim), kış aylarında haftada birkaç sefer. Bilet 2026 itibarıyla tek yön 40-80 Euro arası. Sakız'ın en ünlü özelliği: dünyanın ilk damla sakız üretim merkezi. Ada merkezi, dar sokaklar, tarihi kasteller ve sakız müzeleri. Pyrgi ve Mesta köyleri ortaçağ mimarisinin şaheserleri.",
+        list: [
+          'Mesafe: Çeşme\'den 35-45 dk feribot',
+          'Bilet: 40-80 Euro tek yön (2026)',
+          'Sezon: Mayıs-Ekim yoğun, kış sınırlı',
+          'Görülmeli: Pyrgi köyü, Mesta, sakız müzesi',
+          'Konaklama: Kasım\'a kadar açık, 2-3 gece önerilen',
+        ],
+        tip: 'Sakız adası feribot bileti için Jale Tur, Ertürk ve Turyol firmalarını karşılaştırın. Erken rezervasyon %20-30 ucuz.',
+      },
+      {
+        heading: 'Midilli (Lesvos) ve Sisam (Samos)',
+        content: "Midilli: Ayvalık'tan 1.5-2 saat. Bilet 50-90 Euro tek yön. Ege'nin en büyük adalarından biri. Başkent Mytilini tarihi kale, sahil restoranları ve gece hayatıyla canlı. Zeytinyağı ve uzo üretiminin kalbi. Eresos köyü (Sapfo'nun doğum yeri) kültür turizminin odağı. Sisam: Kuşadası'ndan 1.5 saat. Pythagorion'daki Eupalinos Tüneli antik mühendislik harikası. Vathi limanı pitoresk. Samos Muscat şarabı tadılmalı.",
+      },
+      {
+        heading: 'Vize ve Pratik Bilgiler',
+        content: "Schengen vizesi zorunlu — Yunanistan AB üyesi. En az 1 ay önceden başvuru yapın. Pasaport geçerliliği: seyahat tarihinden itibaren minimum 3 ay. Kimlik kartı yeterli değil, pasaport şart. Adalarda ulaşım: araba kiralama en pratik (30-60 Euro/gün). En iyi ziyaret zamanı: Mayıs-Haziran ve Eylül-Ekim. Yaz kalabalık ve pahalı.",
+        list: [
+          'Vize: Schengen zorunlu, 1 ay önceden başvur',
+          'Pasaport: minimum 3 ay geçerli olmalı',
+          'Araç kiralama: adada 30-60 Euro/gün',
+          'En iyi sezon: Mayıs-Haziran, Eylül-Ekim',
+          'Temmuz-Ağustos: kalabalık ve pahalı, kaçının',
+        ],
+        tip: 'Schengen vizesi için en az 6-8 hafta önceden başvurun. Yaz sezonunda konsolosluklarda yoğunluk çok fazla.',
+      },
+    ],
+    faqs: [
+      { q: 'İzmir\'den Yunan adalarına feribot nereden kalkar?', a: 'Sakız için Çeşme, Midilli için Ayvalık, Sisam için Kuşadası. Her biri İzmir\'den 1-1.5 saat.' },
+      { q: 'Schengen vizesi ne kadar sürer?', a: 'Başvurudan ortalama 15-30 gün. Yaz sezonunda (Mayıs-Ağustos) 6-8 hafta bekleyin.' },
+      { q: 'Yunan adalarına en ucuz nasıl gidilir?', a: 'Erken rezervasyon (2-3 ay önce) ve Mayıs veya Eylül-Ekim seçimi en uygun kombinasyon.' },
+      { q: 'Sakız\'da ne kadar kalınmalı?', a: 'Minimum 2 gece önerilir. 1 gün ada merkezi, 1 gün Pyrgi-Mesta köyleri ve plajlar.' },
+      { q: 'Çeşme\'den Sakız\'a araçlı geçilebilir mi?', a: 'Evet, araçlı feribot var. Araç için ek ücret 100-200 Euro. Adada araç kiralamak daha ekonomik.' },
+    ],
+    relatedIds: ['b9', 'b41', 'nb3', 'b16', 'b15'],
+  },
+]

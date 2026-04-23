@@ -613,4 +613,65 @@
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
+
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-gizli-plajlar-sakli-koylar</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-antik-kent-gunubirlik-rotalar</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-serpme-kahvalti-mekanlar-2026</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-ucretsiz-aktiviteler-butce-dostu</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-karavan-kamp-rotalari-foca-karaburun</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-hafta-sonu-48-saat-program</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-tarihi-lezzetler-geleneksel-urunler</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-cocukla-aktiviteler-aile-rehberi</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-gun-batimi-fotograf-noktalari</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izmirilde.com/guides/izmir-yunan-adalari-feribot-rehberi</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
