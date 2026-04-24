@@ -61,16 +61,11 @@ export default class ErrorBoundary extends Component<Props, State> {
               ulaşabilirsiniz.
             </p>
 
-            {/* GEÇİCİ TEŞHİS: hatayı production'da da göster ki Safari DevTools'suz
-                hata detayına ulaşabilelim. Sorun çözüldükten sonra DEV kontrolüne
-                geri çevrilecek. */}
-            {this.state.error && (
+            {import.meta.env.DEV && this.state.error && (
               <pre className="text-left bg-black/5 border border-black/10 rounded-lg p-4 mb-8 text-xs overflow-auto max-h-48">
-                <strong>Hata mesajı:</strong> {this.state.error.message}
-                {'\n\n'}
-                <strong>Stack (ilk 500 karakter):</strong>
+                {this.state.error.message}
                 {'\n'}
-                {(this.state.error.stack || '').slice(0, 500)}
+                {this.state.error.stack}
               </pre>
             )}
 

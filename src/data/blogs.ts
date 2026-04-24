@@ -2368,9 +2368,6 @@ export const newBlogPosts: BlogPost[] = [
   },
 ]
 
-// Tüm blog yazılarını birleştir (mevcut + yeni)
-export const allBlogPosts: BlogPost[] = [...blogPosts, ...newBlogPosts, ...pdfBlogPosts, ...nicheBlogPosts]
-
 // ===================== PDF BLOG KOLEKSİYONU — 10 YENİ DETAYLI REHBERs =====================
 
 export const pdfBlogPosts: BlogPost[] = [
@@ -3431,3 +3428,9 @@ export const nicheBlogPosts: BlogPost[] = [
     relatedIds: ['golcuk-tabiat-parki', 'izmir-hafta-sonu-48-saat-program', 'spil-dagi-milli-parki'],
   },
 ]
+
+// ===================== TÜM BLOG YAZILARI BİRLEŞTİRME =====================
+// NOT: Bu satır dosyanın EN SONUNDA olmalı. Aksi halde production build'de
+// minifier 'Cannot access i before initialization' TDZ hatası fırlatır
+// (çünkü pdfBlogPosts ve nicheBlogPosts aşağıda tanımlı).
+export const allBlogPosts: BlogPost[] = [...blogPosts, ...newBlogPosts, ...pdfBlogPosts, ...nicheBlogPosts]
