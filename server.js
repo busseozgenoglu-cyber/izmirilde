@@ -34,30 +34,34 @@ function esc(str) {
     .replace(/>/g, '&gt;')
 }
 
-function injectMeta(template, appHtml, meta, pathname) {
+function injectMeta(template, appHtml, meta, pathname, helmet = null) {
   let html = template
 
-  // React app into root
-  html = html.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+  // React app into root (support both empty root and ssr-outlet comment)
+  html = html.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${appHtml}</div>`)
 
   if (!meta) return html
 
   const canonical = meta.canonical ?? `https://izmirilde.com${pathname}`
   const img = meta.image ?? 'https://izmirilde.com/izmirilde-og.png'
+  const title = meta.title ?? ''
 
-  html = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(meta.title)}</title>`)
+  // Title & meta title (use helmet title if available)
+  html = html.replace(/<title>[^<]*<\/title>/, helmet?.title ? helmet.title.toString() : `<title>${esc(title)}</title>`)
+  html = html.replace(/<meta\s+name="title"\s+content="[^"]*"\s*\/?>/, `<meta name="title" content="${esc(title)}" />`)
   html = html.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/?>/, `<meta name="description" content="${esc(meta.description)}" />`)
   html = html.replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${canonical}" />`)
 
-  html = html.replace(/<meta\s+property="og:title"[^>]*\/?>/, `<meta property="og:title" content="${esc(meta.title)}" />`)
+  // OG / Twitter
+  html = html.replace(/<meta\s+property="og:title"[^>]*\/?>/, `<meta property="og:title" content="${esc(title)}" />`)
   html = html.replace(/<meta\s+property="og:description"[^>]*\/?>/, `<meta property="og:description" content="${esc(meta.description)}" />`)
   html = html.replace(/<meta\s+property="og:url"[^>]*\/?>/, `<meta property="og:url" content="${canonical}" />`)
   html = html.replace(/<meta\s+property="og:type"[^>]*\/?>/, `<meta property="og:type" content="${meta.type}" />`)
   html = html.replace(/<meta\s+property="og:image"[^>]*content="[^"]*"[^>]*\/?>/, `<meta property="og:image" content="${img}" />`)
   html = html.replace(/<meta\s+property="og:image:secure_url"[^>]*\/?>/, `<meta property="og:image:secure_url" content="${img}" />`)
-  html = html.replace(/<meta\s+property="og:image:alt"[^>]*\/?>/, `<meta property="og:image:alt" content="${esc(meta.title)}" />`)
+  html = html.replace(/<meta\s+property="og:image:alt"[^>]*\/?>/, `<meta property="og:image:alt" content="${esc(title)}" />`)
 
-  html = html.replace(/<meta\s+name="twitter:title"[^>]*\/?>/, `<meta name="twitter:title" content="${esc(meta.title)}" />`)
+  html = html.replace(/<meta\s+name="twitter:title"[^>]*\/?>/, `<meta name="twitter:title" content="${esc(title)}" />`)
   html = html.replace(/<meta\s+name="twitter:description"[^>]*\/?>/, `<meta name="twitter:description" content="${esc(meta.description)}" />`)
   html = html.replace(/<meta\s+name="twitter:image"[^>]*\/?>/, `<meta name="twitter:image" content="${img}" />`)
   html = html.replace(/<meta\s+name="twitter:url"[^>]*\/?>/, `<meta name="twitter:url" content="${canonical}" />`)
@@ -67,7 +71,7 @@ function injectMeta(template, appHtml, meta, pathname) {
   if (meta.type === 'article' && meta.author) {
     extraHead += `\n    <meta property="article:author" content="${esc(meta.author)}" />`
     if (meta.publishDate) {
-      extraHead += `\n    <meta property="article:published_time" content="${meta.publishDate}" />`
+      extraHead += `\n    <meta property="article:published_time" content="${esc(meta.publishDate)}" />`
     }
   }
 
@@ -83,6 +87,11 @@ function injectMeta(template, appHtml, meta, pathname) {
       })),
     })
     extraHead += `\n    <script type="application/ld+json">${ld}</script>`
+  }
+
+  // Inject helmet script tags (JSON-LD schemas from pages like BlogPosting, FAQPage, HowTo)
+  if (helmet?.script) {
+    extraHead += `\n    ${helmet.script.toString()}`
   }
 
   if (extraHead) {
@@ -110,9 +119,9 @@ app.get('*', async (req, res) => {
   try {
     const template = fs.readFileSync(templatePath, 'utf-8')
     const render = await getRenderer()
-    const { html: appHtml } = render(url)
+    const { html: appHtml, helmet } = render(url)
     const meta = META_MAP[pathname]
-    const fullHtml = injectMeta(template, appHtml, meta, pathname)
+    const fullHtml = injectMeta(template, appHtml, meta, pathname, helmet)
 
     res
       .status(200)
