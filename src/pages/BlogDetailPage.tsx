@@ -181,6 +181,9 @@ export default function BlogDetailPage() {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:image" content={`https://izmirilde.com${post.image}`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={`${post.title} — izmirilde`} />
         <meta property="og:url" content={`https://izmirilde.com/guides/${post.slug}`} />
         <meta property="article:published_time" content={post.publishDate} />
         <meta property="article:author" content={post.author} />
@@ -202,15 +205,15 @@ export default function BlogDetailPage() {
         {faqJsonLd && (
           <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         )}
-        {/* HowTo schema - rota ve pratik rehberler için */}
-        {post.sections.length >= 3 && (
+        {/* HowTo schema - sadece pratik rehber ve rota yazıları için */}
+        {post.sections.length >= 3 && ['🏖 Plaj', '🌿 Doğa', '🛍 Alışveriş'].some(c => post.category.includes(c.replace(/^[^\s]+ /, ''))) && (
           <script type="application/ld+json">{JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'HowTo',
             name: post.title,
             description: post.excerpt,
             image: `https://izmirilde.com${post.image}`,
-            totalTime: post.readTime?.replace(' dk okuma', ' minutes') || 'PT10M',
+            totalTime: `PT${parseInt(post.readTime) * 2 || 20}M`,
             step: post.sections.map((s, i) => ({
               '@type': 'HowToStep',
               position: i + 1,

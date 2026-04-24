@@ -1,7 +1,8 @@
 import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { MapPin, Utensils, Coffee, Sun, Moon, Sparkles } from 'lucide-react'
+import { MapPin, Utensils, Coffee, Sun, Moon, Sparkles, BookOpen } from 'lucide-react'
 import { districts } from '../data/districts'
+import { allBlogPosts } from '../data/blogs'
 import useScrollReveal from '../hooks/useScrollReveal'
 import Breadcrumbs from '../components/Breadcrumbs'
 import NotFoundPage from './NotFoundPage'
@@ -32,25 +33,53 @@ export default function DistrictDetailPage() {
     .filter((d) => d.emoji === district.emoji)
     .slice(0, 4)
 
-  // JSON-LD for district as a Place
+  // Related blogs: match by district name in slug or tags
+  const districtNameLower = district.name.toLowerCase()
+  const relatedBlogs = allBlogPosts
+    .filter(b =>
+      b.slug.includes(districtNameLower) ||
+      b.tags.some(t => t.toLowerCase().includes(districtNameLower))
+    )
+    .slice(0, 4)
+
+  // JSON-LD for district as TouristDestination
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'TravelGuide',
-    name: `İzmir ${district.name} Rehberi`,
+    '@type': 'TouristDestination',
+    '@id': `https://izmirilde.com/districts/${district.slug}`,
+    name: `İzmir ${district.name}`,
     description: district.intro,
     image: `https://izmirilde.com${district.image}`,
     url: `https://izmirilde.com/districts/${district.slug}`,
     inLanguage: 'tr-TR',
-    about: {
-      '@type': 'Place',
-      name: `İzmir ${district.name}`,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: district.name,
-        addressRegion: 'İzmir',
-        addressCountry: 'TR',
-      },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: district.name,
+      addressRegion: 'İzmir',
+      addressCountry: 'TR',
     },
+    containedInPlace: {
+      '@type': 'City',
+      name: 'İzmir',
+      '@id': 'https://izmirilde.com/#destination',
+    },
+    touristType: ['Gastronomi Turizmi', 'Kültür Turizmi', 'Şehir Turizmi'],
+  }
+
+  // WebPage schema for the guide page itself
+  const webPageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `https://izmirilde.com/districts/${district.slug}`,
+    name: `İzmir ${district.name} Rehberi — Gezilecek Yerler ve Mekanlar`,
+    description: `İzmir ${district.name} ilçesinde gezilecek yerler, kahvaltı, öğle ve akşam yemeği mekanları. ${totalVenues} gerçek mekan önerisi ile detaylı rehber.`,
+    url: `https://izmirilde.com/districts/${district.slug}`,
+    inLanguage: 'tr-TR',
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://izmirilde.com/#organization',
+    },
+    about: { '@id': `https://izmirilde.com/districts/${district.slug}` },
   }
 
   // Meal sections metadata
@@ -84,7 +113,11 @@ export default function DistrictDetailPage() {
         <meta name="twitter:description" content={district.intro} />
         <meta name="twitter:image" content={`https://izmirilde.com${district.image}`} />
         <meta property="og:site_name" content="izmirilde" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={`İzmir ${district.name} — izmirilde rehberi`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(webPageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
@@ -235,6 +268,53 @@ export default function DistrictDetailPage() {
             </section>
           )
         })}
+
+        {/* RELATED BLOGS */}
+        {relatedBlogs.length > 0 && (
+          <section className="py-14 lg:py-18 bg-orange-50/40 border-t border-orange-100">
+            <div className="max-w-[1200px] mx-auto px-4 sm:px-8">
+              <div className="flex items-center gap-3 mb-8">
+                <BookOpen className="w-5 h-5 text-orange-500" />
+                <h2
+                  className="text-2xl sm:text-3xl font-bold"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  {district.name} <span className="gradient-text-sunset">Rehberleri</span>
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                {relatedBlogs.map((b) => (
+                  <Link
+                    key={b.id}
+                    to={`/guides/${b.slug}`}
+                    className="group block rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-400 border border-orange-100"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <img
+                        src={b.image}
+                        alt={b.title}
+                        className="w-full h-full object-cover card-image-zoom"
+                        loading="lazy"
+                        onError={(e) => {
+                          const t = e.target as HTMLImageElement
+                          t.onerror = null
+                          t.src = '/images/kulturpark-izmir.jpg'
+                        }}
+                      />
+                    </div>
+                    <div className="p-4">
+                      <span className="text-xs font-semibold text-orange-500 uppercase tracking-wide">{b.category.replace(/^[^\s]+ /, '')}</span>
+                      <h3 className="font-semibold text-base leading-snug mt-1 line-clamp-2 group-hover:text-orange-600 transition-colors">
+                        {b.title}
+                      </h3>
+                      <p className="text-xs text-black/50 mt-2">{b.readTime}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* RELATED DISTRICTS */}
         {related.length > 0 && (
