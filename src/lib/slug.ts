@@ -6,6 +6,25 @@
  * ve data lookup'lara sadece güvenli slug'ların gitmesini sağlamak.
  */
 
+/**
+ * String'den tüm emoji karakterlerini ve başta/sonda kalan boşlukları temizler.
+ *
+ * ÖNEMLİ: Eskiden `/[🏛🏖🍽🌿🌙🎭🛍🗺...]/` gibi karakter sınıfı regex'leri
+ * kullanılıyordu ama ZWJ sequence'lı emoji'ler (ör. 👨‍👩‍👧) character class içinde
+ * geçersiz — böyle bir regex bazı tarayıcılarda SyntaxError'a neden olup
+ * tüm sayfayı patlatıyordu. Unicode property escape (\p{Extended_Pictographic})
+ * hem daha güvenli hem de tüm emoji'leri kapsıyor.
+ */
+export function stripEmoji(text: string): string {
+  if (typeof text !== 'string') return ''
+  try {
+    return text.replace(/\p{Extended_Pictographic}/gu, '').replace(/\s+/g, ' ').trim()
+  } catch {
+    // Unicode property escape destekleyemeyen çok eski tarayıcılar için fallback
+    return text.replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}]/gu, '').replace(/\s+/g, ' ').trim()
+  }
+}
+
 /** İzin verilen maksimum slug uzunluğu. URL'de normal bir blog slug'ı ~80-100 karakter olur. */
 const MAX_SLUG_LENGTH = 200
 

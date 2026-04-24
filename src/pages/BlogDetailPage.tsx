@@ -5,7 +5,7 @@ import { allBlogPosts as blogPosts } from '../data/blogs'
 import useScrollReveal from '../hooks/useScrollReveal'
 import Breadcrumbs from '../components/Breadcrumbs'
 import NotFoundPage from './NotFoundPage'
-import { isValidSlug } from '../lib/slug'
+import { isValidSlug, stripEmoji } from '../lib/slug'
 
 // ===================== İÇ LİNKLEME SİSTEMİ =====================
 function getInternalLinks(currentSlug: string, category: string): { title: string; href: string }[] {
@@ -57,8 +57,13 @@ function getInternalLinks(currentSlug: string, category: string): { title: strin
     ],
   }
 
-  // Kategori bazlı link bul, mevcut slug hariç tut
-  const catKey = Object.keys(linkMap).find(k => category.includes(k.replace(/[🏛🏖🍽🌿🌙🎭🛍]\s/, '').split(' ')[0]))
+  // Kategori bazlı link bul, mevcut slug hariç tut.
+  // Emoji'li key'lerden emoji'yi temizleyip ana kelimeyle match ediyoruz.
+  const categoryWord = stripEmoji(category).split(/\s+/)[0] ?? ''
+  const catKey = Object.keys(linkMap).find(k => {
+    const keyWord = stripEmoji(k).split(/\s+/)[0] ?? ''
+    return keyWord.length > 0 && categoryWord.includes(keyWord)
+  })
   const links = (catKey ? linkMap[catKey] : linkMap['🏛 Tarih'])
     .filter(l => !l.href.includes(currentSlug))
     .slice(0, 4)
@@ -230,7 +235,7 @@ export default function BlogDetailPage() {
           <div className="absolute inset-0">
             <img
               src={post.image}
-              alt={`${post.title} — İzmir ${post.category.replace(/[🏛🏖🍽🌿🌙🎭🛍🗺💰📸👨‍👩‍👧🎵📰⛵🚌🌿⚽💻]\s*/g, '')} rehberi | izmirilde`}
+              alt={`${post.title} — İzmir ${stripEmoji(post.category)} rehberi | izmirilde`}
               className="w-full h-full object-cover scale-110 animate-slow-zoom"
               onError={(e) => {
                 const target = e.target as HTMLImageElement
