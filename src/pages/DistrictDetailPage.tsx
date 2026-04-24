@@ -92,7 +92,7 @@ export default function DistrictDetailPage() {
   return (
     <>
       <Helmet>
-        <title>İzmir {district.name} Rehberi — Gezilecek Yerler ve Mekanlar | izmirilde</title>
+        <title>{`İzmir ${district.name} Rehberi — Gezilecek Yerler ve Mekanlar | izmirilde`}</title>
         <meta
           name="description"
           content={`İzmir ${district.name} ilçesinde gezilecek yerler, kahvaltı, öğle ve akşam yemeği mekanları. ${totalVenues} gerçek mekan önerisi ile detaylı rehber.`}

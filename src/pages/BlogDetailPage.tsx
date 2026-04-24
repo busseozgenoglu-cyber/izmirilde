@@ -172,7 +172,7 @@ export default function BlogDetailPage() {
   return (
     <>
       <Helmet>
-        <title>{post.title} | izmirilde</title>
+        <title>{`${post.title} | izmirilde`}</title>
         <meta name="description" content={post.excerpt} />
         <meta name="keywords" content={post.tags.join(', ')} />
         <link rel="canonical" href={`https://izmirilde.com/guides/${post.slug}`} />

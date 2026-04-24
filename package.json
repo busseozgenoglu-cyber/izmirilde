@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node prerender.mjs",
+    "build": "vite build && vite build --ssr && node build-meta.mjs",
     "lint": "eslint .",
     "preview": "vite preview --port $PORT",
     "start": "node server.js",
-    "type-check": "tsc -b"
+    "type-check": "tsc -b",
+    "build:client": "vite build",
+    "build:server": "vite build --ssr"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -83,5 +85,6 @@
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
     "vite-plugin-prerender": "^1.0.8"
-  }
+  },
+  "type": "module"
 }
