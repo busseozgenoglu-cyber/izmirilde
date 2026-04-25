@@ -2,6 +2,7 @@ import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import fs from 'fs'
+import nodemailer from 'nodemailer'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const PORT = parseInt(process.env.PORT) || 3000
@@ -16,6 +17,8 @@ console.log(`📋 Meta map: ${Object.keys(META_MAP).length} routes`)
 
 // ── Express ───────────────────────────────────────────────────────────────────
 const app = express()
+
+app.use(express.json())
 
 app.use(express.static(CLIENT_DIST, {
   index: false,
@@ -139,6 +142,56 @@ async function getRenderer() {
   }
   return renderFn
 }
+
+// ── Contact form API ──────────────────────────────────────────────────────────
+app.post('/api/contact', async (req, res) => {
+  const { name, email, subject, message } = req.body
+  if (!name || !email || !message) {
+    return res.status(400).json({ ok: false, error: 'Eksik alanlar var.' })
+  }
+
+  const smtpHost = process.env.SMTP_HOST
+  const smtpPort = parseInt(process.env.SMTP_PORT || '587')
+  const smtpUser = process.env.SMTP_USER
+  const smtpPass = process.env.SMTP_PASS
+  const toEmail = process.env.CONTACT_EMAIL || 'buseozgenoglu.1@gmail.com'
+
+  if (!smtpHost || !smtpUser || !smtpPass) {
+    console.error('SMTP ayarları eksik. Railway Variables sekmesinden ekleyin.')
+    return res.status(500).json({ ok: false, error: 'Sunucu yapılandırma hatası.' })
+  }
+
+  try {
+    const transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpPort === 465,
+      auth: { user: smtpUser, pass: smtpPass },
+    })
+
+    await transporter.sendMail({
+      from: `"izmirilde İletişim Formu" <${smtpUser}>`,
+      to: toEmail,
+      replyTo: email,
+      subject: `[izmirilde] ${subject} — ${name}`,
+      text: `Ad: ${name}\nE-posta: ${email}\nKonu: ${subject}\n\nMesaj:\n${message}`,
+      html: `
+        <h2>izmirilde İletişim Formu</h2>
+        <p><strong>Ad:</strong> ${name}</p>
+        <p><strong>E-posta:</strong> ${email}</p>
+        <p><strong>Konu:</strong> ${subject}</p>
+        <hr/>
+        <p><strong>Mesaj:</strong></p>
+        <p style="white-space:pre-line">${message}</p>
+      `,
+    })
+
+    res.json({ ok: true })
+  } catch (err) {
+    console.error('Email gönderim hatası:', err)
+    res.status(500).json({ ok: false, error: 'E-posta gönderilemedi. Lütfen daha sonra tekrar deneyin.' })
+  }
+})
 
 // ── Route handler ─────────────────────────────────────────────────────────────
 app.get('*', async (req, res) => {

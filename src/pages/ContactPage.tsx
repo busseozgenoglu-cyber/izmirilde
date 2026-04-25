@@ -6,11 +6,32 @@ import useScrollReveal from '../hooks/useScrollReveal'
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', subject: 'Mekan Ekle', message: '' })
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Placeholder for form submission
-    alert('Mesajınız gönderildi! (Demo)')
+    setStatus('loading')
+    setErrorMsg('')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      const data = await res.json()
+      if (data.ok) {
+        setStatus('success')
+        setForm({ name: '', email: '', subject: 'Mekan Ekle', message: '' })
+      } else {
+        setStatus('error')
+        setErrorMsg(data.error || 'Bir hata oluştu.')
+      }
+    } catch {
+      setStatus('error')
+      setErrorMsg('Sunucuya ulaşılamadı. Lütfen daha sonra tekrar deneyin.')
+    }
   }
 
   useScrollReveal()
@@ -111,11 +132,22 @@ export default function ContactPage() {
                     required
                   />
                 </div>
+                {status === 'success' && (
+                  <div className="p-4 rounded-xl bg-green-50 text-green-700 text-sm font-medium">
+                    ✅ Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
+                  </div>
+                )}
+                {status === 'error' && (
+                  <div className="p-4 rounded-xl bg-red-50 text-red-700 text-sm font-medium">
+                    ❌ {errorMsg}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="w-full py-3.5 gradient-sunset text-white rounded-lg font-semibold text-base hover:brightness-110 transition-all duration-300"
+                  disabled={status === 'loading'}
+                  className="w-full py-3.5 gradient-sunset text-white rounded-lg font-semibold text-base hover:brightness-110 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Gönder
+                  {status === 'loading' ? 'Gönderiliyor...' : 'Gönder'}
                 </button>
               </form>
             </div>
