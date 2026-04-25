@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import SectionHeader from '../components/SectionHeader'
 import Card from '../components/Card'
 import FilterTabs from '../components/FilterTabs'
+import BlogArchiveSection from '../components/BlogArchiveSection'
 import useScrollReveal from '../hooks/useScrollReveal'
 import {
   trendingCards,
@@ -715,6 +716,7 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <TrendingSection />
+        <BlogArchiveSection />
         <DiscoverySection />
         <PopularListsSection />
         <NewsSection />
