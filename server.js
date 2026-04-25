@@ -131,8 +131,10 @@ app.get('*', async (req, res) => {
     const meta = META_MAP[pathname]
     const fullHtml = injectMeta(template, appHtml, meta, pathname, helmet)
 
+    const status = meta ? 200 : 404
+
     res
-      .status(200)
+      .status(status)
       .set('Content-Type', 'text/html')
       .set('Cache-Control', meta
         ? 'public, max-age=300, stale-while-revalidate=3600'
@@ -141,7 +143,7 @@ app.get('*', async (req, res) => {
   } catch (err) {
     console.error('SSR Error:', url, err.message)
     try {
-      res.status(200).set('Content-Type', 'text/html').send(
+      res.status(500).set('Content-Type', 'text/html').send(
         fs.readFileSync(templatePath, 'utf-8')
       )
     } catch {

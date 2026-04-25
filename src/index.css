@@ -593,7 +593,7 @@ details summary::-webkit-details-marker {
 .banner-track {
   display: flex;
   width: max-content;
-  animation: bannerMarquee 10s linear infinite;
+  animation: bannerMarquee 14s linear infinite;
 }
 
 .banner-track:hover {
