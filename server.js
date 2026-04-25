@@ -157,18 +157,28 @@ app.post('/api/contact', async (req, res) => {
     return res.status(500).json({ ok: false, error: 'Sunucu yapılandırma hatası.' })
   }
 
+  const extra = []
+  if (req.body.venueName) extra.push(`Mekan Adı: ${req.body.venueName}`)
+  if (req.body.district) extra.push(`İlçe: ${req.body.district}`)
+  if (req.body.category) extra.push(`Kategori: ${req.body.category}`)
+  if (req.body.address) extra.push(`Adres: ${req.body.address}`)
+  if (req.body.phone) extra.push(`Telefon: ${req.body.phone}`)
+  const extraText = extra.length ? '\n' + extra.join('\n') + '\n' : ''
+  const extraHtml = extra.map(x => `<p>${x.replace(': ', ':</strong> ').replace(/^/, '<strong>')}</p>`).join('')
+
   try {
     const { error } = await resend.emails.send({
       from: 'izmirilde <onboarding@resend.dev>',
       to: 'buseozgenoglu.1@gmail.com',
       replyTo: email,
       subject: `[izmirilde] ${subject} — ${name}`,
-      text: `Ad: ${name}\nE-posta: ${email}\nKonu: ${subject}\n\nMesaj:\n${message}`,
+      text: `Ad: ${name}\nE-posta: ${email}\nKonu: ${subject}${extraText}\nMesaj:\n${message}`,
       html: `
         <h2>izmirilde İletişim Formu</h2>
         <p><strong>Ad:</strong> ${name}</p>
         <p><strong>E-posta:</strong> ${email}</p>
         <p><strong>Konu:</strong> ${subject}</p>
+        ${extraHtml}
         <hr/>
         <p><strong>Mesaj:</strong></p>
         <p style="white-space:pre-line">${message}</p>
