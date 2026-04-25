@@ -6,6 +6,7 @@ import Card from '../components/Card'
 import FilterTabs from '../components/FilterTabs'
 import BlogArchiveSection from '../components/BlogArchiveSection'
 import AnnouncementBanner from '../components/AnnouncementBanner'
+import CouponSection from '../components/CouponSection'
 import useScrollReveal from '../hooks/useScrollReveal'
 import {
   trendingCards,
@@ -717,6 +718,7 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <AnnouncementBanner />
+        <CouponSection />
         <TrendingSection />
         <BlogArchiveSection />
         <DiscoverySection />
