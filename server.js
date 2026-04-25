@@ -2,7 +2,7 @@ import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import fs from 'fs'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const PORT = parseInt(process.env.PORT) || 3000
@@ -144,34 +144,23 @@ async function getRenderer() {
 }
 
 // ── Contact form API ──────────────────────────────────────────────────────────
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
+
 app.post('/api/contact', async (req, res) => {
   const { name, email, subject, message } = req.body
   if (!name || !email || !message) {
     return res.status(400).json({ ok: false, error: 'Eksik alanlar var.' })
   }
 
-  const smtpHost = process.env.SMTP_HOST
-  const smtpPort = parseInt(process.env.SMTP_PORT || '587')
-  const smtpUser = process.env.SMTP_USER
-  const smtpPass = process.env.SMTP_PASS
-  const toEmail = process.env.CONTACT_EMAIL || 'buseozgenoglu.1@gmail.com'
-
-  if (!smtpHost || !smtpUser || !smtpPass) {
-    console.error('SMTP ayarları eksik. Railway Variables sekmesinden ekleyin.')
+  if (!resend) {
+    console.error('RESEND_API_KEY eksik. Railway Variables sekmesinden ekleyin.')
     return res.status(500).json({ ok: false, error: 'Sunucu yapılandırma hatası.' })
   }
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: smtpHost,
-      port: smtpPort,
-      secure: smtpPort === 465,
-      auth: { user: smtpUser, pass: smtpPass },
-    })
-
-    await transporter.sendMail({
-      from: `"izmirilde İletişim Formu" <${smtpUser}>`,
-      to: toEmail,
+    const { error } = await resend.emails.send({
+      from: 'izmirilde <onboarding@resend.dev>',
+      to: 'buseozgenoglu.1@gmail.com',
       replyTo: email,
       subject: `[izmirilde] ${subject} — ${name}`,
       text: `Ad: ${name}\nE-posta: ${email}\nKonu: ${subject}\n\nMesaj:\n${message}`,
@@ -185,6 +174,11 @@ app.post('/api/contact', async (req, res) => {
         <p style="white-space:pre-line">${message}</p>
       `,
     })
+
+    if (error) {
+      console.error('Resend hatası:', error)
+      return res.status(500).json({ ok: false, error: 'E-posta gönderilemedi. Lütfen daha sonra tekrar deneyin.' })
+    }
 
     res.json({ ok: true })
   } catch (err) {
