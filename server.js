@@ -144,7 +144,7 @@ async function getRenderer() {
 }
 
 // ── Contact form API ──────────────────────────────────────────────────────────
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
+const resend = new Resend(process.env.RESEND_API_KEY || 're_QyhSbPvr_LfokHXyDR4ipgYSUU51b4CCt')
 
 app.post('/api/contact', async (req, res) => {
   const { name, email, subject, message } = req.body
