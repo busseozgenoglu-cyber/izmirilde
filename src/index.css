@@ -584,6 +584,29 @@ details summary::-webkit-details-marker {
   border-bottom: none;
 }
 
+/* ===================== ANNOUNCEMENT BANNER ===================== */
+@keyframes bannerMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.banner-track {
+  display: flex;
+  width: max-content;
+  animation: bannerMarquee 10s linear infinite;
+}
+
+.banner-track:hover {
+  animation-play-state: paused;
+}
+
+.banner-glow {
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.8),
+    0 0 20px rgba(255,200,100,0.6),
+    0 0 40px rgba(255,150,50,0.3);
+}
+
 /* Suspense spinner */
 @keyframes spin {
   to { transform: rotate(360deg); }
