@@ -50,6 +50,14 @@ function injectMeta(template, appHtml, meta, pathname, helmet = null) {
   html = html.replace(/<title>[^<]*<\/title>/, helmet?.title ? helmet.title.toString() : `<title>${esc(title)}</title>`)
   html = html.replace(/<meta\s+name="title"\s+content="[^"]*"\s*\/?>/, `<meta name="title" content="${esc(title)}" />`)
   html = html.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/?>/, `<meta name="description" content="${esc(meta.description)}" />`)
+  if (meta.keywords) {
+    const kwExists = html.includes('<meta name="keywords"')
+    if (kwExists) {
+      html = html.replace(/<meta\s+name="keywords"\s+content="[^"]*"\s*\/?>/, `<meta name="keywords" content="${esc(meta.keywords)}" />`)
+    } else {
+      html = html.replace('</head>', `    <meta name="keywords" content="${esc(meta.keywords)}" />\n  </head>`)
+    }
+  }
   html = html.replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${canonical}" />`)
 
   // OG / Twitter
