@@ -37,10 +37,23 @@ function esc(str) {
 function injectMeta(template, appHtml, meta, pathname, helmet = null) {
   let html = template
 
+  // Strip helmet-rendered tags from appHtml (they belong in <head>, not <body>)
+  // Keep preload links and modulepreload links
+  appHtml = appHtml
+    .replace(/<title>.*?<\/title>/gi, '')
+    .replace(/<meta(?![^>]*charset)[^>]*>/gi, '')
+    .replace(/<link\s+rel="canonical"[^>]*>/gi, '')
+    .replace(/<link\s+rel="alternate"[^>]*>/gi, '')
+
   // React app into root (support both empty root and ssr-outlet comment)
   html = html.replace(/<div id="root">[\s\S]*?<\/div>/, `<div id="root">${appHtml}</div>`)
 
-  if (!meta) return html
+  if (!meta) {
+    // 404 page: ensure noindex
+    html = html.replace(/<meta\s+name="robots"\s+content="[^"]*"\s*\/?>/i, `<meta name="robots" content="noindex, nofollow" />`)
+    html = html.replace(/<meta\s+name="googlebot"\s+content="[^"]*"\s*\/?>/i, `<meta name="googlebot" content="noindex, nofollow" />`)
+    return html
+  }
 
   const canonical = meta.canonical ?? `https://izmirilde.com${pathname}`
   const img = meta.image ?? 'https://izmirilde.com/izmirilde-og.png'
@@ -74,7 +87,15 @@ function injectMeta(template, appHtml, meta, pathname, helmet = null) {
   html = html.replace(/<meta\s+name="twitter:image"[^>]*\/?>/, `<meta name="twitter:image" content="${img}" />`)
   html = html.replace(/<meta\s+name="twitter:url"[^>]*\/?>/, `<meta name="twitter:url" content="${canonical}" />`)
 
+  // Dynamic hreflang — must match the current page URL
+  html = html.replace(/<link\s+rel="alternate"\s+hreflang="tr"[^>]*>/i, `<link rel="alternate" hreflang="tr" href="https://izmirilde.com${pathname}" />`)
+  html = html.replace(/<link\s+rel="alternate"\s+hreflang="x-default"[^>]*>/i, `<link rel="alternate" hreflang="x-default" href="https://izmirilde.com${pathname}" />`)
+
   let extraHead = ''
+
+  // hreflang alternate links
+  extraHead += `\n    <link rel="alternate" hreflang="tr" href="https://izmirilde.com${pathname}" />`
+  extraHead += `\n    <link rel="alternate" hreflang="x-default" href="https://izmirilde.com${pathname}" />`
 
   if (meta.type === 'article' && meta.author) {
     extraHead += `\n    <meta property="article:author" content="${esc(meta.author)}" />`
